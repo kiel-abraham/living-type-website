@@ -11,6 +11,7 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
+    `gatsby-plugin-remove-trailing-slashes`,
     `gatsby-transformer-remark`
   ]
 }
