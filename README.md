@@ -1,5 +1,5 @@
 # THKR static cms
-Made from Gatsby.
+Made from GatsbyJs.
 Building a default template.
 
 
