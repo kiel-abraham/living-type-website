@@ -1,7 +1,8 @@
 ---
 title: "Home"
 pageType: "homepage"
+slug: "/"
 nav: true
 ---
 
-This is the home page. I can add more text
+This is the home page.

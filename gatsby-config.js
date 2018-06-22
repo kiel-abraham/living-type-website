@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'THKR CMS',
+    title: 'THKR CMS'
   },
   plugins: [
     'gatsby-plugin-react-helmet',

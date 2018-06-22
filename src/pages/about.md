@@ -1,6 +1,7 @@
 ---
 title: "About"
 pageType: "standard"
+slug: "/about"
 nav: true
 ---
 

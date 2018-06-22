@@ -13,7 +13,9 @@ const Layout = ({ children, data }) => (
         { name: 'description', content: 'THKR CMS' }
       ]}
     />
-    <Header siteTitle={data.site.siteMetadata.title} />
+    <Header 
+      siteTitle={data.site.siteMetadata.title}
+      nav={data.allMarkdownRemark.edges}/>
     <div
       style={{
         margin: '0 auto',
@@ -36,8 +38,22 @@ export default Layout
 export const query = graphql`
   query SiteTitleQuery {
     site {
+      id
       siteMetadata {
         title
+      }
+    }
+    allMarkdownRemark(filter: {frontmatter: {nav: {eq: true}}}) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            slug
+          }
+        }
       }
     }
   }
