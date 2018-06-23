@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 
@@ -9,7 +9,6 @@ return (
     <Helmet title={metaTitle} />
     <h1>{data.markdownRemark.frontmatter.title}</h1>
     <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-    <Link to="/">Home</Link>
   </div>
 );
 }
