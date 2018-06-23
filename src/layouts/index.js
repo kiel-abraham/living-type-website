@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import { Container } from 'reactstrap'
 
 import Header from '../components/header'
 import './theme.min.css';
