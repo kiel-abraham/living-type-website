@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'gatsby-link'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
@@ -19,6 +20,9 @@ const Layout = ({ children, data }) => (
     <main>
       {children()}
     </main>
+    <footer className="bg-dark fixed-bottom text-center">
+      <small className="text-muted">Powered by <Link to="//www.thkr.com.au">THKR</Link></small>
+    </footer>
   </div>
 )
 
@@ -36,12 +40,12 @@ export const query = graphql`
         title
       }
     }
-    allMarkdownRemark(filter: {frontmatter: {nav: {eq: true}}}) {
+    allMarkdownRemark(
+      filter: {frontmatter: {nav: {eq: true}}}
+      sort: {fields: [frontmatter___navSort], order: ASC}
+    ) {
       edges {
         node {
-          fields {
-            slug
-          }
           frontmatter {
             title
             slug
