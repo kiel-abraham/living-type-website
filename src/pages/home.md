@@ -6,4 +6,4 @@ nav: true
 navSort: 1
 ---
 
-This is the home page.
+<p>This is the home page. </p>

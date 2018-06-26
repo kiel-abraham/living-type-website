@@ -5,6 +5,7 @@ import Helmet from 'react-helmet'
 
 import Header from '../components/header'
 import './theme.min.css';
+import './index.css';
 
 const Layout = ({ children, data }) => (
   <div id="main-layout-div">
@@ -20,7 +21,7 @@ const Layout = ({ children, data }) => (
     <main>
       {children()}
     </main>
-    <footer className="bg-dark fixed-bottom text-center">
+    <footer className="bg-dark text-center">
       <small className="text-muted">Powered by <Link to="//www.thkr.com.au">THKR</Link></small>
     </footer>
   </div>
