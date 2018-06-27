@@ -2,11 +2,11 @@ import React from 'react';
 import Link from 'gatsby-link';
 import { Row, Col, Jumbotron } from 'reactstrap'
 
-const IndexPage = ({ data }) => (
+const HomePage = ({ data }) => (
   <div>
     <Jumbotron>
-      <h1 className="display-3">Hello, world!</h1>
-      <p className="lead">This is a simple hero unit, a simple Jumbotron-style component for calling extra attention to featured content or information.</p>
+      <h1 className="display-3">Welcome to THKR</h1>
+      <p className="lead">THKR (Thinker) is an Australian based business helping people create fast, simple sites with custom assistance.</p>
       <hr className="my-2" />
       <p>It uses utility classes for typgraphy and spacing to space content out within the larger container.</p>
       <p className="lead">
@@ -24,7 +24,7 @@ const IndexPage = ({ data }) => (
   </div>
 )
 
-export default IndexPage
+export default HomePage
 
 export const IndexQuery = graphql`
   query IndexQuery {

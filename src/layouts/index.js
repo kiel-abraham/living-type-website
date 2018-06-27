@@ -9,12 +9,11 @@ import './index.css';
 
 const Layout = ({ children, data }) => (
   <div id="main-layout-div">
-    <Helmet
-      title={data.site.siteMetadata.title}
-      meta={[
-        { name: 'description', content: 'THKR CMS' }
-      ]}
-    />
+    <Helmet>
+      {/*<link rel="stylesheet" href="https://bootswatch.com/4/materia/bootstrap.min.css" media="screen"/>*/}
+      <title>{data.site.siteMetadata.title}</title>
+      <meta name='description' content='THKR CMS'/>
+    </Helmet>
     <Header 
       siteTitle={data.site.siteMetadata.title}
       nav={data.allMarkdownRemark.edges}/>
