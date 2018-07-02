@@ -10,16 +10,18 @@ import './index.css';
 const Layout = ({ children, data }) => (
   <div id="main-layout-div">
     <Helmet>
-      {/*<link rel="stylesheet" href="https://bootswatch.com/4/materia/bootstrap.min.css" media="screen"/>*/}
       <title>{data.site.siteMetadata.title}</title>
       <meta name='description' content='THKR CMS'/>
     </Helmet>
+
     <Header 
       siteTitle={data.site.siteMetadata.title}
       nav={data.allMarkdownRemark.edges}/>
+
     <main>
       {children()}
     </main>
+    
     <footer className="bg-dark text-center">
       <small className="text-muted">Powered by <Link to="//www.thkr.com.au">THKR</Link></small>
     </footer>

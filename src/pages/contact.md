@@ -1,6 +1,6 @@
 ---
 title: "Contact"
-pageType: "standard"
+pageType: "contact"
 slug: "/contact"
 nav: true
 navSort: 4
