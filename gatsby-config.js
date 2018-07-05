@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'THKR CMS'
+    title: 'THKR CMS',
+    tagline: 'Simple websites for small businesses'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -8,7 +9,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `src`,
-        path: `${__dirname}/src/`,
+        path: `${__dirname}/src`,
       },
     },
     `gatsby-plugin-remove-trailing-slashes`,

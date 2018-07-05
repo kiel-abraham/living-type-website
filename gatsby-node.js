@@ -19,7 +19,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     graphql(`
       {
         allMarkdownRemark (
-            filter: { frontmatter: { pageType: { ne: "homepage" } }}
+            filter: { frontmatter: { pageType: { ne: "none"}} }
         ){
           edges {
             node {
