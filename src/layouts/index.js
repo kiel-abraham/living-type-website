@@ -3,12 +3,13 @@ import Link from 'gatsby-link';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
-import { HeaderMain, HeaderSlide } from '../components/header';
+import Header from '../components/header';
 import './theme.min.css';
 import './index.css';
 
 const Layout = ({ children, data }) => {
   const header = data.settings.edges[0].node.frontmatter.header;
+  
   return (
     <div id="main-layout-div">
       <Helmet>
@@ -16,11 +17,11 @@ const Layout = ({ children, data }) => {
         <meta name='description' content='THKR CMS'/>
       </Helmet>
 
-      { header == 'HeaderSlide' && 
-        <HeaderSlide siteTitle={data.site.siteMetadata.title} nav={data.nav.edges} />
-      }
       { header == 'HeaderMain' && 
-        <HeaderMain siteTitle={data.site.siteMetadata.title} nav={data.nav.edges} />
+        <Header.HeaderMain siteTitle={data.site.siteMetadata.title} nav={data.nav.edges} />
+      }
+      { header == 'HeaderSlide' && 
+        <Header.HeaderSlide siteTitle={data.site.siteMetadata.title} nav={data.nav.edges} />
       }
 
       <main>
