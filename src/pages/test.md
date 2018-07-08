@@ -1,7 +1,7 @@
 ---
 title: "Test"
 pageType: "none"
-slug: "/"
+slug: "/admin/"
 nav: true
 navSort: 7
 ---

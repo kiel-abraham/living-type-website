@@ -1,9 +1,10 @@
 import React from 'react';
-import Link from 'gatsby-link';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
 import Header from '../components/header';
+import Footer from '../components/footer';
+
 import './theme.min.css';
 import './index.css';
 
@@ -28,9 +29,8 @@ const Layout = ({ children, data }) => {
         {children()}
       </main>
       
-      <footer className="bg-dark text-center">
-        <small className="text-muted">Powered by <Link to="//www.thkr.com.au">THKR</Link></small>
-      </footer>
+      <Footer background={`${data.settings.edges[0].node.frontmatter.footerBackground}`} />
+
     </div>
   )
 }
@@ -70,6 +70,7 @@ export const query = graphql`
         node {
           frontmatter {
             header
+            footerBackground
           }
         }
       }
