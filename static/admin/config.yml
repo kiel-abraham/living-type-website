@@ -9,14 +9,9 @@ collections:
   - name: "settings"
     label: "Settings"
     files:
-      - label: "Global"
-        name: "global"
-        file: "src/pages/settings.md"
-        fields:
-          - {label: "Tagline", name: "tagline", widget: "string"}
       - label: "Footer"
         name: "footer"
-        file: "src/pages/settings/footer.md"
+        file: "src/pages/settings.md"
         fields:
           - label: "Footer Background"
             name: "footerBackground"
