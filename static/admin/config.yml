@@ -14,7 +14,7 @@ collections:
     files:
       - label: "Footer"
         name: "footer"
-        file: "src/pages/settings-footer.md"
+        file: "src/pages/settings/footer.md"
         fields:
           - label: "Footer Background"
             name: "footerBackground"
