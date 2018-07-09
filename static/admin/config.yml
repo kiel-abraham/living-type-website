@@ -8,8 +8,34 @@ media_folder: static/images
 public_folder: /images
 
 collections:
-  - name: "settings"
-    label: "Settings"
+  - label: "Default Pages"
+    name: "defaults"
+    delete: false
+    files:
+      - label: "Home Page"
+        name: "home"
+        file: "src/pages/home.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+        
+      - label: "Contact Page"
+        name: "contact"
+        file: "src/pages/contact.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+
+  - label: "Custom Pages"
+    name: "customs"
+    create: true
+    folder: "src/pages"
+    slug: {{slug}}
+    fields:
+      - {label: "pageType", name: "pageType", widget: "hidden", default: "standard"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - label: "Settings"
+    name: "settings"
     delete: false
     files:
       - label: "Footer"
