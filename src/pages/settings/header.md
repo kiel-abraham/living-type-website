@@ -1,3 +1,4 @@
 ---
+pageType: "none"
 headerStyle: "HeaderSlide"
 ---
