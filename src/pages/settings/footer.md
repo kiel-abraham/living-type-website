@@ -1,0 +1,4 @@
+---
+pageType: "none"
+footerBackground: "dark"
+---

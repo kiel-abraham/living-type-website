@@ -5,7 +5,7 @@ pageType: "none"
 slug: "/"
 nav: true
 navSort: 1
-heroFull: true
+heroFull: false
 ---
 
 <p>This is the home page. </p>

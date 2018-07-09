@@ -1,6 +1,6 @@
-import CMS from 'netlify-cms'
+import CMS from 'netlify-cms';
 
-import FooterPreview from './preview-templates/footer-preview'
+import FooterPreview from './preview-templates/footer-preview';
 
-CMS.registerPreviewStyle('/styles.css')
-CMS.registerPreviewTemplate('settings', FooterPreview)
+CMS.registerPreviewStyle('https://bootswatch.com/4/materia/bootstrap.min.css');
+CMS.registerPreviewTemplate('footer', FooterPreview);
