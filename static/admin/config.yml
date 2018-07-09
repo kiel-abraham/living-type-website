@@ -2,18 +2,22 @@ backend:
   name: git-gateway
   branch: master
 
+display_url: http://localhost:8000
+
 media_folder: static/images
 public_folder: /images
 
 collections:
   - name: "settings"
     label: "Settings"
+    delete: false
     files:
       - label: "Footer"
         name: "footer"
-        file: "src/pages/settings.md"
+        file: "src/pages/settings-footer.md"
         fields:
           - label: "Footer Background"
             name: "footerBackground"
             widget: "select"
             options: ["dark", "light", "primary", "danger"]
+          
