@@ -9,6 +9,7 @@ public_folder: /images
 
 collections:
   - label: "Default Pages"
+    label_singular: "Default Page"
     name: "defaults"
     delete: false
     files:
@@ -16,7 +17,7 @@ collections:
         name: "home"
         file: "src/pages/home.md"
         fields:
-          - {label: "Title", name: "title", widget: "string"}
+          # - {label: "Title", name: "title", widget: "string"}
           - {label: "Show in navigation", name: "nav", widget: "boolean", default: true}
         
       - label: "Contact Page"
@@ -27,6 +28,7 @@ collections:
           - {label: "Show in navigation", name: "nav", widget: "boolean", default: true}
 
   - label: "Custom Pages"
+    label_singular: "Custom Page"
     name: "customs"
     create: true
     folder: "src/pages/custom"
@@ -35,6 +37,11 @@ collections:
       - {label: "pageType", name: "pageType", widget: "hidden", default: "standard"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Show in navigation", name: "nav", widget: "boolean", default: true}
+      - {label: "Navigation sort number", name: "navSort", widget: "number", min: "2", valueType: "int"}
+      - {label: "Show hero", name: "hero", widget: "boolean", default: false}
+      - {label: "Full width hero", name: "heroFull", widget: "boolean", default: false}
+      - {label: "Hero image", name: "heroThumb", widget: "image", class: "thumb"}
+      - {label: "Hero text", name: "heroText", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
 
   - label: "Settings"
@@ -43,7 +50,7 @@ collections:
     files:
       - label: "Header"
         name: "header"
-        files: "src/pages/settings/header.md"
+        file: "src/pages/settings/header.md"
         fields:
           - label: "Header Style"
             name: "headerStyle"
