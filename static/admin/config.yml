@@ -42,11 +42,11 @@ collections:
     delete: false
     files:
       - label: "Header"
-        name: "headerSettings"
-        files: "src/pages/settings.md"
+        name: "header"
+        files: "src/pages/settings/header.md"
         fields:
           - label: "Header Style"
-            name: "header"
+            name: "headerStyle"
             widget: "select"
             options: ["HeaderMain", "HeaderSlide"]
       
