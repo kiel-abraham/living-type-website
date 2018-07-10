@@ -5,6 +5,7 @@ pageType: "none"
 slug: "/"
 nav: true
 navSort: 1
+hero: true
 heroFull: false
 ---
 

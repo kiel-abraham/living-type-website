@@ -18,6 +18,8 @@ collections:
         fields:
           # - {label: "Title", name: "title", widget: "string"}
           - {label: "Show in navigation", name: "nav", widget: "boolean", default: true}
+          - {label: "Show hero", name: "hero", widget: "boolean", default: false}
+          - {label: "Full width hero", name: "heroFull", widget: "boolean", default: false}
         
       - label: "Contact Page"
         name: "contact"
@@ -25,6 +27,8 @@ collections:
         fields:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Show in navigation", name: "nav", widget: "boolean", default: true}
+          - {label: "Show hero", name: "hero", widget: "boolean", default: false}
+          - {label: "Full width hero", name: "heroFull", widget: "boolean", default: false}
           - {label: "Navigation sort number", name: "navSort", widget: "number", min: "2", valueType: "int"}
 
   - label: "Custom Pages"

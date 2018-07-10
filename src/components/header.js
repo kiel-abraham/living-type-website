@@ -18,7 +18,6 @@ class Header extends React.Component {
   render() {
     return ( 
       <header>
-        {this.props.style}
         <nav className="navbar navbar-expand-md navbar-dark bg-primary">
           <Link to="/" className="navbar-brand">{this.props.siteTitle}</Link>
           <NavbarToggler onClick={this.toggle} style={{border: "none"}} />

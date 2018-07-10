@@ -4,10 +4,9 @@ import { Row, Col, Jumbotron } from 'reactstrap';
 import Hero from '../components/hero';
 
 const HomePage = ({ data }) => {
-  const heroFull = data.allMarkdownRemark.edges[0].node.frontmatter.heroFull ? 'container-fluid' : 'container';
   return (
     <div>
-      <Hero heroFull={heroFull} />
+      <Hero heroData={data.allMarkdownRemark.edges[0].node} />
 
       <section className="container">
         <Row>
@@ -33,6 +32,7 @@ export const IndexQuery = graphql`
           html
           frontmatter {
             title
+            hero
             heroFull
           }
         }
