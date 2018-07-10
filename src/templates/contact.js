@@ -38,7 +38,6 @@ export const ContactQuery = graphql`
           html
           frontmatter {
             title
-            pageType
           }
         }
       }

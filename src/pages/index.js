@@ -34,6 +34,7 @@ export const IndexQuery = graphql`
             title
             hero
             heroFull
+            heroTitle
           }
         }
       }
