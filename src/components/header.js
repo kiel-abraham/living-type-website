@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import { Collapse, NavbarToggler, NavItem } from 'reactstrap'
 
-class HeaderMain extends React.Component {
+class Header extends React.Component {
   constructor(props) {
     super(props);
     this.toggle = this.toggle.bind(this);
@@ -18,6 +18,7 @@ class HeaderMain extends React.Component {
   render() {
     return ( 
       <header>
+        {this.props.style}
         <nav className="navbar navbar-expand-md navbar-dark bg-primary">
           <Link to="/" className="navbar-brand">{this.props.siteTitle}</Link>
           <NavbarToggler onClick={this.toggle} style={{border: "none"}} />
@@ -34,4 +35,4 @@ class HeaderMain extends React.Component {
   }
 }
 
-export default HeaderMain
+export default Header;

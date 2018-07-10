@@ -9,7 +9,6 @@ public_folder: /images
 
 collections:
   - label: "Default Pages"
-    label_singular: "Default Page"
     name: "defaults"
     delete: false
     files:
@@ -26,6 +25,7 @@ collections:
         fields:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Show in navigation", name: "nav", widget: "boolean", default: true}
+          - {label: "Navigation sort number", name: "navSort", widget: "number", min: "2", valueType: "int"}
 
   - label: "Custom Pages"
     label_singular: "Custom Page"

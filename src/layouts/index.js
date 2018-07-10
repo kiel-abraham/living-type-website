@@ -9,8 +9,6 @@ import './theme.min.css';
 import './index.css';
 
 const Layout = ({ children, data }) => {
-  const header = data.settings.edges[0].node.frontmatter.header;
-  
   return (
     <div id="main-layout-div">
       <Helmet>
@@ -18,18 +16,17 @@ const Layout = ({ children, data }) => {
         <meta name='description' content='THKR CMS'/>
       </Helmet>
 
-      { header == 'HeaderMain' && 
-        <Header.HeaderMain siteTitle={data.site.siteMetadata.title} nav={data.nav.edges} />
-      }
-      { header == 'HeaderSlide' && 
-        <Header.HeaderSlide siteTitle={data.site.siteMetadata.title} nav={data.nav.edges} />
-      }
+      <Header 
+        style={data.header.edges[0].node.frontmatter.headerStyle}
+        siteTitle={data.site.siteMetadata.title}
+        nav={data.nav.edges}
+        />
 
       <main>
         {children()}
       </main>
       
-      <Footer background={`${data.settings.edges[0].node.frontmatter.footerBackground}`} />
+      <Footer background={`${data.footer.edges[0].node.frontmatter.footerBackground}`} />
 
     </div>
   )
@@ -63,13 +60,23 @@ export const query = graphql`
         }
       }
     }
-    settings: allMarkdownRemark(
-      filter: {frontmatter: {settingsPage: {eq: true}}}
+    header: allMarkdownRemark(
+      filter: {frontmatter: {settings: {eq: "header"}}}
     ) {
       edges {
         node {
           frontmatter {
-            header
+            headerStyle
+          }
+        }
+      }
+    }
+    footer: allMarkdownRemark(
+      filter: {frontmatter: {settings: {eq: "footer"}}}
+    ) {
+      edges {
+        node {
+          frontmatter {
             footerBackground
           }
         }
