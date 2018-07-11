@@ -10,7 +10,7 @@ const Hero = ({ heroData }) => {
   if (showHero) {
     return (
       <Jumbotron className={heroFull}>
-          <h1 className="display-3">{heroTitle}</h1>
+          <h2 className="display-3">{heroTitle}</h2>
           <p className="lead">THKR (Thinker) is an Australian based business helping people create fast, simple sites with custom assistance.</p>
           <hr className="my-2" />
           <p>It uses utility classes for typgraphy and spacing to space content out within the larger container.</p>

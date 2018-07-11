@@ -1,14 +1,12 @@
 import React from 'react';
-import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 import Hero from '../components/hero';
-import { Jumbotron, Row, Col } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 
 const StandardPage = ({ data }) => {
-  const metaTitle = data.markdownRemark.frontmatter.title + " | " + data.site.siteMetadata.title;
   return (
     <div>
-      <Helmet title={metaTitle} />
+      <Helmet title={`${data.markdownRemark.frontmatter.title} | ${data.site.siteMetadata.title}`} />
 
       <Hero heroData={data.markdownRemark} />
       

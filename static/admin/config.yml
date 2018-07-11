@@ -20,6 +20,7 @@ collections:
           - {label: "Show in navigation", name: "nav", widget: "boolean", default: true}
           - {label: "Show hero", name: "hero", widget: "boolean", default: false}
           - {label: "Full width hero", name: "heroFull", widget: "boolean", default: false}
+          - {label: "Hero title", name: "heroTitle", widget: "string"}
         
       - label: "Contact Page"
         name: "contact"
@@ -29,6 +30,7 @@ collections:
           - {label: "Show in navigation", name: "nav", widget: "boolean", default: true}
           - {label: "Show hero", name: "hero", widget: "boolean", default: false}
           - {label: "Full width hero", name: "heroFull", widget: "boolean", default: false}
+          - {label: "Hero title", name: "heroTitle", widget: "string"}
           - {label: "Navigation sort number", name: "navSort", widget: "number", min: "2", valueType: "int"}
 
   - label: "Custom Pages"
@@ -44,8 +46,7 @@ collections:
       - {label: "Navigation sort number", name: "navSort", widget: "number", min: "2", valueType: "int"}
       - {label: "Show hero", name: "hero", widget: "boolean", default: false}
       - {label: "Full width hero", name: "heroFull", widget: "boolean", default: false}
-      - {label: "Hero image", name: "heroThumb", widget: "image", class: "thumb"}
-      - {label: "Hero text", name: "heroText", widget: "string"}
+      - {label: "Hero title", name: "heroTitle", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
 
   - label: "Settings"

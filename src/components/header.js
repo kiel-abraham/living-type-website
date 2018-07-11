@@ -24,7 +24,16 @@ class Header extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <ul className="navbar-nav ml-auto">
                 {this.props.nav.map((item, index) => {
-                  return <NavItem key={ index }><Link exact to={item.node.frontmatter.slug} activeClassName="active" className="nav-link" onClick={this.toggle}>{item.node.frontmatter.title}</Link></NavItem>;
+                  return (
+                    <NavItem key={ index }>
+                      <Link 
+                        exact to={item.node.frontmatter.slug}
+                        activeClassName="active"
+                        className="nav-link"
+                        onClick={this.toggle}>{item.node.frontmatter.title}
+                      </Link>
+                    </NavItem>
+                  )
                 })}
             </ul>
           </Collapse>
