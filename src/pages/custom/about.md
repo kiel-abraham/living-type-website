@@ -1,12 +1,10 @@
 ---
-title: "About"
-pageType: "standard"
-slug: "/about"
+pageType: standard
+title: About
 nav: true
 navSort: 2
 hero: true
 heroFull: false
-heroTitle: "About Us"
+heroTitle: Hi Hailey
 ---
-
-This is the about page.
+This is the about page
