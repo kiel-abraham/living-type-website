@@ -70,9 +70,4 @@ collections:
             name: "footerBackground"
             widget: "select"
             options: ["dark", "light"]
-          - label: "Social Media"
-            name: "social"
-            widget: "list"
-            field:
-              - {label: "URL", name: "url", widget: "string"}
           

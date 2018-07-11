@@ -14,8 +14,7 @@ const CustomsPreview = ({ entry, widgetFor }) => (
       <Row>
         <Col>
           <h1>{entry.getIn(['data', 'title'])}</h1>
-          {/* widgetFor I believe */}
-          <div dangerouslySetInnerHTML={{ __html: entry.getIn(['data', 'title'])}} />
+          <div dangerouslySetInnerHTML={{ __html: widgetFor('body')}} />
         </Col>
       </Row>
     </section>
