@@ -8,7 +8,11 @@ const StandardPage = ({ data }) => {
     <div>
       <Helmet title={`${data.markdownRemark.frontmatter.title} | ${data.site.siteMetadata.title}`} />
 
-      <Hero heroData={data.markdownRemark} />
+      <Hero
+        showHero={data.markdownRemark.frontmatter.hero}
+        heroFull={data.markdownRemark.frontmatter.heroFull}
+        heroTitle={data.markdownRemark.frontmatter.heroTitle}
+        />
       
       <section className="container">
         <Row>

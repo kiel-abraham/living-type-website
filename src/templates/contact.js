@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 import { Row, Col } from 'reactstrap';
 
 const ContactPage = ({ data }) => {
-    const page = data.allMarkdownRemark.edges[0].node;
+  const page = data.allMarkdownRemark.edges[0].node;
   const metaTitle = page.frontmatter.title + " | " + data.site.siteMetadata.title;
 return (
   <div>

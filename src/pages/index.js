@@ -1,12 +1,15 @@
 import React from 'react';
-import Link from 'gatsby-link';
-import { Row, Col, Jumbotron } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 import Hero from '../components/hero';
 
 const HomePage = ({ data }) => {
   return (
     <div>
-      <Hero heroData={data.allMarkdownRemark.edges[0].node} />
+      <Hero
+        showHero={data.allMarkdownRemark.edges[0].node.frontmatter.hero}
+        heroFull={data.allMarkdownRemark.edges[0].node.frontmatter.heroFull}
+        heroTitle={data.allMarkdownRemark.edges[0].node.frontmatter.heroTitle}
+        />
 
       <section className="container">
         <Row>
