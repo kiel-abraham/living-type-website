@@ -1,9 +1,10 @@
 ---
 pageType: standard
-title: About Us
+title: About
+slug: "/About"
 nav: true
 navSort: 2
-hero: false
+hero: true
 heroFull: false
 heroTitle: Hi Hailey
 ---
