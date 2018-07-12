@@ -3,7 +3,7 @@ pageType: standard
 title: About
 nav: true
 navSort: 2
-hero: true
+hero: false
 heroFull: false
 heroTitle: Hi Hailey
 ---
