@@ -1,7 +1,6 @@
 ---
 pageType: standard
-title: About
-slug: "/about"
+title: About Us
 nav: true
 navSort: 2
 hero: false
