@@ -4,7 +4,7 @@ title: About
 slug: "/about"
 nav: true
 navSort: 2
-hero: true
+hero: false
 heroFull: false
 heroTitle: Hi Hailey
 ---
