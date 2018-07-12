@@ -38,7 +38,7 @@ collections:
     name: "customs"
     create: true
     folder: "src/pages/custom"
-    slug: {{slug}}
+    slug: "{{slug}}"
     fields:
       - {label: "pageType", name: "pageType", widget: "hidden", default: "standard"}
       - {label: "Title", name: "title", widget: "string"}
