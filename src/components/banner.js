@@ -13,7 +13,7 @@ const Banner = ({ visible, fullWidth, align, title, subtitle, button, buttonColo
       </Jumbotron>
     )
   } else {
-    return null;
+    return "test";
   }
 }
 

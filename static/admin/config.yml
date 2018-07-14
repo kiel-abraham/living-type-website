@@ -16,7 +16,6 @@ collections:
         name: "home"
         file: "src/pages/home.md"
         fields:
-          # - {label: "Title", name: "title", widget: "string"}
           - {label: "Show in navigation", name: "nav", widget: "boolean", default: true}
           - label: "Hero"
             name: "hero"
@@ -29,6 +28,8 @@ collections:
               - {label: "Subtitle", name: "subtitle", widget: "string"}
               - {label: "Button text", name: "button", widget: "string"}
               - {label: "Button colour", name: "buttonColour", widget: "select", options: ["primary", "secondary", "info", "success", "warning", "danger", "dark"], default: "primary"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
         
       - label: "Contact Page"
         name: "contact"

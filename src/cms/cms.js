@@ -1,6 +1,6 @@
 import CMS from 'netlify-cms';
 
-import HomePreview from './preview-templates/contact-preview';
+import HomePreview from './preview-templates/home-preview';
 import ContactPreview from './preview-templates/contact-preview';
 import CustomsPreview from './preview-templates/customs-preview';
 import HeaderPreview from './preview-templates/header-preview';

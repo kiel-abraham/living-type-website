@@ -15,7 +15,7 @@ const HomePage = ({ data }) => {
         subtitle={frontmatter.hero.subtitle}
         button={frontmatter.hero.button}
         buttonColour={frontmatter.hero.buttonColour}
-        />
+      />
 
       <section className="container">
         <Row>

@@ -14,6 +14,5 @@ hero:
   button: "About Us"
   buttonColour: "primary"
 ---
-
 <p>This is the home page. </p>
 <p>This is another part of it</p>
