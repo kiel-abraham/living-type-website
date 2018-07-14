@@ -4,9 +4,11 @@ pageType: "contact"
 slug: "/contact"
 nav: true
 navSort: 4
-profile:
-  public: true
-  name: "Test"
+hero:
+  showHero: false
+  heroFull: false
+  heroTitle: "Get In Touch"
+
 ---
 
 This is the contact page.
