@@ -1,5 +1,5 @@
 import React from 'react';
-import { Nav, NavbarBrand, Link } from 'reactstrap';
+import { Navbar, NavbarBrand, NavbarToggler } from 'reactstrap';
 
 // will need to use gif images to display how the menu would work
 
@@ -16,7 +16,11 @@ const HeaderPreview = ({ entry, widgetFor }) => {
         return(
             <div>
                 <h3>Other</h3>
-                <img src="http://gph.is/2c82eID" />
+                <iframe src="https://giphy.com/embed/GFm6aYLQ98o8w" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+                <Navbar color="dark" dark expand="xs">
+                    <NavbarBrand href="/">THKR CMS</NavbarBrand>
+                    <button type="button" className="navbar-toggler"><span className="navbar-toggler-icon"></span></button>
+                </Navbar>
             </div>
         ); 
     }

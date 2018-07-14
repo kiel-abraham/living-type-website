@@ -28,6 +28,12 @@ collections:
         fields:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Show in navigation", name: "nav", widget: "boolean", default: true}
+          - label: "Profile"
+            name: "profile"
+            widget: "object"
+            fields:
+              - {label: "Public", name: "public", widget: "boolean", default: true}
+              - {label: "Name", name: "name", widget: "string"}
           - {label: "Show hero", name: "hero", widget: "boolean", default: false}
           - {label: "Full width hero", name: "heroFull", widget: "boolean", default: false}
           - {label: "Hero title", name: "heroTitle", widget: "string"}
