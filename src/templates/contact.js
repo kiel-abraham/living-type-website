@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 import { Row, Col } from 'reactstrap';
 
 const ContactPage = ({ data }) => {
-  const page = data.allMarkdownRemark.edges[0].node;
+  const page = data.markdownRemark;
   const metaTitle = page.frontmatter.title + " | " + data.site.siteMetadata.title;
 return (
   <div>
@@ -30,16 +30,10 @@ export const ContactQuery = graphql`
             title
         }
     }
-    allMarkdownRemark (
-      filter: { frontmatter: { pageType: { eq: "contact" } }}
-    ) {
-      edges {
-        node {
-          html
-          frontmatter {
-            title
-          }
-        }
+    markdownRemark(frontmatter: { pageType: { eq: "contact" } }) {
+      html
+      frontmatter {
+        title
       }
     }
   }
