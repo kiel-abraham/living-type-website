@@ -6,9 +6,13 @@ slug: "/"
 nav: true
 navSort: 1
 hero:
-  showHero: true
-  heroFull: false
-  heroTitle: "Welcome to THKR"
+  visible: true
+  fullWidth: false
+  align: "center"
+  title: "Welcome to THKR"
+  subtitle: "THKR (Thinker) is an Australian based business helping people create fast, simple sites with custom assistance."
+  button: "About Us"
+  buttonColour: "primary"
 ---
 
 <p>This is the home page. </p>

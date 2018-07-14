@@ -1,6 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import Hero from '../components/hero';
+import Banner from '../components/banner';
 import { Row, Col } from 'reactstrap';
 
 const StandardPage = ({ data }) => {

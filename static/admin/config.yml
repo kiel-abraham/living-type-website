@@ -22,9 +22,13 @@ collections:
             name: "hero"
             widget: "object"
             fields:
-              - {label: "Show Hero", name: "showHero", widget: "boolean", default: false}
-              - {label: "Full width hero", name: "heroFull", widget: "boolean", default: false}
-              - {label: "Hero title", name: "heroTitle", widget: "string"}
+              - {label: "Visible", name: "visible", widget: "boolean", default: false}
+              - {label: "Full width", name: "fullWidth", widget: "boolean", default: false}
+              - {label: "Align", name: "align", widget: "select", options: ["left", "center", "right"], default: "left"}
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Subtitle", name: "subtitle", widget: "string"}
+              - {label: "Button text", name: "button", widget: "string"}
+              - {label: "Button colour", name: "buttonColour", widget: "select", options: ["primary", "secondary", "info", "success", "warning", "danger", "dark"], default: "primary"}
         
       - label: "Contact Page"
         name: "contact"

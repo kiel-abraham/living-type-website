@@ -1,16 +1,20 @@
 import React from 'react';
 import { Row, Col } from 'reactstrap';
-import Hero from '../components/hero';
+import Banner from '../components/banner';
 
 const HomePage = ({ data }) => {
   const frontmatter = data.markdownRemark.frontmatter;
   const content = data.markdownRemark.html;
   return (
     <div>
-      <Hero
-        showHero={frontmatter.hero.showHero}
-        heroFull={frontmatter.hero.heroFull}
-        heroTitle={frontmatter.hero.heroTitle}
+      <Banner
+        visible={frontmatter.hero.visible}
+        fullWidth={frontmatter.hero.fullWidth}
+        align={frontmatter.hero.align}
+        title={frontmatter.hero.title}
+        subtitle={frontmatter.hero.subtitle}
+        button={frontmatter.hero.button}
+        buttonColour={frontmatter.hero.buttonColour}
         />
 
       <section className="container">
@@ -34,9 +38,13 @@ export const IndexQuery = graphql`
       frontmatter {
         title
         hero {
-          showHero
-          heroFull
-          heroTitle
+          visible
+          fullWidth
+          align
+          title
+          subtitle
+          button
+          buttonColour
         }
       }
     }
