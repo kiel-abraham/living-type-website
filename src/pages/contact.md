@@ -5,7 +5,7 @@ slug: "/contact"
 nav: true
 navSort: 4
 hero:
-  showHero: false
+  showHero: true
   heroFull: false
   heroTitle: "Get In Touch"
 
