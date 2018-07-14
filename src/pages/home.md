@@ -5,9 +5,10 @@ pageType: "none"
 slug: "/"
 nav: true
 navSort: 1
-hero: true
-heroFull: false
-heroTitle: "Welcome to THKR"
+hero:
+  showHero: true
+  heroFull: false
+  heroTitle: "Welcome to THKR"
 ---
 
 <p>This is the home page. </p>

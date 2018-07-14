@@ -18,9 +18,13 @@ collections:
         fields:
           # - {label: "Title", name: "title", widget: "string"}
           - {label: "Show in navigation", name: "nav", widget: "boolean", default: true}
-          - {label: "Show hero", name: "hero", widget: "boolean", default: false}
-          - {label: "Full width hero", name: "heroFull", widget: "boolean", default: false}
-          - {label: "Hero title", name: "heroTitle", widget: "string"}
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - {label: "Show Hero", name: "showHero", widget: "boolean", default: false}
+              - {label: "Full width hero", name: "heroFull", widget: "boolean", default: false}
+              - {label: "Hero title", name: "heroTitle", widget: "string"}
         
       - label: "Contact Page"
         name: "contact"
@@ -29,14 +33,6 @@ collections:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Show in navigation", name: "nav", widget: "boolean", default: true}
           - {label: "Navigation sort number", name: "navSort", widget: "number", min: "2", valueType: "int"}
-          - label: "Hero"
-            name: "hero"
-            widget: "object"
-            fields:
-              - {label: "Show Hero", name: "showHero", widget: "boolean", default: false}
-              - {label: "Full width hero", name: "heroFull", widget: "boolean", default: false}
-              - {label: "Hero title", name: "heroTitle", widget: "string"}
-          
 
   - label: "Custom Pages"
     label_singular: "Custom Page"
@@ -49,9 +45,6 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Show in navigation", name: "nav", widget: "boolean", default: true}
       - {label: "Navigation sort number", name: "navSort", widget: "number", min: "2", valueType: "int"}
-      - {label: "Show hero", name: "hero", widget: "boolean", default: false}
-      - {label: "Full width hero", name: "heroFull", widget: "boolean", default: false}
-      - {label: "Hero title", name: "heroTitle", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
 
   - label: "Settings"

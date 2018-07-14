@@ -8,7 +8,5 @@ hero:
   showHero: true
   heroFull: false
   heroTitle: "Get In Touch"
-
 ---
-
 This is the contact page.

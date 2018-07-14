@@ -1,6 +1,5 @@
-import React from 'react'
-import Link from 'gatsby-link'
-import Helmet from 'react-helmet'
+import React from 'react';
+import Helmet from 'react-helmet';
 import { Row, Col } from 'reactstrap';
 
 const ContactPage = ({ data }) => {
@@ -9,10 +8,12 @@ const ContactPage = ({ data }) => {
 return (
   <div>
     <Helmet title={metaTitle} />
+
     <section className="container">
       <Row>
         <Col>
           <h1>{page.frontmatter.title}</h1>
+          <div>{page.frontmatter.hero.heroTitle}</div>
           <div dangerouslySetInnerHTML={{ __html: page.html }} />
         </Col>
       </Row>
@@ -26,14 +27,19 @@ export default ContactPage
 export const ContactQuery = graphql`
   query ContactQuery {
     site {
-        siteMetadata {
-            title
-        }
+      siteMetadata {
+        title
+      }
     }
     markdownRemark(frontmatter: { pageType: { eq: "contact" } }) {
       html
       frontmatter {
         title
+        hero {
+          showHero
+          heroFull
+          heroTitle
+        }
       }
     }
   }
