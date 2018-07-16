@@ -7,11 +7,11 @@ const HomePreview = ({ entry, widgetFor }) => {
             <Banner
                 visible={entry.getIn(['data', 'hero', 'visible'])}
                 fullWidth={entry.getIn(['data', 'hero', 'fullWidth'])}
-                align={entry.getIn(['data', 'hero', 'align'])}
                 title={entry.getIn(['data', 'hero', 'title'])}
                 subtitle={entry.getIn(['data', 'hero', 'subtitle'])}
                 button={entry.getIn(['data', 'hero', 'button'])}
                 buttonColour={entry.getIn(['data', 'hero', 'buttonColour'])}
+                align={entry.getIn(['data', 'hero', 'align'])}
             />
             <h1>{entry.getIn(['data', 'title'])}</h1>
             <div>{widgetFor('body')}</div>

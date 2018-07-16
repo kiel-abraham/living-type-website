@@ -23,11 +23,13 @@ collections:
             fields:
               - {label: "Visible", name: "visible", widget: "boolean", default: false}
               - {label: "Full width", name: "fullWidth", widget: "boolean", default: false}
-              - {label: "Align", name: "align", widget: "select", options: ["left", "center", "right"], default: "left"}
-              - {label: "Title", name: "title", widget: "string"}
-              - {label: "Subtitle", name: "subtitle", widget: "string"}
-              - {label: "Button text", name: "button", widget: "string"}
+              - {label: "Title", name: "title", widget: "string", required: false}
+              - {label: "Subtitle", name: "subtitle", widget: "text", required: false}
+              - {label: "Button text", name: "button", widget: "string", required: false}
               - {label: "Button colour", name: "buttonColour", widget: "select", options: ["primary", "secondary", "info", "success", "warning", "danger", "dark"], default: "primary"}
+              - {label: "Align", name: "align", widget: "select", options: ["left", "center", "right"], default: "left"}
+              - {label: "Background Image", name: "image", widget: "image"}
+              - {label: "Image Overlay", name: "overlay", widget: "select", options: ["none", "light", "dark", "primary"], default: "none"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
         

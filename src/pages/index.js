@@ -10,11 +10,11 @@ const HomePage = ({ data }) => {
       <Banner
         visible={frontmatter.hero.visible}
         fullWidth={frontmatter.hero.fullWidth}
-        align={frontmatter.hero.align}
         title={frontmatter.hero.title}
         subtitle={frontmatter.hero.subtitle}
         button={frontmatter.hero.button}
         buttonColour={frontmatter.hero.buttonColour}
+        align={frontmatter.hero.align}
       />
 
       <section className="container">
