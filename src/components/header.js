@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import { Collapse, NavbarToggler, NavItem } from 'reactstrap'
+import { Container, Row, Col, Collapse, NavbarToggler, NavItem } from 'reactstrap'
 
 class Header extends React.Component {
   constructor(props) {
@@ -46,6 +46,7 @@ class Header extends React.Component {
       return ( 
         <header>
           <nav className="navbar navbar-expand-md navbar-dark bg-primary">
+          <Container style={{padding: 0}}>
             <Link to="/" className="navbar-brand">{this.props.siteTitle}</Link>
             <NavbarToggler onClick={this.toggle} style={{border: "none"}} />
             <Collapse isOpen={this.state.isOpen} navbar>
@@ -64,6 +65,7 @@ class Header extends React.Component {
                   })}
               </ul>
             </Collapse>
+            </Container>
           </nav>
         </header>
       );
