@@ -51,6 +51,7 @@ collections:
         fields:
           - {label: "Page Type", name: "pageType", widget: "hidden", default: "standard"}
           - {label: "Title", name: "title", widget: "string"}
+          - {label: "Slug", name: "slug", widget: "hidden", default: "/thank-you"}
           - {label: "Show in navigation", name: "nav", widget: "hidden", default: false}
           - {label: "Body", name: "body", widget: "markdown"}
 
