@@ -14,7 +14,7 @@ collections:
     files:
       - label: "Home Page"
         name: "home"
-        file: "src/pages/home.md"
+        file: "src/pages/default/home.md"
         fields:
           - {label: "Page Type", name: "pageType", widget: "hidden", default: "none"}
           - {label: "Show in navigation", name: "nav", widget: "boolean", default: true}
