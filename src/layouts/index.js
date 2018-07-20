@@ -5,6 +5,7 @@ import { Button } from 'reactstrap';
 
 import Header from '../components/header';
 import Footer from '../components/footer';
+import FloatButton from '../components/floatButton';
 
 import './theme.min.css';
 import './index.css';
@@ -30,18 +31,10 @@ const Layout = ({ children, data }) => {
       <Footer background={`${data.settings.frontmatter.footerBackground}`} />
 
       {data.settings.frontmatter.showFloatButton &&
-        <Button
-          color={data.settings.frontmatter.floatButtonColour}
-          className="float-right fixed-bottom"
-          style={{borderRadius: "50%", left: "-10px"}}
-        >
-          {data.settings.frontmatter.floatButton === "Phone" &&
-            P
-          }
-          {data.settings.frontmatter.floatButton === "Email" &&
-            E
-          }
-        </Button>
+        <FloatButton
+          floatButtonColour={data.settings.frontmatter.floatButtonColour}
+          floatButton={data.settings.frontmatter.floatButton}
+        />
       }
     </div>
   )
@@ -81,6 +74,7 @@ export const query = graphql`
         footerBackground
         showFloatButton
         floatButton
+        floatButtonColour
       }
     }
   }

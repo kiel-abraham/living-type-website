@@ -16,6 +16,12 @@ const SettingsPreview = ({ entry, widgetFor }) => {
                 <Footer
                     background={entry.getIn(['data', 'footerBackground'])}
                 />
+                {entry.getIn(['data', 'showFloatButton']) &&
+                <FloatButton
+                    floatButtonColour={entry.getIn(['data', 'floatButtonColour'])}
+                    floatButton={entry.getIn(['data', 'floatButton'])}
+                />
+                }
             </div>
         );
     } else {

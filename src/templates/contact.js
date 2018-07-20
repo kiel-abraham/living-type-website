@@ -51,11 +51,6 @@ export const ContactQuery = graphql`
       html
       frontmatter {
         title
-        hero {
-          showHero
-          heroFull
-          heroTitle
-        }
       }
     }
   }
