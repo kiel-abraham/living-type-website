@@ -42,6 +42,14 @@ collections:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Show in navigation", name: "nav", widget: "boolean", default: true}
           - {label: "Navigation sort number", name: "navSort", widget: "number", min: "2", valueType: "int"}
+      
+      - label: "Thankyou Page"
+        name: "thankyou"
+        file: "src/pages/default/thankyou.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Show in navigation", name: "nav", widget: "hidden", default: false}
+          - {label: "Body", name: "body", widget: "markdown"}
 
   - label: "Custom Pages"
     label_singular: "Custom Page"
