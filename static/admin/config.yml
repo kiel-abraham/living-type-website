@@ -66,7 +66,7 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Show in navigation", name: "nav", widget: "boolean", default: true}
       - {label: "Navigation sort number", name: "navSort", widget: "number", min: "2", valueType: "int"}
-      - {label: "Parent page", name: "parent", widget: "relation", collection: "customs", searchFields: ["title"], valueField: "title"}
+      - {label: "Parent page", name: "parent", widget: "relation", collection: "customs", searchFields: ["title"], valueField: "title", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
 
   - label: "Settings"
