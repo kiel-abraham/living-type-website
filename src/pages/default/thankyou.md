@@ -1,7 +1,7 @@
 ---
 pageType: standard
 title: Thank You
-slug: "/thankyou"
+slug: /thankyou
 nav: false
 ---
-Thank you for your email. We will look at it and respond soon.
+Thank you for your message.
