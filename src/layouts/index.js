@@ -17,7 +17,7 @@ const Layout = ({ children, data }) => {
       </Helmet>
 
       <Header 
-        style={data.header.edges[0].node.frontmatter.headerStyle}
+        style={data.settings.frontmatter.headerStyle}
         siteTitle={data.site.siteMetadata.title}
         nav={data.nav.edges}
         />
@@ -26,7 +26,7 @@ const Layout = ({ children, data }) => {
         {children()}
       </main>
       
-      <Footer background={`${data.footer.edges[0].node.frontmatter.footerBackground}`} />
+      <Footer background={`${data.settings.frontmatter.footerBackground}`} />
 
     </div>
   )
@@ -60,26 +60,10 @@ export const query = graphql`
         }
       }
     }
-    header: allMarkdownRemark(
-      filter: {frontmatter: {settings: {eq: "header"}}}
-    ) {
-      edges {
-        node {
-          frontmatter {
-            headerStyle
-          }
-        }
-      }
-    }
-    footer: allMarkdownRemark(
-      filter: {frontmatter: {settings: {eq: "footer"}}}
-    ) {
-      edges {
-        node {
-          frontmatter {
-            footerBackground
-          }
-        }
+    settings: markdownRemark(frontmatter: { settingsPage: { eq: true } }) {
+      frontmatter {
+        headerStyle
+        footerBackground
       }
     }
   }

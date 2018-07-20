@@ -73,19 +73,14 @@ collections:
     name: "settings"
     delete: false
     files:
-      - label: "Header"
-        name: "header"
-        file: "src/pages/settings/header.md"
+      - label: "Site Settings"
+        name: "settings"
+        file: "src/pages/settings/settings.md"
         fields:
           - label: "Header Style"
             name: "headerStyle"
             widget: "select"
             options: ["HeaderMain", "HeaderSlide"]
-      
-      - label: "Footer"
-        name: "footer"
-        file: "src/pages/settings/footer.md"
-        fields:
           - label: "Footer Background"
             name: "footerBackground"
             widget: "select"

@@ -1,15 +1,19 @@
 import React from 'react';
+import Footer from '../../components/footer';
 import { Navbar, NavbarBrand, NavbarToggler } from 'reactstrap';
 
 // will need to use gif images to display how the menu would work
 
-const HeaderPreview = ({ entry, widgetFor }) => {
+const SettingsPreview = ({ entry, widgetFor }) => {
     if (entry.getIn(['data', 'headerStyle']) === "HeaderSlide") {
         return(
             <div>
                 <h3>Slide</h3>
                 <nav className="navbar navbar-expand-md navbar-dark bg-primary">Test</nav>
                 <img src="http://gph.is/2c2CSvz" />
+                <Footer
+                    background={entry.getIn(['data', 'footerBackground'])}
+                />
             </div>
         );
     } else {
@@ -21,9 +25,12 @@ const HeaderPreview = ({ entry, widgetFor }) => {
                     <NavbarBrand href="/">THKR CMS</NavbarBrand>
                     <button type="button" className="navbar-toggler"><span className="navbar-toggler-icon"></span></button>
                 </Navbar>
+                <Footer
+                    background={entry.getIn(['data', 'footerBackground'])}
+                />
             </div>
         ); 
     }
 }
 
-export default HeaderPreview;
+export default SettingsPreview;
