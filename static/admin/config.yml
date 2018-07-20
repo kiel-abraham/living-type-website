@@ -16,6 +16,7 @@ collections:
         name: "home"
         file: "src/pages/home.md"
         fields:
+          - {label: "Page Type", name: "pageType", widget: "hidden", default: "none"}
           - {label: "Show in navigation", name: "nav", widget: "boolean", default: true}
           - label: "Hero"
             name: "hero"
@@ -37,8 +38,9 @@ collections:
         
       - label: "Contact Page"
         name: "contact"
-        file: "src/pages/contact.md"
+        file: "src/pages/default/contact.md"
         fields:
+          - {label: "Page Type", name: "pageType", widget: "hidden", default: "contact"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Show in navigation", name: "nav", widget: "boolean", default: true}
           - {label: "Navigation sort number", name: "navSort", widget: "number", min: "2", valueType: "int"}
@@ -47,6 +49,7 @@ collections:
         name: "thankyou"
         file: "src/pages/default/thankyou.md"
         fields:
+          - {label: "Page Type", name: "pageType", widget: "hidden", default: "standard"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Show in navigation", name: "nav", widget: "hidden", default: false}
           - {label: "Body", name: "body", widget: "markdown"}
