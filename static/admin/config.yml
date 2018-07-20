@@ -41,9 +41,14 @@ collections:
         file: "src/pages/default/contact.md"
         fields:
           - {label: "Page Type", name: "pageType", widget: "hidden", default: "contact"}
+          - {label: "Slug", name: "slug", widget: "hidden", default: "/contact"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Show in navigation", name: "nav", widget: "boolean", default: true}
           - {label: "Navigation sort number", name: "navSort", widget: "number", min: "2", valueType: "int"}
+          - {label: "Email", name: "email", widget: "string"}
+          - {label: "Phone", name: "phone", widget: "string", required: false}
+          - {label: "Address", name: "address", widget: "string", required: false}
+          - {label: "Body", name: "body", widget: "markdown"}
       
       - label: "Thankyou Page"
         name: "thankyou"
@@ -77,12 +82,8 @@ collections:
         name: "settings"
         file: "src/pages/settings/settings.md"
         fields:
-          - label: "Header Style"
-            name: "headerStyle"
-            widget: "select"
-            options: ["HeaderMain", "HeaderSlide"]
-          - label: "Footer Background"
-            name: "footerBackground"
-            widget: "select"
-            options: ["dark", "light"]
+          - {label: "Settings Page", name: "settingsPage", widget: "hidden", default: true}
+          - {label: "Page Type", name: "pageType", widget: "hidden", default: "none"}
+          - {label: "Header Style", name: "headerStyle", widget: "select", options: ["HeaderMain", "HeaderSlide"], default: "HeaderMain"}
+          - {label: "Footer Background", name: "footerBackground", widget: "select", options: ["dark", "light"], default: "dark"}
           
