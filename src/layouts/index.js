@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
+import { Button } from 'reactstrap';
 
 import Header from '../components/header';
 import Footer from '../components/footer';
@@ -28,6 +29,16 @@ const Layout = ({ children, data }) => {
       
       <Footer background={`${data.settings.frontmatter.footerBackground}`} />
 
+      {data.settings.frontmatter.showFloatButton &&
+        <Button color="primary" className="float-right fixed-bottom" style={{borderRadius: "50%", left: "-10px"}}>
+        {data.settings.frontmatter.floatButton === "Phone" &&
+          P
+        }
+        {data.settings.frontmatter.floatButton === "Email" &&
+          E
+        }
+        </Button>
+      }
     </div>
   )
 }
@@ -64,6 +75,8 @@ export const query = graphql`
       frontmatter {
         headerStyle
         footerBackground
+        showFloatButton
+        floatButton
       }
     }
   }

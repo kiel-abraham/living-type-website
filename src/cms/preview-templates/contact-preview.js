@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'reactstrap';
 
-const ContactPreview = ({ entry, widgetFor }) => {
+const ContactPreview = ({ entry, widgetFor }) => (
     <section className="container">
       <Row>
         <Col>
@@ -10,6 +10,6 @@ const ContactPreview = ({ entry, widgetFor }) => {
         </Col>
       </Row>
     </section>
-}
+);
 
 export default ContactPreview;

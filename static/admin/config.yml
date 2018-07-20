@@ -86,4 +86,6 @@ collections:
           - {label: "Page Type", name: "pageType", widget: "hidden", default: "none"}
           - {label: "Header Style", name: "headerStyle", widget: "select", options: ["HeaderMain", "HeaderSlide"], default: "HeaderMain"}
           - {label: "Footer Background", name: "footerBackground", widget: "select", options: ["dark", "light"], default: "dark"}
+          - {label: "Show Floating Button", name: "showFloatButton", widget: "boolean", default: true}
+          - {label: "Floating Button", name: "floatButton", widget: "select", options: ["Phone", "Email"], default: "Phone"}
           
