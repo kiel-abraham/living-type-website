@@ -13,7 +13,6 @@ return (
       <Row>
         <Col>
           <h1>{page.frontmatter.title}</h1>
-          <div>{page.frontmatter.hero.heroTitle}</div>
           <div dangerouslySetInnerHTML={{ __html: page.html }} />
 
         <Form>

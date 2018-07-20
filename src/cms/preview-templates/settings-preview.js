@@ -1,11 +1,12 @@
 import React from 'react';
 import Footer from '../../components/footer';
+import FloatButton from '../../components/floatButton';
 import { Navbar, NavbarBrand, NavbarToggler } from 'reactstrap';
 
 // will need to use gif images to display how the menu would work
 
-
 const SettingsPreview = ({ entry, widgetFor }) => {
+
     if (entry.getIn(['data', 'headerStyle']) === "HeaderSlide") {
         return(
             <div>
@@ -17,10 +18,10 @@ const SettingsPreview = ({ entry, widgetFor }) => {
                     background={entry.getIn(['data', 'footerBackground'])}
                 />
                 {entry.getIn(['data', 'showFloatButton']) &&
-                <FloatButton
-                    floatButtonColour={entry.getIn(['data', 'floatButtonColour'])}
-                    floatButton={entry.getIn(['data', 'floatButton'])}
-                />
+                    <FloatButton
+                        floatButtonColour={entry.getIn(['data', 'floatButtonColour'])}
+                        floatButton={entry.getIn(['data', 'floatButton'])}
+                    />
                 }
             </div>
         );

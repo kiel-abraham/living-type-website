@@ -1,6 +1,8 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import { Button } from 'reactstrap';
+import FaPhone from 'react-icons/lib/fa/phone';
+import FaEnvelope from 'react-icons/lib/fa/envelope';
 
 const FloatButton = ({ floatButtonColour, floatButton }) => {
 
@@ -17,10 +19,10 @@ const FloatButton = ({ floatButtonColour, floatButton }) => {
           style={styles}
         >
           {floatButton === "Phone" &&
-            "P"
+            <FaPhone />
           }
           {floatButton === "Email" &&
-            "E"
+            <FaEnvelope />
           }
         </Button>
     )

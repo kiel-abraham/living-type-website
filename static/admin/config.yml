@@ -89,4 +89,3 @@ collections:
           - {label: "Show Floating Button", name: "showFloatButton", widget: "boolean", default: true}
           - {label: "Floating Button", name: "floatButton", widget: "select", options: ["Phone", "Email"], default: "Phone"}
           - {label: "Floating Button Colour", name: "floatButtonColour", widget: "select", options: ["primary", "secondary", "info", "success", "warning", "danger", "dark"], default: "primary"}
-          

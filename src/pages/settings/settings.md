@@ -8,7 +8,7 @@ phone: "1300 300 999"
 email: "test@email.com"
 footerBackground: "dark"
 showFloatButton: true
-floatButton: "Email"
-floatButtonColour: "info"
+floatButton: "Phone"
+floatButtonColour: "primary"
 ---
 

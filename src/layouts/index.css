@@ -3,11 +3,3 @@ body {
     min-height: 100vh;
     padding-bottom: 4rem;
 }
-
-footer {
-    position: absolute;
-    padding: 0.5rem;
-    right: 0;
-    bottom: 0;
-    left: 0;
-}
