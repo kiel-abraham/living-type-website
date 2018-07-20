@@ -9,5 +9,6 @@ email: "test@email.com"
 footerBackground: "dark"
 showFloatButton: true
 floatButton: "Phone"
+floatButtonColour: "primary"
 ---
 
