@@ -11,5 +11,9 @@ floatingButton:
     type: "Phone"
     colour: "primary"
 socialColour: "secondary"
+socialLinks:
+    - link: "https://www.facebook.com"
+    - link: "https://www.google.com"
+    - link: "https://www.twitter.com"
 ---
 

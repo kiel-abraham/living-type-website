@@ -16,10 +16,16 @@ const Footer = ({ background, socialColour, siteTitle }) => {
     left: "0"
   };
 
+  const url = "https://www.facebook.com";
+
   return (
     <footer className={`bg-${background} text-center`} style={styles}>
       <div className="mt-2 mb-2">
-        <a href="//www.facebook.com" className={`text-${socialColour}`}><FaFacebook size={28} /></a>
+        <a href={url} className={`text-${socialColour}`}>
+        {(url.search("facebook") !== -1) &&
+          <FaFacebook size={28} />
+        }
+        </a>
         <a href="//www.google.com" className={`text-${socialColour}`}><FaGoogle size={28} /></a>
         <a href="//www.google.com" className={`text-${socialColour}`}><FaTwitter size={28} /></a>
         <a href="//www.google.com" className={`text-${socialColour}`}><FaYoutube size={28} color="info" /></a>
