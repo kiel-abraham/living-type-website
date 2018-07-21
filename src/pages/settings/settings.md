@@ -12,8 +12,11 @@ floatingButton:
     colour: "primary"
 socialColour: "secondary"
 socialLinks:
-    - link: "https://www.facebook.com"
-    - link: "https://www.google.com"
-    - link: "https://www.twitter.com"
+    - url: "Facebook"
+      link: "https://www.facebook.com"
+    - url: "Google"
+      link: "https://www.google.com"
+    - url: "Twitter"
+      link: "https://www.twitter.com"
 ---
 

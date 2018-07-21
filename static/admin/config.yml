@@ -89,7 +89,7 @@ collections:
           - {label: "Invert", name: "invert", widget: "boolean", default: false}
           - {label: "Footer Background", name: "footerBackground", widget: "select", options: ["dark", "light"], default: "dark"}
           - {label: "Social Links Colour", name: "socialColour", widget: "select", options: ["primary", "secondary", "info", "success", "warning", "danger", "dark"], default: "primary"}
-          - {label: "Social Links", name: "socialLinks", widget: "list", field: [{label: "Link", name: "link", widget: "string"}]}
+          - {label: "Social Links", name: "socialLinks", widget: "list", fields: [{label: "Name", name: "url", widget: "string"}, {label: "Link", name: "link", widget: "string"}]}
           - label: "Floating Button"
             name: "floatingButton"
             widget: "object"
