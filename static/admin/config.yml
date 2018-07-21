@@ -85,8 +85,16 @@ collections:
           - {label: "Settings Page", name: "settingsPage", widget: "hidden", default: true}
           - {label: "Page Type", name: "pageType", widget: "hidden", default: "none"}
           - {label: "Header Style", name: "headerStyle", widget: "select", options: ["HeaderMain", "HeaderSlide"], default: "HeaderMain"}
+          - {label: "Header Background", name: "headerBackground", widget: "select", options: ["primary", "secondary", "info", "success", "warning", "danger", "dark"], default: "primary"}
+          - {label: "Invert", name: "invert", widget: "boolean", default: false}
           - {label: "Footer Background", name: "footerBackground", widget: "select", options: ["dark", "light"], default: "dark"}
-          - {label: "Show Floating Button", name: "showFloatButton", widget: "boolean", default: true}
-          - {label: "Floating Button", name: "floatButton", widget: "select", options: ["Phone", "Email"], default: "Phone"}
-          - {label: "Floating Button Colour", name: "floatButtonColour", widget: "select", options: ["primary", "secondary", "info", "success", "warning", "danger", "dark"], default: "primary"}
           - {label: "Social Links Colour", name: "socialColour", widget: "select", options: ["primary", "secondary", "info", "success", "warning", "danger", "dark"], default: "primary"}
+          # - {label: "Social Links", name: "socialLinks", widget: "list", field: [{label: "Link", name: "link", widget: "string"}]}
+          - label: "Floating Button"
+            name: "floatingButton"
+            widget: "object"
+            fields:
+              - {label: "Visible", name: "visible", widget: "boolean", default: true}
+              - {label: "Type", name: "type", widget: "select", options: ["Phone", "Email"], default: "Phone"}
+              - {label: "Colour", name: "colour", widget: "select", options: ["primary", "secondary", "info", "success", "warning", "danger", "dark"], default: "primary"}
+          

@@ -34,10 +34,10 @@ const Layout = ({ children, data }) => {
         siteTitle={data.site.siteMetadata.title}
       />
 
-      {data.settings.frontmatter.showFloatButton &&
+      {data.settings.frontmatter.floatingButton.visible &&
         <FloatButton
-          floatButtonColour={data.settings.frontmatter.floatButtonColour}
-          floatButton={data.settings.frontmatter.floatButton}
+          floatButtonColour={data.settings.frontmatter.floatingButton.colour}
+          floatButton={data.settings.frontmatter.floatingButton.type}
           phone={data.contact.frontmatter.phone}
         />
       }
@@ -77,9 +77,11 @@ export const query = graphql`
       frontmatter {
         headerStyle
         footerBackground
-        showFloatButton
-        floatButton
-        floatButtonColour
+        floatingButton {
+          visible
+          type
+          colour
+        }
         socialColour
       }
     }

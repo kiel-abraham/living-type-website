@@ -3,10 +3,13 @@ settingsPage: true
 pageType: "none"
 tagline: "This is the tagline"
 headerStyle: "HeaderMain"
+headerBackground: "primary"
 footerBackground: "dark"
 showFloatButton: true
-floatButton: "Phone"
-floatButtonColour: "primary"
+floatingButton:
+    visble: true
+    type: "Phone"
+    colour: "primary"
 socialColour: "secondary"
 ---
 
