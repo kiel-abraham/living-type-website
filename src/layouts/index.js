@@ -28,12 +28,17 @@ const Layout = ({ children, data }) => {
         {children()}
       </main>
       
-      <Footer background={`${data.settings.frontmatter.footerBackground}`} />
+      <Footer
+        background={`${data.settings.frontmatter.footerBackground}`}
+        socialColour="secondary"
+        siteTitle={data.site.siteMetadata.title}
+      />
 
       {data.settings.frontmatter.showFloatButton &&
         <FloatButton
           floatButtonColour={data.settings.frontmatter.floatButtonColour}
           floatButton={data.settings.frontmatter.floatButton}
+          phone={data.contact.frontmatter.phone}
         />
       }
     </div>
@@ -75,6 +80,11 @@ export const query = graphql`
         showFloatButton
         floatButton
         floatButtonColour
+      }
+    }
+    contact: markdownRemark(frontmatter: { pageType: { eq: "contact" } }) {
+      frontmatter {
+        phone
       }
     }
   }
