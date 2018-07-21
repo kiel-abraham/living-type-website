@@ -10,6 +10,8 @@ const SettingsHeaderMain = () => (
 );
 
 const SettingsPreview = ({ entry }) => {
+    const entryLinks = entry.getIn(['data', 'socialLinks'])
+    const links = entryLinks ? entryLinks.toJS() : []
     return(
         <div>
             {(entry.getIn(['data', 'headerStyle']) === "HeaderSlide") &&
@@ -23,6 +25,7 @@ const SettingsPreview = ({ entry }) => {
             <Footer
                 background={entry.getIn(['data', 'footerBackground'])}
                 socialColour={entry.getIn(['data', 'socialColour'])}
+                links={links}
                 siteTitle="THKR CMS"
             />
 
