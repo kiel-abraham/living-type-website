@@ -21,7 +21,10 @@ const SettingsPreview = ({ entry, widgetFor }) => {
                 <button type="button" className="navbar-toggler"><span className="navbar-toggler-icon"></span></button>
             </Navbar>
 
-            <Footer background={entry.getIn(['data', 'footerBackground'])} />
+            <Footer
+                background={entry.getIn(['data', 'footerBackground'])}
+                socialColour={entry.getIn(['data', 'socialColour'])}    
+            />
 
             {entry.getIn(['data', 'showFloatButton']) &&
                 <FloatButton

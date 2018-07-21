@@ -7,5 +7,6 @@ footerBackground: "dark"
 showFloatButton: true
 floatButton: "Phone"
 floatButtonColour: "primary"
+socialColour: "secondary"
 ---
 

@@ -30,7 +30,7 @@ const Layout = ({ children, data }) => {
       
       <Footer
         background={`${data.settings.frontmatter.footerBackground}`}
-        socialColour="secondary"
+        socialColour={`${data.settings.frontmatter.socialColour}`}
         siteTitle={data.site.siteMetadata.title}
       />
 
@@ -80,6 +80,7 @@ export const query = graphql`
         showFloatButton
         floatButton
         floatButtonColour
+        socialColour
       }
     }
     contact: markdownRemark(frontmatter: { pageType: { eq: "contact" } }) {
