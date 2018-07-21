@@ -12,9 +12,8 @@ const SettingsHeaderMain = () => (
 const SettingsPreview = ({ entry }) => {
     return(
         <div>
-            <SettingsHeaderMain />
             {(entry.getIn(['data', 'headerStyle']) === "HeaderSlide") &&
-                <iframe src="https://giphy.com/embed/GFm6aYLQ98o8w" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+                <SettingsHeaderMain />
             }
             <Navbar color={entry.getIn(['data', 'headerBackground']) || "primary"} dark={!entry.getIn(['data', 'invert'])} light={entry.getIn(['data', 'invert'])} expand="xs">
                 <NavbarBrand href="/">THKR CMS</NavbarBrand>

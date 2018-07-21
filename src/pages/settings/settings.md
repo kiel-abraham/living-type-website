@@ -7,7 +7,7 @@ headerBackground: "primary"
 footerBackground: "dark"
 showFloatButton: true
 floatingButton:
-    visble: true
+    visible: true
     type: "Phone"
     colour: "primary"
 socialColour: "secondary"

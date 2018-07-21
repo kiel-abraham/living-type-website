@@ -29,8 +29,8 @@ const Layout = ({ children, data }) => {
       </main>
       
       <Footer
-        background={`${data.settings.frontmatter.footerBackground}`}
-        socialColour={`${data.settings.frontmatter.socialColour}`}
+        background={data.settings.frontmatter.footerBackground}
+        socialColour={data.settings.frontmatter.socialColour}
         siteTitle={data.site.siteMetadata.title}
       />
 
