@@ -2,7 +2,7 @@
 settingsPage: true
 pageType: "none"
 tagline: "This is the tagline"
-headerStyle: "HeaderPop"
+headerStyle: "HeaderMain"
 headerBackground: "primary"
 footerBackground: "dark"
 showFloatButton: true
