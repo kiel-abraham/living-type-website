@@ -20,6 +20,8 @@ const Layout = ({ children, data }) => {
 
       <Header 
         style={data.settings.frontmatter.header.menu}
+        background={data.settings.frontmatter.header.background}
+        invert={data.settings.frontmatter.header.invert}
         siteTitle={data.site.siteMetadata.title}
         nav={data.nav.edges}
         />

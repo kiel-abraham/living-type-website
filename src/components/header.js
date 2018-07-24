@@ -17,11 +17,11 @@ class Header extends React.Component {
     });
   }
   render() {
-
-    if (this.props.style === "HeaderMain") {
+    const invert = this.props.invert ? "light": "dark";
+    if (this.props.style === "Slide") {
       return ( 
         <header>
-          <nav className="navbar navbar-expand-md navbar-dark bg-primary">
+          <nav className={`navbar navbar-expand-md navbar-${invert} bg-${this.props.background}`}>
             <Container style={{padding: 0}}>
               <Link to="/" className="navbar-brand">{this.props.siteTitle}</Link>
               <NavbarToggler onClick={this.toggle} style={{border: "none"}} />
@@ -45,10 +45,10 @@ class Header extends React.Component {
           </nav>
         </header>
       );
-    } else if (this.props.style === "HeaderScroll") {
+    } else if (this.props.style === "Scroll") {
       return ( 
         <header>
-          <nav className="navbar navbar-expand-md navbar-dark bg-info">
+          <nav className={`navbar navbar-expand-md navbar-${invert} bg-${this.props.background}`}>
             <Container style={{padding: 0}}>
               <Link to="/" className="navbar-brand mx-auto mr-sm-auto ml-sm-0">{this.props.siteTitle}</Link>
               <div style={{maxWidth: "100%"}}>
@@ -78,7 +78,7 @@ class Header extends React.Component {
     } else {
       return ( 
         <header>
-          <nav className="navbar navbar-expand-md navbar-dark bg-success">
+          <nav className={`navbar navbar-expand-md navbar-${invert} bg-${this.props.background}`}>
             <Container style={{padding: 0}}>
               <Link to="/" className="navbar-brand">{this.props.siteTitle}</Link>
                 <ul className="navbar-nav" style={{flexDirection: "row"}}>

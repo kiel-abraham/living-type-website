@@ -3,7 +3,7 @@ settingsPage: true
 pageType: "none"
 tagline: "This is the tagline"
 header:
-    menu: "HeaderStandard"
+    menu: "Standard"
     background: "primary"
     invert: false
 footerBackground: "dark"

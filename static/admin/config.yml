@@ -84,9 +84,13 @@ collections:
         fields:
           - {label: "Settings Page", name: "settingsPage", widget: "hidden", default: true}
           - {label: "Page Type", name: "pageType", widget: "hidden", default: "none"}
-          - {label: "Header Style", name: "headerStyle", widget: "select", options: ["HeaderMain", "HeaderSlide"], default: "HeaderMain"}
-          - {label: "Header Background", name: "headerBackground", widget: "select", options: ["primary", "secondary", "info", "success", "warning", "danger", "dark"], default: "primary"}
-          - {label: "Invert", name: "invert", widget: "boolean", default: false}
+          - label: "Header"
+            name: "header"
+            widget: "object"
+            fields:
+              - {label: "Menu Style", name: "menu", widget: "select", options: ["Standard", "Scroll", "Slide"], default: "Standard"}
+              - {label: "Background Colour", name: "background", widget: "select", options: ["primary", "secondary", "info", "success", "warning", "danger", "dark"], default: "primary"}
+              - {label: "Invert", name: "invert", widget: "boolean", default: false}
           - {label: "Footer Background", name: "footerBackground", widget: "select", options: ["dark", "light"], default: "dark"}
           - {label: "Social Links Colour", name: "socialColour", widget: "select", options: ["primary", "secondary", "info", "success", "warning", "danger", "dark"], default: "primary"}
           - {label: "Social Links", name: "socialLinks", widget: "list", fields: [{label: "Link", name: "link", widget: "string"}]}
