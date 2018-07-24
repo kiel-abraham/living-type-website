@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import { Container, Collapse, NavbarToggler, NavItem } from 'reactstrap';
-import FaBars from 'react-icons/lib/fa/bars';
 
 class Header extends React.Component {
   constructor(props) {
@@ -18,7 +17,7 @@ class Header extends React.Component {
   }
   render() {
     const invert = this.props.invert ? "light": "dark";
-    if (this.props.style === "Slide") {
+    if (this.props.menu === "Slide") {
       return ( 
         <header>
           <nav className={`navbar navbar-expand-sm navbar-${invert} bg-${this.props.background}`}>
@@ -45,7 +44,7 @@ class Header extends React.Component {
           </nav>
         </header>
       );
-    } else if (this.props.style === "Scroll") {
+    } else if (this.props.menu === "Scroll") {
       return ( 
         <header>
           <nav className={`navbar navbar-${invert} bg-${this.props.background}`}>

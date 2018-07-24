@@ -34,12 +34,13 @@ const SettingsPreview = ({ entry }) => {
       ];
     return(
         <div>
+            
             <Header 
-                style={entry.getIn(['data', 'header', 'menu'])}
+                menu={entry.getIn(['data', 'header', 'menu'])}
                 background={entry.getIn(['data', 'header', 'background'])}
                 invert={entry.getIn(['data', 'header', 'invert'])}
-                siteTitle="THKR CMS"
                 nav={navList}
+                siteTitle="THKR CMS"
             />
 
             <Footer

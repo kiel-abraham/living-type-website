@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import { Button } from 'reactstrap';
 
 import Header from '../components/header';
 import Footer from '../components/footer';
@@ -15,18 +14,18 @@ const Layout = ({ children, data }) => {
     <div id="main-layout-div">
       <Helmet>
         <title>{data.site.siteMetadata.title} | {data.site.siteMetadata.tagline}</title>
-        <meta name='description' content='THKR CMS'/>
+        <meta name="description" content="THKR CMS"/>
       </Helmet>
 
       <Header 
-        style={data.settings.frontmatter.header.menu}
+        menu={data.settings.frontmatter.header.menu}
         background={data.settings.frontmatter.header.background}
         invert={data.settings.frontmatter.header.invert}
         siteTitle={data.site.siteMetadata.title}
         nav={data.nav.edges}
       />
 
-      <main style={{marginBottom: "5rem"}}>
+      <main className="mb-5">
         {children()}
       </main>
       
