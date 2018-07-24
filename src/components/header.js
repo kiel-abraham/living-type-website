@@ -21,7 +21,7 @@ class Header extends React.Component {
     if (this.props.style === "Slide") {
       return ( 
         <header>
-          <nav className={`navbar navbar-expand-md navbar-${invert} bg-${this.props.background}`}>
+          <nav className={`navbar navbar-expand-sm navbar-${invert} bg-${this.props.background}`}>
             <Container style={{padding: 0}}>
               <Link to="/" className="navbar-brand">{this.props.siteTitle}</Link>
               <NavbarToggler onClick={this.toggle} style={{border: "none"}} />
@@ -48,7 +48,7 @@ class Header extends React.Component {
     } else if (this.props.style === "Scroll") {
       return ( 
         <header>
-          <nav className={`navbar navbar-expand-md navbar-${invert} bg-${this.props.background}`}>
+          <nav className={`navbar navbar-${invert} bg-${this.props.background}`}>
             <Container style={{padding: 0}}>
               <Link to="/" className="navbar-brand mx-auto mr-sm-auto ml-sm-0">{this.props.siteTitle}</Link>
               <div style={{maxWidth: "100%"}}>
@@ -78,7 +78,7 @@ class Header extends React.Component {
     } else {
       return ( 
         <header>
-          <nav className={`navbar navbar-expand-md navbar-${invert} bg-${this.props.background}`}>
+          <nav className={`navbar navbar-${invert} bg-${this.props.background}`}>
             <Container style={{padding: 0}}>
               <Link to="/" className="navbar-brand">{this.props.siteTitle}</Link>
                 <ul className="navbar-nav" style={{flexDirection: "row"}}>
