@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'gatsby-link';
-import { Container, Row, Col, Collapse, NavbarToggler, NavItem, NavLink, Button, Modal, ModalBody } from 'reactstrap';
+import { Container, Collapse, NavbarToggler, NavItem } from 'reactstrap';
 import FaBars from 'react-icons/lib/fa/bars';
 
 class Header extends React.Component {
@@ -46,26 +46,12 @@ class Header extends React.Component {
         </header>
         
       );
-    } else if (this.props.style === "HeaderPop") {
-      return ( 
-        <header>
-          <nav className="navbar navbar-expand-md navbar-dark bg-dark">
-            <Link to="/" className="navbar-brand">{this.props.siteTitle}</Link>
-            <Button size="sm" className="ml-auto" onClick={this.toggle}>Menu <FaBars /></Button>
-          </nav>
-          <Modal isOpen={this.state.isOpen} toggle={this.toggle}>
-            <ModalBody>
-              Test modal
-            </ModalBody>
-          </Modal>
-        </header>
-      );
-    } else {
+    } else if (this.props.style === "HeaderScroll") {
       return ( 
         <header>
           <nav className="navbar navbar-expand-md navbar-dark bg-info">
             <Container style={{padding: 0}}>
-              <Link to="/" className="navbar-brand mx-auto mr-sm-5 ml-sm-0">{this.props.siteTitle}</Link>
+              <Link to="/" className="navbar-brand mx-auto mr-sm-auto ml-sm-0">{this.props.siteTitle}</Link>
               <div style={{maxWidth: "100%"}}>
                 <ul className="navbar-nav" style={{overflowX: "auto", whiteSpace: "noWrap", flexDirection: "row"}}>
                   {this.props.nav.map((item, index) => {
@@ -80,11 +66,36 @@ class Header extends React.Component {
                       </NavItem>
                     )
                   })}
-                  <NavItem><Link to="/contact" className="nav-link">Testing</Link></NavItem>
-                  <NavItem><Link to="/contact" className="nav-link">Testing</Link></NavItem>
-                  <NavItem><Link to="/contact" className="nav-link">Testing</Link></NavItem>
+                  <NavItem><Link to="/contact" className="nav-link px-2">Testing</Link></NavItem>
+                  <NavItem><Link to="/contact" className="nav-link px-2">Testing</Link></NavItem>
+                  <NavItem><Link to="/contact" className="nav-link px-2">Testing</Link></NavItem>
+                  <NavItem><Link to="/contact" className="nav-link px-2">Testing</Link></NavItem>
                 </ul>
               </div>
+            </Container>
+          </nav>
+        </header>
+      );
+    } else {
+      return ( 
+        <header>
+          <nav className="navbar navbar-expand-md navbar-dark bg-success">
+            <Container style={{padding: 0}}>
+              <Link to="/" className="navbar-brand mx-auto mr-sm-auto ml-sm-0">{this.props.siteTitle}</Link>
+                <ul className="navbar-nav" style={{flexDirection: "row"}}>
+                  {this.props.nav.map((item, index) => {
+                    return (
+                      <NavItem key={ index }>
+                        <Link 
+                          exact to={item.node.frontmatter.slug}
+                          activeClassName="active"
+                          className="nav-link px-2"
+                          onClick={this.toggle}>{item.node.frontmatter.title}
+                        </Link>
+                      </NavItem>
+                    )
+                  })}
+                </ul>
             </Container>
           </nav>
         </header>
