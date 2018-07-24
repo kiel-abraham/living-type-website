@@ -19,7 +19,7 @@ const Layout = ({ children, data }) => {
       </Helmet>
 
       <Header 
-        style={data.settings.frontmatter.headerStyle}
+        style={data.settings.frontmatter.header.menu}
         siteTitle={data.site.siteMetadata.title}
         nav={data.nav.edges}
         />
@@ -76,7 +76,11 @@ export const query = graphql`
     }
     settings: markdownRemark(frontmatter: { settingsPage: { eq: true } }) {
       frontmatter {
-        headerStyle
+        header {
+          menu
+          background
+          invert
+        }
         footerBackground
         floatingButton {
           visible

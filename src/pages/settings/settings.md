@@ -2,10 +2,11 @@
 settingsPage: true
 pageType: "none"
 tagline: "This is the tagline"
-headerStyle: "HeaderScroll"
-headerBackground: "primary"
+header:
+    menu: "HeaderStandard"
+    background: "primary"
+    invert: false
 footerBackground: "dark"
-showFloatButton: true
 floatingButton:
     visible: true
     type: "Phone"
