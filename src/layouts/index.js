@@ -24,7 +24,7 @@ const Layout = ({ children, data }) => {
         nav={data.nav.edges}
         />
 
-      <main>
+      <main style={{marginBottom: "5rem"}}>
         {children()}
       </main>
       

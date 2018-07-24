@@ -65,7 +65,7 @@ class Header extends React.Component {
         <header>
           <nav className="navbar navbar-expand-md navbar-dark bg-info">
             <Container style={{padding: 0}}>
-              <Link to="/" className="navbar-brand" style={{margin: "auto"}}>{this.props.siteTitle}</Link>
+              <Link to="/" className="navbar-brand mx-auto mr-sm-5 ml-sm-0">{this.props.siteTitle}</Link>
               <div style={{maxWidth: "100%"}}>
                 <ul className="navbar-nav" style={{overflowX: "auto", whiteSpace: "noWrap", flexDirection: "row"}}>
                   {this.props.nav.map((item, index) => {
@@ -74,14 +74,12 @@ class Header extends React.Component {
                         <Link 
                           exact to={item.node.frontmatter.slug}
                           activeClassName="active"
-                          className="nav-link"
+                          className="nav-link px-2"
                           onClick={this.toggle}>{item.node.frontmatter.title}
                         </Link>
                       </NavItem>
                     )
                   })}
-                  <NavItem><Link to="/contact" className="nav-link">Testing</Link></NavItem>
-                  <NavItem><Link to="/contact" className="nav-link">Testing</Link></NavItem>
                   <NavItem><Link to="/contact" className="nav-link">Testing</Link></NavItem>
                   <NavItem><Link to="/contact" className="nav-link">Testing</Link></NavItem>
                   <NavItem><Link to="/contact" className="nav-link">Testing</Link></NavItem>
