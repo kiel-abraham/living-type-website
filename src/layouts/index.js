@@ -24,7 +24,7 @@ const Layout = ({ children, data }) => {
         invert={data.settings.frontmatter.header.invert}
         siteTitle={data.site.siteMetadata.title}
         nav={data.nav.edges}
-        />
+      />
 
       <main style={{marginBottom: "5rem"}}>
         {children()}

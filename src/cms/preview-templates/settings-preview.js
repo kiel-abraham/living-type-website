@@ -1,26 +1,46 @@
 import React from 'react';
+import Header from '../../components/header';
 import Footer from '../../components/footer';
 import FloatButton from '../../components/floatButton';
-import { Navbar, NavbarBrand, NavbarToggler } from 'reactstrap';
-
-// will need to use gif images to display how the menu would work
-
-const SettingsHeaderMain = () => (
-    <div>Test</div>
-);
 
 const SettingsPreview = ({ entry }) => {
-    const entryLinks = entry.getIn(['data', 'socialLinks'])
-    const links = entryLinks ? entryLinks.toJS() : []
+    const entryLinks = entry.getIn(['data', 'socialLinks']);
+    const links = entryLinks ? entryLinks.toJS() : [];
+    const navList = [
+        {
+          "node": {
+            "frontmatter": {
+              "title": "Home",
+              "slug": "/"
+            }
+          }
+        },
+        {
+          "node": {
+            "frontmatter": {
+              "title": "About",
+              "slug": "/about"
+            }
+          }
+        },
+        {
+          "node": {
+            "frontmatter": {
+              "title": "Contact",
+              "slug": "/contact"
+            }
+          }
+        }
+      ];
     return(
         <div>
-            {(entry.getIn(['data', 'headerStyle']) === "HeaderSlide") &&
-                <SettingsHeaderMain />
-            }
-            <Navbar color={entry.getIn(['data', 'headerBackground']) || "primary"} dark={!entry.getIn(['data', 'invert'])} light={entry.getIn(['data', 'invert'])} expand="xs">
-                <NavbarBrand href="/">THKR CMS</NavbarBrand>
-                <button type="button" className="navbar-toggler"><span className="navbar-toggler-icon"></span></button>
-            </Navbar>
+            <Header 
+                style={entry.getIn(['data', 'header', 'menu'])}
+                background={entry.getIn(['data', 'header', 'background'])}
+                invert={entry.getIn(['data', 'header', 'invert'])}
+                siteTitle="THKR CMS"
+                nav={navList}
+            />
 
             <Footer
                 background={entry.getIn(['data', 'footerBackground'])}
