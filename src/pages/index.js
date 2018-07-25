@@ -4,7 +4,7 @@ import Banner from '../components/banner';
 
 const HomePage = ({ data }) => {
   const frontmatter = data.markdownRemark.frontmatter;
-  const space = frontmatter.hero.visible ? "" : "mt-5";
+  const space = frontmatter.hero.visible ? "" : "mt-4";
   return (
     <div>
       <Banner

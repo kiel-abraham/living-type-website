@@ -5,7 +5,7 @@ import { Row, Col } from 'reactstrap';
 
 const StandardPage = ({ data }) => {
   const frontmatter = data.markdownRemark.frontmatter;
-  const space = true ? "mt-5" : "";
+  const space = true ? "mt-4" : "";
   return (
     <div>
       <Helmet title={`${frontmatter.title} | ${data.site.siteMetadata.title}`} />
