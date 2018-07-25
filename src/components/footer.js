@@ -18,10 +18,89 @@ const Footer = ({ background, socialColour, links, siteTitle }) => {
 
   return (
     <footer className={`bg-${background} text-center`} style={styles}>
-      <div className="mt-2 mb-2">
+      <ul className="nav my-2 d-inline-flex" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="url" content="url"/>
+				<meta itemprop="logo" content="logo"/>
+				<meta itemprop="name" content={siteTitle}/>
         {links.map((item, index) => {
           return (
-            <a href={item.link} className={`text-${socialColour}`} key={index}>
+            <li className="nav-item">
+              {(item.link.search("facebook") !== -1) &&
+                <a
+                  key={index}
+                  itemprop="sameAs"
+                  href={item.link}
+                  className={`nav-link p-0 text-${socialColour}`}
+                  target="_blank"
+                  title={`${siteTitle} on Facebook`}
+                >
+                  <FaFacebook size={28} />
+                  <span className="sr-only">Facebook</span>
+                </a>
+              }
+              {(item.link.search("google") !== -1) &&
+                <a
+                  key={index}
+                  itemprop="sameAs"
+                  href={item.link}
+                  className={`nav-link p-0 text-${socialColour}`}
+                  target="_blank"
+                  title={`${siteTitle} on Google`}
+                >
+                  <FaGoogle size={28} />
+                  <span className="sr-only">Google</span>
+                </a>
+              }
+              {(item.link.search("twitter") !== -1) &&
+                <a
+                  key={index} 
+                  itemprop="sameAs"
+                  href={item.link}
+                  className={`nav-link p-0 text-${socialColour}`}
+                  target="_blank"
+                  title={`${siteTitle} on Twitter`}
+                >
+                  <FaTwitter size={28} />
+                  <span className="sr-only">Twitter</span>
+                </a>
+              }
+              {(item.link.search("instagram") !== -1) &&
+                <a
+                  key={index}
+                  itemprop="sameAs"
+                  href={item.link}
+                  className={`nav-link p-0 text-${socialColour}`}
+                  target="_blank"
+                  title={`${siteTitle} on Instagram`}
+                >
+                  <FaInstagram size={28} />
+                  <span className="sr-only">Instagram</span>
+                </a>
+              }
+              {(item.link.search("youtube") !== -1) &&
+                <a
+                  key={index}
+                  itemprop="sameAs"
+                  href={item.link}
+                  className={`nav-link p-0 text-${socialColour}`}
+                  target="_blank"
+                  title={`${siteTitle} on YouTube`}
+                >
+                  <FaYoutube size={28} />
+                  <span className="sr-only">YouTube</span>
+                </a>
+              }
+            </li>
+          )
+        })}
+      </ul>
+      <div className="mt-2 mb-2" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="url" content="url"/>
+				<meta itemprop="logo" content="logo"/>
+				<meta itemprop="name" content={siteTitle}/>
+        {links.map((item, index) => {
+          return (
+            <a href={item.link} className={`text-${socialColour}`} key={index} itemprop="sameAs" target="_blank">
               {(item.link.search("facebook") !== -1) &&
                 <FaFacebook size={28} />
               }
