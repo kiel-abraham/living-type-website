@@ -5,7 +5,6 @@ import { Row, Col } from 'reactstrap';
 
 const StandardPage = ({ data }) => {
   const frontmatter = data.markdownRemark.frontmatter;
-  const space = true ? "mt-4" : "";
   return (
     <div>
       <Helmet title={`${frontmatter.title} | ${data.site.siteMetadata.title}`} />
@@ -18,7 +17,7 @@ const StandardPage = ({ data }) => {
         />
       */}
       
-      <section className={`container ${space}`}>
+      <section className="container mt-4">
         <Row>
           <Col>
             <h1>{frontmatter.title}</h1>

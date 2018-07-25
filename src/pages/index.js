@@ -4,7 +4,6 @@ import Banner from '../components/banner';
 
 const HomePage = ({ data }) => {
   const frontmatter = data.markdownRemark.frontmatter;
-  const space = frontmatter.hero.visible ? "" : "mt-4";
   return (
     <div>
       <Banner
@@ -17,7 +16,7 @@ const HomePage = ({ data }) => {
         align={frontmatter.hero.align}
       />
 
-      <section className={`container ${space}`}>
+      <section className="container mt-4">
         <Row>
           <Col>
             <h1>{frontmatter.title}</h1>
