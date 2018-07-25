@@ -2,6 +2,16 @@ import React from 'react';
 import Link from 'gatsby-link';
 import { Container, Collapse, NavbarToggler, NavItem } from 'reactstrap';
 
+const Logo = ({logo, siteTitle}) => (
+  <Link to="/" className="navbar-brand" title={siteTitle}>
+    {logo === "" ? (
+      siteTitle
+    ):(
+      <img src={logo} alt={`${siteTitle} logo`} width="150" />
+    )}
+  </Link>
+);
+
 class Header extends React.Component {
   constructor(props) {
     super(props);
@@ -79,7 +89,7 @@ class Header extends React.Component {
         <header>
           <nav className={`navbar navbar-${invert} bg-${this.props.background}`}>
             <Container style={{padding: 0}}>
-              <Link to="/" className="navbar-brand">{this.props.siteTitle}</Link>
+              <Logo logo="" siteTitle={this.props.siteTitle} />
                 <ul className="navbar-nav" style={{flexDirection: "row"}}>
                   {this.props.nav.map((item, index) => {
                     return (

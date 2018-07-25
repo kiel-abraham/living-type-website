@@ -11,11 +11,23 @@ import './index.css';
 
 const Layout = ({ children, data }) => {
   return (
-    <div id="main-layout-div">
+    <div>
       <Helmet>
         <title>{data.site.siteMetadata.title} | {data.site.siteMetadata.tagline}</title>
         <meta name="description" content="THKR CMS"/>
       </Helmet>
+
+      {/*
+
+      <script type="application/ld+json">{`
+        {
+            "@context": "http://schema.org"
+        }
+      `}</script>
+
+      */}
+
+      <a href="#main-content" className="sr-only sr-only-focusable">Skip to main content</a>
 
       <Header 
         menu={data.settings.frontmatter.header.menu}
@@ -25,7 +37,7 @@ const Layout = ({ children, data }) => {
         nav={data.nav.edges}
       />
 
-      <main className="mb-5">
+      <main id="main-content" className="mb-5">
         {children()}
       </main>
       

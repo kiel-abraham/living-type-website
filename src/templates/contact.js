@@ -4,10 +4,9 @@ import { Row, Col, Button, Form, FormGroup, Label, Input, FormText } from 'react
 
 const ContactPage = ({ data }) => {
 const page = data.markdownRemark;
-const metaTitle = page.frontmatter.title + " | " + data.site.siteMetadata.title;
 return (
   <div>
-    <Helmet title={metaTitle} />
+    <Helmet title={`${data.markdownRemark.frontmatter.title} | ${data.site.siteMetadata.title}`} />
 
     <section className="container">
       <Row>
