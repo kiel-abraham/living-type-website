@@ -18,17 +18,16 @@ const Footer = ({ background, socialColour, links, siteTitle }) => {
 
   return (
     <footer className={`bg-${background} text-center`} style={styles}>
-      <ul className="nav my-2 d-inline-flex" itemscope itemtype="http://schema.org/Organization">
-        <meta itemprop="url" content="url"/>
-				<meta itemprop="logo" content="logo"/>
-				<meta itemprop="name" content={siteTitle}/>
+      <ul className="nav my-2 d-inline-flex" itemScope itemType="http://schema.org/Organization">
+        <meta itemProp="url" content="url"/>
+				<meta itemProp="logo" content="logo"/>
+				<meta itemProp="name" content={siteTitle}/>
         {links.map((item, index) => {
           return (
-            <li className="nav-item">
+            <li className="nav-item" key={index}>
+              <meta itemProp="sameAs" content={item.link}/>
               {(item.link.search("facebook") !== -1) &&
                 <a
-                  key={index}
-                  itemprop="sameAs"
                   href={item.link}
                   className={`nav-link p-0 text-${socialColour}`}
                   target="_blank"
@@ -40,8 +39,6 @@ const Footer = ({ background, socialColour, links, siteTitle }) => {
               }
               {(item.link.search("google") !== -1) &&
                 <a
-                  key={index}
-                  itemprop="sameAs"
                   href={item.link}
                   className={`nav-link p-0 text-${socialColour}`}
                   target="_blank"
@@ -52,9 +49,7 @@ const Footer = ({ background, socialColour, links, siteTitle }) => {
                 </a>
               }
               {(item.link.search("twitter") !== -1) &&
-                <a
-                  key={index} 
-                  itemprop="sameAs"
+                <a 
                   href={item.link}
                   className={`nav-link p-0 text-${socialColour}`}
                   target="_blank"
@@ -66,8 +61,6 @@ const Footer = ({ background, socialColour, links, siteTitle }) => {
               }
               {(item.link.search("instagram") !== -1) &&
                 <a
-                  key={index}
-                  itemprop="sameAs"
                   href={item.link}
                   className={`nav-link p-0 text-${socialColour}`}
                   target="_blank"
@@ -79,8 +72,6 @@ const Footer = ({ background, socialColour, links, siteTitle }) => {
               }
               {(item.link.search("youtube") !== -1) &&
                 <a
-                  key={index}
-                  itemprop="sameAs"
                   href={item.link}
                   className={`nav-link p-0 text-${socialColour}`}
                   target="_blank"
@@ -94,32 +85,6 @@ const Footer = ({ background, socialColour, links, siteTitle }) => {
           )
         })}
       </ul>
-      <div className="mt-2 mb-2" itemscope itemtype="http://schema.org/Organization">
-        <meta itemprop="url" content="url"/>
-				<meta itemprop="logo" content="logo"/>
-				<meta itemprop="name" content={siteTitle}/>
-        {links.map((item, index) => {
-          return (
-            <a href={item.link} className={`text-${socialColour}`} key={index} itemprop="sameAs" target="_blank">
-              {(item.link.search("facebook") !== -1) &&
-                <FaFacebook size={28} />
-              }
-              {(item.link.search("google") !== -1) &&
-                <FaGoogle size={28} />
-              }
-              {(item.link.search("twitter") !== -1) &&
-                <FaTwitter size={28} />
-              }
-              {(item.link.search("youtube") !== -1) &&
-                <FaYoutube size={28} />
-              }
-              {(item.link.search("instagram") !== -1) &&
-                <FaInstagram size={28} />
-              }
-            </a>
-          )
-        })}
-      </div>
       <p>&copy; {year} {siteTitle}</p>
       <small className="text-muted">Powered by <Link to="//www.thkr.com.au">THKR</Link></small>
     </footer>

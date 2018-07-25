@@ -18,13 +18,19 @@ const Layout = ({ children, data }) => {
       </Helmet>
 
       {/*
-
       <script type="application/ld+json">{`
         {
-            "@context": "http://schema.org"
+          "@context": "http://schema.org",
+          "@type": "Organization",
+          "url": "http://www.example.com",
+          "name": ${data.site.siteMetadata.title},
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-401-555-1212",
+            "contactType": "Customer service"
+          }
         }
       `}</script>
-
       */}
 
       <a href="#main-content" className="sr-only sr-only-focusable">Skip to main content</a>
