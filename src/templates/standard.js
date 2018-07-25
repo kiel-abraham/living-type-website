@@ -4,9 +4,11 @@ import Banner from '../components/banner';
 import { Row, Col } from 'reactstrap';
 
 const StandardPage = ({ data }) => {
+  const frontmatter = data.markdownRemark.frontmatter;
+  const space = true ? "mt-5" : "";
   return (
     <div>
-      <Helmet title={`${data.markdownRemark.frontmatter.title} | ${data.site.siteMetadata.title}`} />
+      <Helmet title={`${frontmatter.title} | ${data.site.siteMetadata.title}`} />
 
       {/*
       <Hero
@@ -16,10 +18,10 @@ const StandardPage = ({ data }) => {
         />
       */}
       
-      <section className="container">
+      <section className={`container ${space}`}>
         <Row>
           <Col>
-            <h1>{data.markdownRemark.frontmatter.title}</h1>
+            <h1>{frontmatter.title}</h1>
             <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
           </Col>
         </Row>

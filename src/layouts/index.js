@@ -15,6 +15,7 @@ const Layout = ({ children, data }) => {
       <Helmet>
         <title>{data.site.siteMetadata.title} | {data.site.siteMetadata.tagline}</title>
         <meta name="description" content="THKR CMS"/>
+        {/*<link rel="shortcut icon" href="/assets/favicon_logo.png"/>*/}
       </Helmet>
 
       {/*
@@ -29,6 +30,7 @@ const Layout = ({ children, data }) => {
             "telephone": "+1-401-555-1212",
             "contactType": "Customer service"
           }
+          ${sameAs}
         }
       `}</script>
       */}
@@ -52,6 +54,7 @@ const Layout = ({ children, data }) => {
         socialColour={data.settings.frontmatter.socialColour}
         links={data.settings.frontmatter.socialLinks}
         siteTitle={data.site.siteMetadata.title}
+        url={data.site.siteMetadata.url}
       />
 
       {data.settings.frontmatter.floatingButton.visible &&
@@ -76,6 +79,7 @@ export const query = graphql`
     site {
       id
       siteMetadata {
+        url
         title
         tagline
       }

@@ -4,7 +4,7 @@ import Banner from '../components/banner';
 
 const HomePage = ({ data }) => {
   const frontmatter = data.markdownRemark.frontmatter;
-  const content = data.markdownRemark.html;
+  const space = frontmatter.hero.visible ? "" : "mt-5";
   return (
     <div>
       <Banner
@@ -17,11 +17,11 @@ const HomePage = ({ data }) => {
         align={frontmatter.hero.align}
       />
 
-      <section className="container">
+      <section className={`container ${space}`}>
         <Row>
           <Col>
             <h1>{frontmatter.title}</h1>
-            <div dangerouslySetInnerHTML={{ __html: content }} />
+            <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
           </Col>
         </Row>
       </section>
