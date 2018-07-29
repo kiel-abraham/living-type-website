@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import Social from './social';
 import FaFacebook from 'react-icons/lib/fa/facebook-square';
 import FaGoogle from 'react-icons/lib/fa/google-plus-square';
 import FaTwitter from 'react-icons/lib/fa/twitter-square';
@@ -27,15 +28,7 @@ const Footer = ({ background, socialColour, links, siteTitle, url }) => {
             <li className="nav-item" key={index}>
               <meta itemProp="sameAs" content={item.link}/>
               {(item.link.search("facebook") !== -1) &&
-                <a
-                  href={item.link}
-                  className={`nav-link p-0 text-${socialColour}`}
-                  target="_blank"
-                  title={`${siteTitle} on Facebook`}
-                >
-                  <FaFacebook size={28} />
-                  <span className="sr-only">Facebook</span>
-                </a>
+                <Social link={item.link} socialColour={socialColour} siteTitle={siteTitle} />
               }
               {(item.link.search("google") !== -1) &&
                 <a
