@@ -19,28 +19,34 @@ return (
         <Col sm="6">
           <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
           <address>
-            <FaPhone/> <a href={`tel:${data.markdownRemark.frontmatter.phone}`}>{data.markdownRemark.frontmatter.phone}</a><br/>
-            <FaEmail/> <a href={`mailto:${data.markdownRemark.frontmatter.email}`}>{data.markdownRemark.frontmatter.email}</a><br/>
-            <FaHome/> {data.markdownRemark.frontmatter.address}
+            {frontmatter.phone &&
+              <p><FaPhone/> <a href={`tel:${frontmatter.phone}`}>{frontmatter.phone}</a></p>
+            }
+            {frontmatter.email &&
+              <p><FaEmail/> <a href={`mailto:${frontmatter.email}`}>{frontmatter.email}</a></p>
+            }
+            {frontmatter.address &&
+              <p><FaHome/> {frontmatter.address}</p>
+            }
           </address>
         </Col>
         <Col sm="6">
-        <Form>
-          <h2>Send a message</h2>
-          <FormGroup>
-          <Label for="name">Name</Label>
-          <Input type="text" name="name" id="name" placeholder="Enter your name" />
-        </FormGroup>
-        <FormGroup>
-          <Label for="email">Email</Label>
-          <Input type="email" name="email" id="email" placeholder="Enter your email" />
-        </FormGroup>
-        <FormGroup>
-          <Label for="message">Message</Label>
-          <Input type="textarea" name="message" id="message" />
-        </FormGroup>
-        <Button color="primary">Submit</Button>
-      </Form>
+          <Form>
+            <h2>Send a message</h2>
+            <FormGroup>
+              <Label for="name">Name</Label>
+              <Input type="text" name="name" id="name" placeholder="Enter your name" />
+            </FormGroup>
+            <FormGroup>
+              <Label for="email">Email</Label>
+              <Input type="email" name="email" id="email" placeholder="Enter your email" />
+            </FormGroup>
+            <FormGroup>
+              <Label for="message">Message</Label>
+              <Input type="textarea" name="message" id="message" />
+            </FormGroup>
+            <Button color="primary">Submit</Button>
+          </Form>
         </Col>
       </Row>
     </section>
