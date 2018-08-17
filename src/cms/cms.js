@@ -8,5 +8,6 @@ import SettingsPreview from './preview-templates/settings-preview';
 CMS.registerPreviewStyle('https://bootswatch.com/4/materia/bootstrap.min.css');
 CMS.registerPreviewTemplate('home', HomePreview);
 CMS.registerPreviewTemplate('contact', ContactPreview);
+CMS.registerPreviewTemplate('thankyou', CustomsPreview);
 CMS.registerPreviewTemplate('customs', CustomsPreview);
 CMS.registerPreviewTemplate('settings', SettingsPreview);
