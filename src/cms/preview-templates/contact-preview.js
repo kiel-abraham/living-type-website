@@ -1,15 +1,16 @@
 import React from 'react';
-import { Row, Col } from 'reactstrap';
+import Contact from '../../components/contact';
 
-const ContactPreview = ({ entry, widgetFor }) => (
-    <section className="container">
-      <Row>
-        <Col>
-          <h1>{entry.getIn(['data', 'title'])}</h1>
-          <div>{widgetFor('body')}</div>
-        </Col>
-      </Row>
-    </section>
-);
+const ContactPreview = ({ entry, widgetFor }) => {
+  return (
+    <Contact
+      title={entry.getIn(['data', 'title'])}
+      body={entry.getIn(['data', 'body'])}
+      phone={entry.getIn(['data', 'phone'])}
+      email={entry.getIn(['data', 'email'])}
+      address={entry.getIn(['data', 'address'])}
+    />
+  );
+}
 
-export default ContactPreview;
+export default ContactPreview
