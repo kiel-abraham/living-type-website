@@ -14,6 +14,8 @@ const ContactPage = ({ data }) => {
         phone={frontmatter.phone}
         email={frontmatter.email}
         address={frontmatter.address}
+        buttonColor={frontmatter.form.buttonColor}
+        buttonText={frontmatter.form.buttonText}
       />
     </div>
   );
@@ -35,6 +37,10 @@ export const ContactQuery = graphql`
         phone
         email
         address
+        form {
+          buttonColor
+          buttonText
+        }
       }
     }
   }

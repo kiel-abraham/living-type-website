@@ -4,7 +4,7 @@ import FaPhone from 'react-icons/lib/fa/phone';
 import FaEmail from 'react-icons/lib/fa/envelope';
 import FaHome from 'react-icons/lib/fa/home';
 
-const Contact = ({ title, body, phone, email, address }) => {
+const Contact = ({ title, body, phone, email, address, buttonColor, buttonText }) => {
   return (
     <section className="container mt-4">
       <Row>
@@ -51,7 +51,7 @@ const Contact = ({ title, body, phone, email, address }) => {
               <Label for="message">Message</Label>
               <Input type="textarea" name="message" id="message" />
             </FormGroup>
-            <Button color="primary">Submit</Button>
+            <Button color={buttonColor}>{buttonText}</Button>
           </Form>
         </Col>
       </Row>
@@ -59,4 +59,4 @@ const Contact = ({ title, body, phone, email, address }) => {
   );
 }
 
-export default Contact;
+export default Contact
