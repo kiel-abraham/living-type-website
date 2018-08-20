@@ -54,21 +54,21 @@ collections:
             widget: "object"
             fields:
               - {label: "Form Title", name: "formTitle", widget: "string"}
-              - label: "Form Inputs"
-                name: "inputs"
-                label_singular: "Form Input"
-                widget: "list"
-                fields:
-                  - label: "Item"
-                    name: "item"
-                    widget: "object"
-                    fields:
-                      - {label: "Type", name: "type", widget: "select", options: ["text", "textarea", "email", "number"], default: "text"}
-                      - {label: "Name", name: "name", widget: "string"}
-                      - {label: "Placeholder", name: "placeholder", widget: "string", required: false}
-                      - {label: "Required", name: "required", widget: "boolean", default: false}
               - {label: "Form Button", name: "buttonText", widget: "string"}
               - {label: "Form Button Colour", name: "buttonColor", widget: "select", options: ["primary", "secondary", "info", "success", "warning", "danger", "dark"], default: "primary"}
+          - label: "Form Inputs"
+            name: "inputs"
+            label_singular: "Form Input"
+            widget: "list"
+            fields:
+              - label: "Item"
+                name: "item"
+                widget: "object"
+                fields:
+                  - {label: "Type", name: "type", widget: "select", options: ["text", "textarea", "email", "number"], default: "text"}
+                  - {label: "Name", name: "name", widget: "string"}
+                  - {label: "Placeholder", name: "placeholder", widget: "string", required: false}
+                  - {label: "Required", name: "required", widget: "boolean", default: false}
       
       - label: "Thankyou Page"
         name: "thankyou"
