@@ -17,6 +17,7 @@ const ContactPage = ({ data }) => {
         formTitle={frontmatter.form.formTitle}
         buttonColor={frontmatter.form.buttonColor}
         buttonText={frontmatter.form.buttonText}
+        inputs={frontmatter.form.inputs}
       />
     </div>
   );
@@ -42,6 +43,10 @@ export const ContactQuery = graphql`
           formTitle
           buttonColor
           buttonText
+          inputs {
+            name
+            required
+          }
         }
       }
     }

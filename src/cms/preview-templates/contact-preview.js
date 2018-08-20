@@ -9,6 +9,9 @@ const ContactPreview = ({ entry, widgetFor }) => {
       phone={entry.getIn(['data', 'phone'])}
       email={entry.getIn(['data', 'email'])}
       address={entry.getIn(['data', 'address'])}
+      formTitle={entry.getIn(['data', 'form', 'formTitle'])}
+      buttonText={entry.getIn(['data', 'form', 'buttonText'])}
+      buttonColor={entry.getIn(['data', 'form', 'buttonColor'])}
     />
   );
 }

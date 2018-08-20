@@ -4,7 +4,8 @@ import FaPhone from 'react-icons/lib/fa/phone';
 import FaEmail from 'react-icons/lib/fa/envelope';
 import FaHome from 'react-icons/lib/fa/home';
 
-const Contact = ({ title, body, phone, email, address, formTitle, buttonColor, buttonText }) => {
+const Contact = ({ title, body, phone, email, address, formTitle, buttonColor, buttonText, inputs }) => {
+  console.log(inputs);
   return (
     <section className="container mt-4">
       <Row>
@@ -39,13 +40,22 @@ const Contact = ({ title, body, phone, email, address, formTitle, buttonColor, b
         <Col sm="6">
           <Form>
             <h2>{formTitle}</h2>
+            
+            {inputs[0].required ? (
             <FormGroup>
-              <Label for="name">Name</Label>
-              <Input type="text" name="name" id="name" placeholder="Enter your name" />
+              <Label for="name">{inputs[0].name} *</Label>
+              <Input type="text" name="name" id="name" placeholder="Enter your name" required/>
             </FormGroup>
+            ):(
+            <FormGroup>
+              <Label for="name">{inputs[0].name}</Label>
+              <Input type="text" name="name" id="name" placeholder="Enter your name"/>
+            </FormGroup>
+            )}
+
             <FormGroup>
               <Label for="email">Email</Label>
-              <Input type="email" name="email" id="email" placeholder="Enter your email" />
+              <Input type="email" name="email" id="email" placeholder="Enter your email" required/>
             </FormGroup>
             <FormGroup>
               <Label for="message">Message</Label>

@@ -49,6 +49,26 @@ collections:
           - {label: "Phone", name: "phone", widget: "string", required: false}
           - {label: "Address", name: "address", widget: "string", required: false}
           - {label: "Body", name: "body", widget: "markdown"}
+          - label: "Form"
+            name: "form"
+            widget: "object"
+            fields:
+              - {label: "Form Title", name: "formTitle", widget: "string"}
+              - label: "Form Inputs"
+                name: "inputs"
+                label_singular: "Form Input"
+                widget: "list"
+                fields:
+                  - label: "Item"
+                    name: "item"
+                    widget: "object"
+                    fields:
+                      - {label: "Type", name: "type", widget: "select", options: ["short text", "long text", "email", "number"], default: "short text"}
+                      - {label: "Name", name: "name", widget: "string"}
+                      - {label: "Placeholder", name: "placeholder", widget: "string", required: false}
+                      - {label: "Required", name: "required", widget: "boolean", default: false}
+              - {label: "Form Button", name: "buttonText", widget: "string"}
+              - {label: "Form Button Colour", name: "buttonColor", widget: "select", options: ["primary", "secondary", "info", "success", "warning", "danger", "dark"], default: "primary"}
       
       - label: "Thankyou Page"
         name: "thankyou"
