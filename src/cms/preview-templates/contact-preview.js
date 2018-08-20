@@ -13,7 +13,7 @@ const ContactPreview = ({ entry, widgetFor }) => {
       formTitle={entry.getIn(['data', 'form', 'formTitle'])}
       buttonText={entry.getIn(['data', 'form', 'buttonText'])}
       buttonColor={entry.getIn(['data', 'form', 'buttonColor'])}
-      inputs={entry.getIn(['data', 'inputs', 'item'])}
+      inputs={entry.getIn(['data', 'inputs'])}
     />
   );
 }
