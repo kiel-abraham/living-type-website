@@ -60,7 +60,7 @@ collections:
                 widget: "list"
                 fields:
                   - label: "Item"
-                    name: "items"
+                    name: "item"
                     widget: "object"
                     fields:
                       - {label: "Type", name: "type", widget: "select", options: ["text", "textarea", "email", "number"], default: "text"}
