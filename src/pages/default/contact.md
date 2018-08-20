@@ -12,7 +12,7 @@ form:
     buttonColor: "primary"
     buttonText: "Send"
     inputs:
-        - tyoe: "short text"
+        - type: "text"
           name: "First Name"
           placeholder: "Enter your first name"
           required: false

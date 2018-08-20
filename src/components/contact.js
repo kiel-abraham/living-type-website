@@ -5,7 +5,6 @@ import FaEmail from 'react-icons/lib/fa/envelope';
 import FaHome from 'react-icons/lib/fa/home';
 
 const Contact = ({ title, body, phone, email, address, formTitle, buttonColor, buttonText, inputs }) => {
-  console.log(inputs);
   return (
     <section className="container mt-4">
       <Row>
@@ -40,18 +39,22 @@ const Contact = ({ title, body, phone, email, address, formTitle, buttonColor, b
         <Col sm="6">
           <Form>
             <h2>{formTitle}</h2>
-            
-            {inputs[0].required ? (
-            <FormGroup>
-              <Label for="name">{inputs[0].name} *</Label>
-              <Input type="text" name="name" id="name" placeholder="Enter your name" required/>
-            </FormGroup>
-            ):(
-            <FormGroup>
-              <Label for="name">{inputs[0].name}</Label>
-              <Input type="text" name="name" id="name" placeholder="Enter your name"/>
-            </FormGroup>
-            )}
+
+            {inputs.map((item, index) => {
+              return (
+                item.required ? (
+                  <FormGroup>
+                    <Label for="name">{item.name} *</Label>
+                    <Input type={item.type} name="name" id="name" placeholder={item.placeholder} required/>
+                  </FormGroup>
+                  ):(
+                  <FormGroup>
+                    <Label for="name">{item.name}</Label>
+                    <Input type={item.type} name="name" id="name" placeholder={item.placeholder}/>
+                  </FormGroup>
+                )
+              )
+            })}
 
             <FormGroup>
               <Label for="email">Email</Label>

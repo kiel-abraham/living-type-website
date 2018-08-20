@@ -44,7 +44,9 @@ export const ContactQuery = graphql`
           buttonColor
           buttonText
           inputs {
+            type
             name
+            placeholder
             required
           }
         }
