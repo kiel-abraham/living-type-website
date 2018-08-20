@@ -39,25 +39,29 @@ const Contact = ({ title, body, phone, email, address, formTitle, buttonColor, b
         <Col sm="6">
           <Form>
             <h2>{formTitle}</h2>
-
-            {inputs.map((item, index) => {
-              return (
-                item.required ? (
-                  <FormGroup>
-                    <Label for="name">{item.name} *</Label>
-                    <Input type={item.type} name="name" id="name" placeholder={item.placeholder} required/>
-                  </FormGroup>
-                  ):(
-                  <FormGroup>
-                    <Label for="name">{item.name}</Label>
-                    <Input type={item.type} name="name" id="name" placeholder={item.placeholder}/>
-                  </FormGroup>
+            {inputs.map((x, index) => {
+              if (Object.keys(inputs[index]).length !== 0) {
+                const y = x.item.name.toLowerCase().replace(" ", "_");
+                return (
+                  x.item.required ? (
+                    <FormGroup key={index}>
+                      <Label for={`${y}${index}`}>{x.item.name} *</Label>
+                      <Input type={x.item.type} name={`${y}${index}`} id={index} placeholder={x.item.placeholder} required/>
+                    </FormGroup>
+                    ):(
+                    <FormGroup key={index}>
+                      <Label for={`${y}${index}`}>{x.item.name}</Label>
+                      <Input type={x.item.type} name={`${y}${index}`} id={index} placeholder={x.item.placeholder}/>
+                    </FormGroup>
+                  )
                 )
-              )
+              } else {
+                return false;
+              }
             })}
 
             <FormGroup>
-              <Label for="email">Email</Label>
+              <Label for="email">Email *</Label>
               <Input type="email" name="email" id="email" placeholder="Enter your email" required/>
             </FormGroup>
             <FormGroup>
