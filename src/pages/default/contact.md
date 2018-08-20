@@ -12,9 +12,10 @@ form:
     buttonColor: "primary"
     buttonText: "Send"
 inputs:
-    - type: "text"
-      name: "First Name"
-      placeholder: "Enter your first name"
-      required: false
+    - item:
+        type: "text"
+        name: "First Name"
+        placeholder: "Enter your first name"
+        required: false
 ---
 This is the contact page.
