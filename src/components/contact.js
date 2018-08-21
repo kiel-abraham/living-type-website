@@ -37,7 +37,7 @@ const Contact = ({ title, body, phone, email, address, formTitle, buttonColor, b
           }
         </Col>
         <Col sm="6">
-          <Form>
+          <Form name="contact" method="POST" netlify>
             <h2>{formTitle}</h2>
             {inputs.map((x, index) => {
               if (Object.keys(inputs[index]).length !== 0) {
