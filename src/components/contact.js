@@ -56,18 +56,10 @@ const Contact = ({ title, body, phone, email, address, formTitle, buttonColor, b
                   )
                 )
               } else {
-                return false;
+                return <Input type="text"/>;
               }
             })}
 
-            <FormGroup>
-              <Label for="email">Email *</Label>
-              <Input type="email" name="email" id="email" placeholder="Enter your email" required/>
-            </FormGroup>
-            <FormGroup>
-              <Label for="message">Message</Label>
-              <Input type="textarea" name="message" id="message" />
-            </FormGroup>
             <Button color={buttonColor}>{buttonText}</Button>
           </Form>
         </Col>

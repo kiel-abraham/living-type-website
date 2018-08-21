@@ -14,8 +14,18 @@ form:
 inputs:
     - item:
         type: "text"
-        name: "First Name"
-        placeholder: "Enter your first name"
-        required: false
+        name: "Name"
+        placeholder: "Enter your name"
+        required: true
+    - item:
+        type: "email"
+        name: "Email"
+        placeholder: "Enter your email"
+        required: true
+    - item:
+        type: "textarea"
+        name: "Message"
+        placeholder: "Enter your message"
+        required: true
 ---
 This is the contact page.
