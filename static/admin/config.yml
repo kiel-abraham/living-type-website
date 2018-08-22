@@ -39,8 +39,7 @@ collections:
           - {label: "Page Title", name: "title", widget: "string"}
           - {label: "Align", name: "contentAlign", widget: "select", options: ["left", "center", "right"], default: "left"}
           - {label: "Body", name: "body", widget: "markdown"}
-          
-        
+
       - label: "Contact Page"
         name: "contact"
         file: "src/pages/default/contact.md"
@@ -75,7 +74,7 @@ collections:
                   - {label: "Placeholder", name: "placeholder", widget: "string", required: false}
                   - {label: "Type", name: "type", widget: "select", options: ["text", "textarea", "email", "tel", "number"], default: "text"}
                   - {label: "Required", name: "required", widget: "boolean", default: false}
-      
+
       - label: "Thankyou Page"
         name: "thankyou"
         file: "src/pages/default/thankyou.md"
@@ -85,7 +84,7 @@ collections:
           - {label: "Nav", name: "nav", widget: "hidden", default: false}
           - {label: "Page Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
-      
+
       - label: "404 Page"
         name: "404"
         file: "src/pages/default/404.md"
