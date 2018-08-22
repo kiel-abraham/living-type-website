@@ -84,7 +84,7 @@ collections:
         name: "404"
         file: "src/pages/default/404.md"
         fields:
-          - {label: "Page Type", name: "pageType", widget: "hidden", default: "none"}er
+          - {label: "Page Type", name: "pageType", widget: "hidden", default: "none"}
           - {label: "404 Page", name: "page404", widget: "hidden", default: true}
           - {label: "Slug", name: "slug", widget: "hidden", default: "/404"}
           - {label: "Nav", name: "nav", widget: "hidden", default: false}
