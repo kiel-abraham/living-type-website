@@ -11,6 +11,7 @@ banner:
   title: "Welcome to THKR"
   subtitle: "THKR (Thinker) is an Australian based business helping people create fast, simple sites with custom assistance."
   button: "About Us"
+  buttonLink: "/about"
   buttonColour: "primary"
   align: "center"
 ---

@@ -12,6 +12,7 @@ const HomePage = ({ data }) => {
         title={frontmatter.banner.title}
         subtitle={frontmatter.banner.subtitle}
         button={frontmatter.banner.button}
+        buttonLink={frontmatter.banner.buttonLink}
         buttonColour={frontmatter.banner.buttonColour}
         align={frontmatter.banner.align}
       />
@@ -43,6 +44,7 @@ export const IndexQuery = graphql`
           title
           subtitle
           button
+          buttonLink
           buttonColour
         }
       }

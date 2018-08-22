@@ -17,12 +17,15 @@ collections:
         file: "src/pages/default/home.md"
         fields:
           - {label: "Page Type", name: "pageType", widget: "hidden", default: "none"}
+          - {label: "Home Page", name: "homePage", widget: "hidden", default: true}
+          - {label: "Slug", name: "slug", widget: "hidden", default: "/"}
+          - {label: "Nav Sort", name: "navSort", widget: "hidden", default: 1}
           - {label: "Show in navigation", name: "nav", widget: "boolean", default: true}
           - label: "Banner"
             name: "banner"
             widget: "object"
             fields:
-              - {label: "Visible", name: "visible", widget: "boolean", default: false}
+              - {label: "Visible", name: "visible", widget: "boolean", default: true}
               - {label: "Full width", name: "fullWidth", widget: "boolean", default: false}
               - {label: "Title", name: "title", widget: "string", required: false}
               - {label: "Subtitle", name: "subtitle", widget: "text", required: false}
