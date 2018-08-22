@@ -4,6 +4,7 @@ contentAlign: "left"
 homePage: true
 pageType: "none"
 slug: "/"
+navTitle: "Home"
 nav: true
 navSort: 1
 banner:

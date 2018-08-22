@@ -1,6 +1,7 @@
 ---
 pageType: standard
 title: About
+menuTitle: About
 slug: "/about"
 nav: true
 navSort: 2

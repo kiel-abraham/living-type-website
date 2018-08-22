@@ -20,7 +20,8 @@ collections:
           - {label: "Home Page", name: "homePage", widget: "hidden", default: true}
           - {label: "Slug", name: "slug", widget: "hidden", default: "/"}
           - {label: "Nav Sort", name: "navSort", widget: "hidden", default: 1}
-          - {label: "Show in navigation", name: "nav", widget: "boolean", default: true}
+          - {label: "Menu Title", name: "navTitle", widget: "string", default: "Home"}
+          - {label: "Show in menu", name: "nav", widget: "boolean", default: true}
           - label: "Banner"
             name: "banner"
             widget: "object"
@@ -35,7 +36,7 @@ collections:
               - {label: "Align", name: "align", widget: "select", options: ["left", "center", "right"], default: "left"}
               - {label: "Background Image", name: "image", widget: "image"}
               - {label: "Image Overlay", name: "overlay", widget: "select", options: ["none", "light", "dark", "primary"], default: "none"}
-          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Page Title", name: "title", widget: "string"}
           - {label: "Align", name: "contentAlign", widget: "select", options: ["left", "center", "right"], default: "left"}
           - {label: "Body", name: "body", widget: "markdown"}
           
@@ -46,9 +47,10 @@ collections:
         fields:
           - {label: "Page Type", name: "pageType", widget: "hidden", default: "contact"}
           - {label: "Slug", name: "slug", widget: "hidden", default: "/contact"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Show in navigation", name: "nav", widget: "boolean", default: true}
-          - {label: "Navigation sort number", name: "navSort", widget: "number", min: "2", valueType: "int"}
+          - {label: "Menu Title", name: "navTitle", widget: "string", default: "Contact"}
+          - {label: "Show in menu", name: "nav", widget: "boolean", default: true}
+          - {label: "Menu sort number", name: "navSort", widget: "number", min: "2", valueType: "int"}
+          - {label: "Page Title", name: "title", widget: "string", default: "Contact"}
           - {label: "Email", name: "email", widget: "string"}
           - {label: "Phone", name: "phone", widget: "string", required: false}
           - {label: "Address", name: "address", widget: "string", required: false}
@@ -80,8 +82,8 @@ collections:
         fields:
           - {label: "Page Type", name: "pageType", widget: "hidden", default: "standard"}
           - {label: "Slug", name: "slug", widget: "hidden", default: "/thankyou"}
-          - {label: "Show in navigation", name: "nav", widget: "hidden", default: false}
-          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Nav", name: "nav", widget: "hidden", default: false}
+          - {label: "Page Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
       
       - label: "404 Page"
@@ -92,7 +94,7 @@ collections:
           - {label: "404 Page", name: "page404", widget: "hidden", default: true}
           - {label: "Slug", name: "slug", widget: "hidden", default: "/404"}
           - {label: "Nav", name: "nav", widget: "hidden", default: false}
-          - {label: "Title", name: "title", widget: "string", default: "Page not found"}
+          - {label: "Page Title", name: "title", widget: "string", default: "Page not found"}
           - {label: "Body", name: "body", widget: "markdown"}
 
   - label: "Custom Pages"
@@ -103,10 +105,11 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: "Page Type", name: "pageType", widget: "select", options: ["standard", "menu-only"], default: "standard"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Show in navigation", name: "nav", widget: "boolean", default: true}
-      - {label: "Navigation sort number", name: "navSort", widget: "number", min: "2", valueType: "int"}
+      - {label: "Menu Title", name: "menuTitle", widget: "string"}
+      - {label: "Show in menu", name: "nav", widget: "boolean", default: true}
+      - {label: "Menu sort number", name: "navSort", widget: "number", min: "2", valueType: "int"}
       - {label: "Parent page", name: "parent", widget: "relation", collection: "customs", searchFields: ["title"], valueField: "title", required: false}
+      - {label: "Page Title", name: "title", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
 
   - label: "Settings"
