@@ -1,5 +1,6 @@
 import React from 'react';
 import Banner from '../../components/banner';
+import { Row, Col } from 'reactstrap';
 
 const HomePreview = ({ entry, widgetFor }) => {
     return(
@@ -14,10 +15,15 @@ const HomePreview = ({ entry, widgetFor }) => {
                 buttonColour={entry.getIn(['data', 'banner', 'buttonColour'])}
                 align={entry.getIn(['data', 'banner', 'align'])}
             />
-            <div className={`text-${entry.getIn(['data', 'contentAlign'])}`}>
-                <h1>{entry.getIn(['data', 'title'])}</h1>
-                <div>{widgetFor('body')}</div>
-            </div>
+
+            <section className="container mt-4">
+                <Row>
+                    <Col className={`text-${entry.getIn(['data', 'contentAlign'])}`}>
+                        <h1>{entry.getIn(['data', 'title'])}</h1>
+                        <div>{widgetFor('body')}</div>
+                    </Col>
+                </Row>
+            </section>
         </div>
     );
 }
