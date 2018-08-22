@@ -18,8 +18,8 @@ collections:
         fields:
           - {label: "Page Type", name: "pageType", widget: "hidden", default: "none"}
           - {label: "Show in navigation", name: "nav", widget: "boolean", default: true}
-          - label: "Hero"
-            name: "hero"
+          - label: "Banner"
+            name: "banner"
             widget: "object"
             fields:
               - {label: "Visible", name: "visible", widget: "boolean", default: false}

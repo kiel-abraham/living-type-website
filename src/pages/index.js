@@ -7,13 +7,13 @@ const HomePage = ({ data }) => {
   return (
     <div>
       <Banner
-        visible={frontmatter.hero.visible}
-        fullWidth={frontmatter.hero.fullWidth}
-        title={frontmatter.hero.title}
-        subtitle={frontmatter.hero.subtitle}
-        button={frontmatter.hero.button}
-        buttonColour={frontmatter.hero.buttonColour}
-        align={frontmatter.hero.align}
+        visible={frontmatter.banner.visible}
+        fullWidth={frontmatter.banner.fullWidth}
+        title={frontmatter.banner.title}
+        subtitle={frontmatter.banner.subtitle}
+        button={frontmatter.banner.button}
+        buttonColour={frontmatter.banner.buttonColour}
+        align={frontmatter.banner.align}
       />
 
       <section className="container mt-4">
@@ -36,7 +36,7 @@ export const IndexQuery = graphql`
       html
       frontmatter {
         title
-        hero {
+        banner {
           visible
           fullWidth
           align
