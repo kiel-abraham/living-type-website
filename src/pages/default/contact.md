@@ -23,14 +23,11 @@ inputs:
       required: true
       type: email
   - item:
-      name: Subject
-      placeholder: Enter your
-      required: true
-      type: text
-  - item:
       name: Message
       placeholder: Enter your message
       required: true
       type: textarea
+  - item:
+      name: New line
 ---
 This is the contact page. More work needs to be done
