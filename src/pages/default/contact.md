@@ -5,27 +5,31 @@ title: Contact
 nav: true
 navSort: 4
 email: info@test.com
-phone: '1300222999'
+phone: '1300222111'
 address: '35 Boundary Rd, West End, Qld 4101'
 form:
-    formTitle: "Send a message"
-    buttonColor: "primary"
-    buttonText: "Send"
+  buttonColor: success
+  buttonText: Send
+  formTitle: Send a message
 inputs:
-    - item:
-        type: "text"
-        name: "Name"
-        placeholder: "Enter your name"
-        required: true
-    - item:
-        type: "email"
-        name: "Email"
-        placeholder: "Enter your email"
-        required: true
-    - item:
-        type: "textarea"
-        name: "Message"
-        placeholder: "Enter your message"
-        required: true
+  - item:
+      name: Name
+      placeholder: Enter your name
+      required: true
+      type: text
+  - item:
+      name: Email
+      placeholder: Enter your email
+      required: true
+      type: email
+  - item:
+      name: Subject
+      placeholder: Enter a subject
+      required: true
+  - item:
+      name: Message
+      placeholder: Enter your message
+      required: true
+      type: textarea
 ---
-This is the contact page.
+This is the contact page. More work needs to be done
