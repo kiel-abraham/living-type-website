@@ -84,12 +84,11 @@ collections:
         name: "404"
         file: "src/pages/default/404.md"
         fields:
-          - {label: "Page Type", name: "pageType", widget: "hidden", default: "none"}
-          - {label: "Title", name: "title", widget: "hidden", default: "404"}
+          - {label: "Page Type", name: "pageType", widget: "hidden", default: "none"}er
           - {label: "404 Page", name: "page404", widget: "hidden", default: true}
           - {label: "Slug", name: "slug", widget: "hidden", default: "/404"}
           - {label: "Nav", name: "nav", widget: "hidden", default: false}
-          - {label: "Title", name: "pageTitle", widget: "string", default: "Page not found"}
+          - {label: "Title", name: "title", widget: "string", default: "Page not found"}
           - {label: "Body", name: "body", widget: "markdown"}
 
   - label: "Custom Pages"

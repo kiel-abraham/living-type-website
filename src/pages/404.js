@@ -5,7 +5,7 @@ const NotFoundPage = ({ data }) => (
   <section className="container mt-4">
     <Row>
       <Col>
-        <h1>{data.markdownRemark.frontmatter.pageTitle}</h1>
+        <h1>{data.markdownRemark.frontmatter.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
       </Col>
     </Row>
@@ -19,7 +19,7 @@ export const query404 = graphql`
     markdownRemark(frontmatter: { page404: { eq: true } }) {
       html
       frontmatter {
-        pageTitle
+        title
       }
     }
   }

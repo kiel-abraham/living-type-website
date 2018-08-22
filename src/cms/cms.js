@@ -10,4 +10,5 @@ CMS.registerPreviewTemplate('home', HomePreview);
 CMS.registerPreviewTemplate('contact', ContactPreview);
 CMS.registerPreviewTemplate('thankyou', CustomsPreview);
 CMS.registerPreviewTemplate('customs', CustomsPreview);
+CMS.registerPreviewTemplate('404', CustomsPreview);
 CMS.registerPreviewTemplate('settings', SettingsPreview);
