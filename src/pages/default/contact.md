@@ -8,7 +8,7 @@ email: info@test.com
 phone: '1300222111'
 address: '35 Boundary Rd, West End, Qld 4101'
 form:
-  buttonColor: success
+  buttonColor: primary
   buttonText: Send
   formTitle: Send a message
 inputs:
@@ -27,7 +27,5 @@ inputs:
       placeholder: Enter your message
       required: true
       type: textarea
-  - item:
-      name: ''
 ---
 This is the contact page. More work needs to be done
