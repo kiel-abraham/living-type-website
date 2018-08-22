@@ -92,6 +92,7 @@ export const query = graphql`
         node {
           frontmatter {
             title
+            menuTitle
             slug
           }
         }

@@ -2,7 +2,7 @@
 pageType: contact
 slug: /contact
 title: Contact
-menuTitle: Contact
+menuTitle: "Contact"
 nav: true
 navSort: 4
 email: info@test.com

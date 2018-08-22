@@ -43,7 +43,7 @@ class Header extends React.Component {
                             exact to={item.node.frontmatter.slug}
                             activeClassName="active"
                             className="nav-link"
-                            onClick={this.toggle}>{item.node.frontmatter.title}
+                            onClick={this.toggle}>{item.node.frontmatter.menuTitle || item.node.frontmatter.title}
                           </Link>
                         </NavItem>
                       )
@@ -69,7 +69,7 @@ class Header extends React.Component {
                           exact to={item.node.frontmatter.slug}
                           activeClassName="active"
                           className="nav-link px-2"
-                          onClick={this.toggle}>{item.node.frontmatter.title}
+                          onClick={this.toggle}>{item.node.frontmatter.menuTitle || item.node.frontmatter.title}
                         </Link>
                       </NavItem>
                     )
@@ -98,7 +98,7 @@ class Header extends React.Component {
                           exact to={item.node.frontmatter.slug}
                           activeClassName="active"
                           className="nav-link px-2"
-                          onClick={this.toggle}>{item.node.frontmatter.title}
+                          onClick={this.toggle}>{item.node.frontmatter.menuTitle || item.node.frontmatter.title}
                         </Link>
                       </NavItem>
                     )

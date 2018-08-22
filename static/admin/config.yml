@@ -47,7 +47,7 @@ collections:
         fields:
           - {label: "Page Type", name: "pageType", widget: "hidden", default: "contact"}
           - {label: "Slug", name: "slug", widget: "hidden", default: "/contact"}
-          - {label: "Menu Title", name: "navTitle", widget: "string", default: "Contact"}
+          - {label: "Menu Title", name: "menuTitle", widget: "string", default: "Contact"}
           - {label: "Show in menu", name: "nav", widget: "boolean", default: true}
           - {label: "Menu sort number", name: "navSort", widget: "number", min: "2", valueType: "int"}
           - {label: "Page Title", name: "title", widget: "string", default: "Contact"}
