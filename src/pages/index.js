@@ -19,7 +19,7 @@ const HomePage = ({ data }) => {
 
       <section className="container mt-4">
         <Row>
-          <Col>
+          <Col className={`text-${frontmatter.contentAlign}`}>
             <h1>{frontmatter.title}</h1>
             <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
           </Col>
@@ -37,6 +37,7 @@ export const IndexQuery = graphql`
       html
       frontmatter {
         title
+        contentAlign
         banner {
           visible
           fullWidth

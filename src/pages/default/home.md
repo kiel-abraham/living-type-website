@@ -1,5 +1,6 @@
 ---
 title: "Home"
+contentAlign: "left"
 homePage: true
 pageType: "none"
 slug: "/"

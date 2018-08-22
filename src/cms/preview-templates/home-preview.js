@@ -14,8 +14,10 @@ const HomePreview = ({ entry, widgetFor }) => {
                 buttonColour={entry.getIn(['data', 'banner', 'buttonColour'])}
                 align={entry.getIn(['data', 'banner', 'align'])}
             />
-            <h1>{entry.getIn(['data', 'title'])}</h1>
-            <div>{widgetFor('body')}</div>
+            <div className={`text-${entry.getIn(['data', 'contentAlign'])}`}>
+                <h1>{entry.getIn(['data', 'title'])}</h1>
+                <div>{widgetFor('body')}</div>
+            </div>
         </div>
     );
 }

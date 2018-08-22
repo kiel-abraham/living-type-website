@@ -30,12 +30,13 @@ collections:
               - {label: "Title", name: "title", widget: "string", required: false}
               - {label: "Subtitle", name: "subtitle", widget: "text", required: false}
               - {label: "Button text", name: "button", widget: "string", required: false}
-              - {label: "Button link - enter full URL", name: "buttonLink", widget: "string", required: false}
+              - {label: "Button Link", name: "buttonLink", widget: "string", required: false}
               - {label: "Button colour", name: "buttonColour", widget: "select", options: ["primary", "secondary", "info", "success", "warning", "danger", "dark"], default: "primary"}
               - {label: "Align", name: "align", widget: "select", options: ["left", "center", "right"], default: "left"}
               - {label: "Background Image", name: "image", widget: "image"}
               - {label: "Image Overlay", name: "overlay", widget: "select", options: ["none", "light", "dark", "primary"], default: "none"}
           - {label: "Title", name: "title", widget: "string"}
+          - {label: "Align", name: "contentAlign", widget: "select", options: ["left", "center", "right"], default: "left"}
           - {label: "Body", name: "body", widget: "markdown"}
           
         
@@ -78,9 +79,9 @@ collections:
         file: "src/pages/default/thankyou.md"
         fields:
           - {label: "Page Type", name: "pageType", widget: "hidden", default: "standard"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Slug", name: "slug", widget: "hidden", default: "/thank-you"}
+          - {label: "Slug", name: "slug", widget: "hidden", default: "/thankyou"}
           - {label: "Show in navigation", name: "nav", widget: "hidden", default: false}
+          - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
       
       - label: "404 Page"
