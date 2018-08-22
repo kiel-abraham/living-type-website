@@ -24,8 +24,9 @@ inputs:
       type: email
   - item:
       name: Subject
-      placeholder: Enter a subject
+      placeholder: Enter your
       required: true
+      type: text
   - item:
       name: Message
       placeholder: Enter your message
