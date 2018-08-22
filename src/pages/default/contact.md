@@ -28,6 +28,6 @@ inputs:
       required: true
       type: textarea
   - item:
-      name: New line
+      name: ''
 ---
 This is the contact page. More work needs to be done
