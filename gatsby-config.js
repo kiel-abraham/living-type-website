@@ -21,6 +21,14 @@ module.exports = {
         modulePath: `${__dirname}/src/cms/cms.js`,
       }
     },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: `${siteMetadata.url}`,
+        sitemap: `${siteMetadata.url}sitemap.xml`,
+        policy: [{ userAgent: '*', disallow: '/admin/' }]
+      }
+    },
     'gatsby-plugin-netlify'
   ]
 }
