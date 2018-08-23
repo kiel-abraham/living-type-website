@@ -22,6 +22,12 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        exclude: ["/admin/*"]
+      }
+    },
+    {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         policy: [{ userAgent: '*', disallow: ['/admin/'] }]
