@@ -54,7 +54,7 @@ const Layout = ({ children, data }) => {
         socialColour={data.settings.frontmatter.socialColour}
         links={data.settings.frontmatter.socialLinks}
         siteTitle={data.site.siteMetadata.title}
-        url={data.site.siteMetadata.url}
+        url={data.site.siteMetadata.siteUrl}
       />
 
       {data.settings.frontmatter.floatingButton.visible &&
@@ -79,7 +79,7 @@ export const query = graphql`
     site {
       id
       siteMetadata {
-        url
+        siteUrl
         title
         tagline
       }
