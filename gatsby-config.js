@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    url: 'https://thkrcms.netlify.com/',
+    siteUrl: 'https://thkrcms.netlify.com',
     title: 'THKR CMS',
     tagline: 'Simple websites for small businesses'
   },
@@ -24,8 +24,6 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: `${siteMetadata.url}`,
-        sitemap: `${siteMetadata.url}sitemap.xml`,
         policy: [{ userAgent: '*', disallow: ['/admin/'] }]
       }
     },
