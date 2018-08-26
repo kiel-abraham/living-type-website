@@ -10,12 +10,17 @@ import './theme.min.css';
 import './index.css';
 
 const Layout = ({ children, data }) => {
-  const meta = data.home.frontmatter.metaDesc || data.site.siteMetadata.title;
+  const metaDesc = data.home.frontmatter.metaDesc || data.site.siteMetadata.title;
   return (
     <div>
       <Helmet>
         <title>{data.site.siteMetadata.title} | {data.site.siteMetadata.tagline}</title>
-        <meta name="description" content={meta}/>
+        <meta name="description" content={metaDesc}/>
+        <meta property="og:title" content={`${data.site.siteMetadata.title} | ${data.site.siteMetadata.tagline}`}/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:description" content={metaDesc}/>
+        {/*<meta property="og:url" content="http://www.yourdomain.com" />*/}
+        {/*<meta property="og:image" content="http://www.yourdomain.com/image-name.jpg" />*/}
         {/*<link rel="shortcut icon" href="/assets/favicon_logo.png"/>*/}
       </Helmet>
 

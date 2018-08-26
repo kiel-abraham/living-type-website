@@ -40,6 +40,7 @@ collections:
           - {label: "Align", name: "contentAlign", widget: "select", options: ["left", "center", "right"], default: "left"}
           - {label: "Body", name: "body", widget: "markdown"}
           - {label: "Meta Description", name: "metaDesc", widget: "text"}
+          - {label: "Meta Image", name: "metaImage", widget: "image", required: false}
 
       - label: "Contact Page"
         name: "contact"
@@ -56,6 +57,7 @@ collections:
           - {label: "Address", name: "address", widget: "string", required: false}
           - {label: "Body", name: "body", widget: "markdown"}
           - {label: "Meta Description", name: "metaDesc", widget: "text"}
+          - {label: "Meta Image", name: "metaImage", widget: "image", required: false}
           - label: "Form"
             name: "form"
             widget: "object"
@@ -87,6 +89,7 @@ collections:
           - {label: "Page Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
           - {label: "Meta Description", name: "metaDesc", widget: "text"}
+          - {label: "Meta Image", name: "metaImage", widget: "image", required: false}
 
       - label: "404 Page"
         name: "404"
@@ -114,6 +117,7 @@ collections:
       - {label: "Page Title", name: "title", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Meta Description", name: "metaDesc", widget: "text"}
+      - {label: "Meta Image", name: "metaImage", widget: "image", required: false}
 
   - label: "Settings"
     name: "settings"
@@ -133,8 +137,7 @@ collections:
               - {label: "Menu Style", name: "menu", widget: "select", options: ["Standard", "Scroll", "Slide"], default: "Standard"}
               - {label: "Background Colour", name: "background", widget: "select", options: ["primary", "secondary", "info", "success", "warning", "danger", "dark"], default: "primary"}
               - {label: "Invert", name: "invert", widget: "boolean", default: false}
-          - {label: "Favicon - 32 x 32px", name: "favicon", widget: "image", required: false}
-          - {label: "Website Image", name: "ogImage", widget: "image", required: false}
+          - {label: "Favicon", name: "favicon", widget: "image", required: false}
           - {label: "Footer Background", name: "footerBackground", widget: "select", options: ["dark", "light"], default: "dark"}
           - {label: "Social Links Colour", name: "socialColour", widget: "select", options: ["primary", "secondary", "info", "success", "warning", "danger", "dark"], default: "primary"}
           - {label: "Social Links", name: "socialLinks", widget: "list", fields: [{label: "Link", name: "link", widget: "string"}]}
