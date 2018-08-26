@@ -10,11 +10,12 @@ import './theme.min.css';
 import './index.css';
 
 const Layout = ({ children, data }) => {
+  const meta = data.home.frontmatter.metaDesc || data.site.siteMetadata.title;
   return (
     <div>
       <Helmet>
         <title>{data.site.siteMetadata.title} | {data.site.siteMetadata.tagline}</title>
-        <meta name="description" content="THKR CMS"/>
+        <meta name="description" content={meta}/>
         {/*<link rel="shortcut icon" href="/assets/favicon_logo.png"/>*/}
       </Helmet>
 
@@ -82,6 +83,11 @@ export const query = graphql`
         siteUrl
         title
         tagline
+      }
+    }
+    home: markdownRemark(frontmatter: { homePage: { eq: true } }) {
+      frontmatter {
+        metaDesc
       }
     }
     nav: allMarkdownRemark(

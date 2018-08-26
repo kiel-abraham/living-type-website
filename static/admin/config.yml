@@ -39,6 +39,7 @@ collections:
           - {label: "Page Title", name: "title", widget: "string"}
           - {label: "Align", name: "contentAlign", widget: "select", options: ["left", "center", "right"], default: "left"}
           - {label: "Body", name: "body", widget: "markdown"}
+          - {label: "Meta Description", name: "metaDesc", widget: "text"}
 
       - label: "Contact Page"
         name: "contact"
@@ -54,6 +55,7 @@ collections:
           - {label: "Phone", name: "phone", widget: "string", required: false}
           - {label: "Address", name: "address", widget: "string", required: false}
           - {label: "Body", name: "body", widget: "markdown"}
+          - {label: "Meta Description", name: "metaDesc", widget: "text"}
           - label: "Form"
             name: "form"
             widget: "object"
@@ -84,6 +86,7 @@ collections:
           - {label: "Nav", name: "nav", widget: "hidden", default: false}
           - {label: "Page Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
+          - {label: "Meta Description", name: "metaDesc", widget: "text"}
 
       - label: "404 Page"
         name: "404"
@@ -110,6 +113,7 @@ collections:
       - {label: "Parent page", name: "parent", widget: "relation", collection: "customs", searchFields: ["title"], valueField: "title", required: false}
       - {label: "Page Title", name: "title", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Meta Description", name: "metaDesc", widget: "text"}
 
   - label: "Settings"
     name: "settings"

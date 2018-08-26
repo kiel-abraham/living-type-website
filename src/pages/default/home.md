@@ -16,6 +16,7 @@ banner:
   buttonLink: "/about"
   buttonColour: "primary"
   align: "center"
+metaDesc: "Welcome to THKR CMS. Where we make simple easy"
 ---
 <p>This is the home page. </p>
 <p>This is another part of it</p>

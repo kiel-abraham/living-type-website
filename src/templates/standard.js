@@ -7,7 +7,12 @@ const StandardPage = ({ data }) => {
   const frontmatter = data.markdownRemark.frontmatter;
   return (
     <div>
-      <Helmet title={`${frontmatter.title} | ${data.site.siteMetadata.title}`} />
+      <Helmet>
+        <title>{`${frontmatter.title} | ${data.site.siteMetadata.title}`}</title>
+        {frontmatter.metaDesc &&
+          <meta name="description" content={frontmatter.metaDesc}/>
+        }
+      </Helmet>
       
       <section className="container mt-4">
         <Row>
@@ -34,6 +39,7 @@ export const query = graphql`
       html
       frontmatter {
         title
+        metaDesc
       }
     }
   }

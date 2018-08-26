@@ -30,7 +30,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        policy: [{ userAgent: '*', disallow: ['/admin/'] }]
+        policy: [{ userAgent: '*', disallow: ['/admin/*'] }]
       }
     },
     'gatsby-plugin-netlify'

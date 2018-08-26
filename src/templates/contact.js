@@ -6,7 +6,12 @@ const ContactPage = ({ data }) => {
   const frontmatter = data.markdownRemark.frontmatter;
   return (
     <div>
-      <Helmet title={`${frontmatter.title} | ${data.site.siteMetadata.title}`} />
+      <Helmet>
+        <title>{`${frontmatter.title} | ${data.site.siteMetadata.title}`}</title>
+        {frontmatter.metaDesc &&
+          <meta name="description" content={frontmatter.metaDesc}/>
+        }
+      </Helmet>
 
       <Contact
         title={frontmatter.title}
@@ -36,6 +41,7 @@ export const ContactQuery = graphql`
       html
       frontmatter {
         title
+        metaDesc
         phone
         email
         address
