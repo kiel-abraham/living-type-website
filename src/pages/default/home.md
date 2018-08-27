@@ -19,7 +19,7 @@ banner:
 title: Home
 contentAlign: left
 metaDesc: Welcome to THKR CMS. Where we make simple easy
-metaImage: /images/mas-logo.png
+metaImage: /images/shirt-idea-2.jpg
 ---
 <p>This is the home page. </p>
 <p>This is another part of it</p>
