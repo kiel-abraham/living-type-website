@@ -10,24 +10,24 @@ const SettingsPreview = ({ entry }) => {
         {
           "node": {
             "frontmatter": {
-              "title": "Home",
-              "slug": "/"
+              "title": "Menu1",
+              "slug": "#"
             }
           }
         },
         {
           "node": {
             "frontmatter": {
-              "title": "About",
-              "slug": "/about"
+              "title": "Menu2",
+              "slug": "#"
             }
           }
         },
         {
           "node": {
             "frontmatter": {
-              "title": "Contact",
-              "slug": "/contact"
+              "title": "Menu3",
+              "slug": "#"
             }
           }
         }
