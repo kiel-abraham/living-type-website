@@ -24,7 +24,9 @@ const Layout = ({ children, data }) => {
         {data.home.frontmatter.metaImage &&
           <meta property="og:image" content={data.site.siteMetadata.siteUrl + data.home.frontmatter.metaImage} />
         }
-        {/*<link rel="shortcut icon" href="/assets/favicon_logo.png"/>*/}
+        {data.settings.frontmatter.favicon &&
+          <link rel="shortcut icon" href={data.site.siteMetadata.siteUrl + data.settings.frontmatter.favicon} />
+        }
       </Helmet>
 
       {/*
@@ -120,6 +122,7 @@ export const query = graphql`
           background
           invert
         }
+        favicon
         footerBackground
         floatingButton {
           visible
