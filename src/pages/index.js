@@ -11,6 +11,7 @@ const HomePage = ({ data }) => {
         fullWidth={frontmatter.banner.fullWidth}
         title={frontmatter.banner.title}
         subtitle={frontmatter.banner.subtitle}
+        image={frontmatter.banner.image}
         button={frontmatter.banner.button}
         buttonLink={frontmatter.banner.buttonLink}
         buttonColour={frontmatter.banner.buttonColour}
@@ -44,6 +45,7 @@ export const IndexQuery = graphql`
           align
           title
           subtitle
+          image
           button
           buttonLink
           buttonColour

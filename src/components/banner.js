@@ -2,11 +2,10 @@ import React from 'react';
 import Link from 'gatsby-link';
 import { Jumbotron } from 'reactstrap';
 
-const Banner = ({ visible, fullWidth, title, subtitle, button, buttonLink, buttonColour, align }) => {
-  // const image = "https://wallpaperclicker.com/storage/wallpaper/Red-Background-88480120.jpg";
-  const image = '';
+const Banner = ({ visible, fullWidth, title, subtitle, image, button, buttonLink, buttonColour, align }) => {
+  const bannerImage = image || '';
   const backStyles = {
-    backgroundImage: `url(${image})`,
+    backgroundImage: `url(${bannerImage})`,
     backgroundSize: 'cover',
     minHeight: '300px',
     maxHeight: '400px'
