@@ -4,6 +4,7 @@ pageType: none
 header:
   background: primary
   invert: false
+  logo: /images/thkr-logo.png
   menu: Standard
 favicon: /images/mas-logo.png
 footerBackground: dark
