@@ -6,7 +6,7 @@ header:
   invert: false
   logo: /images/thkr-logo.png
   menu: Standard
-favicon: /images/mas-logo.png
+favicon: /images/thkr-logo.png
 footerBackground: dark
 socialColour: secondary
 socialLinks:
