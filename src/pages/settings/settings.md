@@ -1,20 +1,20 @@
 ---
 settingsPage: true
-pageType: "none"
-tagline: "This is the tagline"
+pageType: none
 header:
-    menu: "Standard"
-    background: "primary"
-    invert: false
-footerBackground: "dark"
-floatingButton:
-    visible: true
-    type: "Phone"
-    colour: "primary"
-socialColour: "secondary"
+  background: primary
+  invert: false
+  menu: Standard
+favicon: /images/mas-logo.png
+footerBackground: dark
+socialColour: secondary
 socialLinks:
-    - link: "https://www.facebook.com"
-    - link: "https://www.google.com"
-    - link: "https://www.twitter.com"
+  - link: 'https://www.facebook.com'
+  - link: 'https://www.google.com'
+  - link: 'https://www.twitter.com'
+floatingButton:
+  colour: primary
+  type: Email
+  visible: true
 ---
 
