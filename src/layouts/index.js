@@ -20,6 +20,7 @@ const Layout = ({ children, data }) => {
         <meta property="og:type" content="website"/>
         <meta property="og:description" content={metaDesc}/>
         <meta property="og:url" content={data.site.siteMetadata.siteUrl} />
+        <meta property="og:site_name" content={data.site.siteMetadata.title} />
         {data.home.frontmatter.metaImage &&
           <meta property="og:image" content={data.site.siteMetadata.siteUrl + data.home.frontmatter.metaImage} />
         }

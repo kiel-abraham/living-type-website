@@ -10,6 +10,7 @@ const StandardPage = ({ data }) => {
       <Helmet>
         <title>{`${frontmatter.title} | ${data.site.siteMetadata.title}`}</title>
         <meta property="og:title" content={`${frontmatter.title} | ${data.site.siteMetadata.title}`}/>
+        <meta property="og:url" content={data.site.siteMetadata.siteUrl + frontmatter.slug} />
         {frontmatter.metaDesc &&
           <meta name="description" content={frontmatter.metaDesc}/>
         }
@@ -44,6 +45,7 @@ export const query = graphql`
       html
       frontmatter {
         title
+        slug
         metaDesc
         metaImage
       }
