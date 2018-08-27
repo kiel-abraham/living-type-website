@@ -8,8 +8,12 @@ const ContactPage = ({ data }) => {
     <div>
       <Helmet>
         <title>{`${frontmatter.title} | ${data.site.siteMetadata.title}`}</title>
+        <meta property="og:title" content={`${frontmatter.title} | ${data.site.siteMetadata.title}`}/>
         {frontmatter.metaDesc &&
           <meta name="description" content={frontmatter.metaDesc}/>
+        }
+        {frontmatter.metaImage &&
+          <meta property="og:image" content={data.site.siteMetadata.siteUrl + frontmatter.metaImage} />
         }
       </Helmet>
 
@@ -35,6 +39,7 @@ export const ContactQuery = graphql`
     site {
       siteMetadata {
         title
+        siteUrl
       }
     }
     markdownRemark(frontmatter: { pageType: { eq: "contact" } }) {
@@ -42,6 +47,7 @@ export const ContactQuery = graphql`
       frontmatter {
         title
         metaDesc
+        metaImage
         phone
         email
         address

@@ -19,8 +19,10 @@ const Layout = ({ children, data }) => {
         <meta property="og:title" content={`${data.site.siteMetadata.title} | ${data.site.siteMetadata.tagline}`}/>
         <meta property="og:type" content="website"/>
         <meta property="og:description" content={metaDesc}/>
-        {/*<meta property="og:url" content="http://www.yourdomain.com" />*/}
-        {/*<meta property="og:image" content="http://www.yourdomain.com/image-name.jpg" />*/}
+        <meta property="og:url" content={data.site.siteMetadata.siteUrl} />
+        {data.home.frontmatter.metaImage &&
+          <meta property="og:image" content={data.site.siteMetadata.siteUrl + data.home.frontmatter.metaImage} />
+        }
         {/*<link rel="shortcut icon" href="/assets/favicon_logo.png"/>*/}
       </Helmet>
 
@@ -93,6 +95,7 @@ export const query = graphql`
     home: markdownRemark(frontmatter: { homePage: { eq: true } }) {
       frontmatter {
         metaDesc
+        metaImage
       }
     }
     nav: allMarkdownRemark(
