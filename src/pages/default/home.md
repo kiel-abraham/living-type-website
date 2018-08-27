@@ -17,7 +17,7 @@ banner:
   title: Welcome to THKR
   visible: true
 title: Home
-contentAlign: left
+contentAlign: center
 metaDesc: Welcome to THKR CMS. Where we make simple easy
 metaImage: /images/shirt-idea-2.jpg
 ---
@@ -25,4 +25,4 @@ This is the home page.
 
 Look an image
 
-![](/images/shirt-idea-2.jpg)
+![Tshirt logo](/images/thkr-logo.png)
