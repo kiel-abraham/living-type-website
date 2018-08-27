@@ -21,5 +21,8 @@ contentAlign: left
 metaDesc: Welcome to THKR CMS. Where we make simple easy
 metaImage: /images/shirt-idea-2.jpg
 ---
-<p>This is the home page. </p>
-<p>This is another part of it</p>
+This is the home page.
+
+Look an image
+
+![Logo tshirt](/images/shirt-idea-2.jpg)
