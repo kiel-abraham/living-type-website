@@ -25,4 +25,4 @@ This is the home page.
 
 Look an image
 
-![Logo tshirt](/images/shirt-idea-2.jpg)
+![](/images/shirt-idea-2.jpg)
