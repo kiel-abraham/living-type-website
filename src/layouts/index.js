@@ -54,6 +54,7 @@ const Layout = ({ children, data }) => {
         invert={data.settings.frontmatter.header.invert}
         siteTitle={data.site.siteMetadata.title}
         nav={data.nav.edges}
+        logo={data.settings.frontmatter.header.logo}
       />
 
       <main id="main-content" className="mb-5">
@@ -95,12 +96,6 @@ export const query = graphql`
         tagline
       }
     }
-    home: markdownRemark(frontmatter: { homePage: { eq: true } }) {
-      frontmatter {
-        metaDesc
-        metaImage
-      }
-    }
     nav: allMarkdownRemark(
       filter: {frontmatter: {nav: {eq: true}}}
       sort: {fields: [frontmatter___navSort], order: ASC}
@@ -115,12 +110,19 @@ export const query = graphql`
         }
       }
     }
+    home: markdownRemark(frontmatter: { homePage: { eq: true } }) {
+      frontmatter {
+        metaDesc
+        metaImage
+      }
+    }
     settings: markdownRemark(frontmatter: { settingsPage: { eq: true } }) {
       frontmatter {
         header {
           menu
           background
           invert
+          logo
         }
         favicon
         footerBackground

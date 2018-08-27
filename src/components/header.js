@@ -89,7 +89,7 @@ class Header extends React.Component {
         <header>
           <nav className={`navbar navbar-${invert} bg-${this.props.background}`}>
             <Container style={{padding: 0}}>
-              <Logo logo="" siteTitle={this.props.siteTitle} />
+              <Logo logo={this.props.logo} siteTitle={this.props.siteTitle} />
                 <ul className="navbar-nav" style={{flexDirection: "row"}}>
                   {this.props.nav.map((item, index) => {
                     return (

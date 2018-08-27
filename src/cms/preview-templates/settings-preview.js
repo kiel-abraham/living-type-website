@@ -41,6 +41,7 @@ const SettingsPreview = ({ entry }) => {
                 invert={entry.getIn(['data', 'header', 'invert'])}
                 nav={navList}
                 siteTitle="THKR CMS"
+                logo={entry.getIn(['data', 'header', 'logo'])}
             />
 
             <Footer
