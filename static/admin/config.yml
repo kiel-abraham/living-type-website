@@ -109,7 +109,7 @@ collections:
     folder: "src/pages/custom"
     slug: "{{slug}}"
     fields:
-      - {label: "Slug", name: "slug", widget: "hidden"}
+      ## - {label: "Slug", name: "slug", widget: "hidden"}
       - {label: "Page Type", name: "pageType", widget: "select", options: ["standard", "menu-only"], default: "standard"}
       - {label: "Menu Title", name: "menuTitle", widget: "string"}
       - {label: "Show in menu", name: "nav", widget: "boolean", default: true}
