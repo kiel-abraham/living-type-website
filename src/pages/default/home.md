@@ -7,11 +7,11 @@ navTitle: Home
 nav: true
 banner:
   align: center
-  button: About Us
-  image: ""
+  button: About
   buttonColour: primary
   buttonLink: /about
   fullWidth: false
+  image: ''
   subtitle: >-
     THKR (Thinker) is an Australian based business helping people create fast,
     simple sites with custom assistance.
