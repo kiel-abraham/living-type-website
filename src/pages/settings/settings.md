@@ -4,7 +4,7 @@ pageType: none
 header:
   background: primary
   invert: false
-  logo: ''
+  logo: /images/thkr-logo.png
   menu: Standard
 favicon: /images/thkr-logo.png
 footerBackground: dark
