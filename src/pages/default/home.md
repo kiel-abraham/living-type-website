@@ -24,6 +24,3 @@ metaImage: ''
 ---
 This is the home page.
 
-Look an image
-
-![Tshirt logo](/images/thkr-logo.png)
