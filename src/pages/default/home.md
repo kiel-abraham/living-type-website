@@ -7,7 +7,7 @@ navTitle: Home
 nav: true
 banner:
   align: center
-  button: About
+  button: About Us
   buttonColour: primary
   buttonLink: /about
   fullWidth: false
