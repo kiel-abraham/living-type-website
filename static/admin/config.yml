@@ -34,12 +34,12 @@ collections:
               - {label: "Button Link", name: "buttonLink", widget: "string", required: false}
               - {label: "Button colour", name: "buttonColour", widget: "select", options: ["primary", "secondary", "info", "success", "warning", "danger", "dark"], default: "primary"}
               - {label: "Align", name: "align", widget: "select", options: ["left", "center", "right"], default: "left"}
-              - {label: "Background Image", name: "image", widget: "image"}
+              - {label: "Background Image", name: "image", widget: "image", default: ""}
               - {label: "Image Overlay", name: "overlay", widget: "select", options: ["none", "light", "dark", "primary"], default: "none"}
           - {label: "Page Title", name: "title", widget: "string"}
           - {label: "Align", name: "contentAlign", widget: "select", options: ["left", "center", "right"], default: "left"}
           - {label: "Body", name: "body", widget: "markdown"}
-          - {label: "Meta Description", name: "metaDesc", widget: "text"}
+          - {label: "Meta Description", name: "metaDesc", widget: "text", required: false}
           - {label: "Meta Image", name: "metaImage", widget: "image", required: false}
 
       - label: "Contact Page"
@@ -56,7 +56,7 @@ collections:
           - {label: "Phone", name: "phone", widget: "string", required: false}
           - {label: "Address", name: "address", widget: "string", required: false}
           - {label: "Body", name: "body", widget: "markdown"}
-          - {label: "Meta Description", name: "metaDesc", widget: "text"}
+          - {label: "Meta Description", name: "metaDesc", widget: "text", required: false}
           - {label: "Meta Image", name: "metaImage", widget: "image", required: false}
           - label: "Form"
             name: "form"
@@ -88,7 +88,7 @@ collections:
           - {label: "Nav", name: "nav", widget: "hidden", default: false}
           - {label: "Page Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
-          - {label: "Meta Description", name: "metaDesc", widget: "text"}
+          - {label: "Meta Description", name: "metaDesc", widget: "text", required: false}
           - {label: "Meta Image", name: "metaImage", widget: "image", required: false}
 
       - label: "404 Page"
@@ -109,6 +109,7 @@ collections:
     folder: "src/pages/custom"
     slug: "{{slug}}"
     fields:
+      - {label: "Slug", name: "slug", widget: "hidden"}
       - {label: "Page Type", name: "pageType", widget: "select", options: ["standard", "menu-only"], default: "standard"}
       - {label: "Menu Title", name: "menuTitle", widget: "string"}
       - {label: "Show in menu", name: "nav", widget: "boolean", default: true}
@@ -116,7 +117,7 @@ collections:
       - {label: "Parent page", name: "parent", widget: "relation", collection: "customs", searchFields: ["title"], valueField: "title", required: false}
       - {label: "Page Title", name: "title", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Meta Description", name: "metaDesc", widget: "text"}
+      - {label: "Meta Description", name: "metaDesc", widget: "text", required: false}
       - {label: "Meta Image", name: "metaImage", widget: "image", required: false}
 
   - label: "Settings"

@@ -8,6 +8,7 @@ nav: true
 banner:
   align: center
   button: About Us
+  image: ""
   buttonColour: primary
   buttonLink: /about
   fullWidth: false
