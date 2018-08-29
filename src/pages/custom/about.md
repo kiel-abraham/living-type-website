@@ -1,9 +1,9 @@
 ---
+slug: /about
 pageType: standard
-title: About
 menuTitle: About
-slug: "/about"
 nav: true
 navSort: 2
+title: About
 ---
-This is the about page
+This is the about page. Testing the slug
