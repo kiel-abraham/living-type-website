@@ -1,4 +1,5 @@
 ---
+slug: /about
 pageType: standard
 menuTitle: About
 nav: true
