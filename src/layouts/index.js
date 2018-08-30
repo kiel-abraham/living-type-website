@@ -11,6 +11,14 @@ import './index.css';
 
 const Layout = ({ children, data }) => {
   const metaDesc = data.home.frontmatter.metaDesc || data.site.siteMetadata.title;
+  let ogImage;
+  if (data.home.frontmatter.metaImage) {
+    ogImage = data.home.frontmatter.metaImage;
+  } else if (data.settings.frontmatter.header.logo) {
+    ogImage = data.settings.frontmatter.header.logo;
+  } else {
+    ogImage = null;
+  }
   return (
     <div>
       <Helmet>
@@ -21,8 +29,8 @@ const Layout = ({ children, data }) => {
         <meta property="og:description" content={metaDesc}/>
         <meta property="og:url" content={data.site.siteMetadata.siteUrl} />
         <meta property="og:site_name" content={data.site.siteMetadata.title} />
-        {data.home.frontmatter.metaImage &&
-          <meta property="og:image" content={data.site.siteMetadata.siteUrl + data.home.frontmatter.metaImage} />
+        {ogImage &&
+          <meta property="og:image" content={data.site.siteMetadata.siteUrl + ogImage} />
         }
         {data.settings.frontmatter.favicon &&
           <link rel="shortcut icon" href={data.site.siteMetadata.siteUrl + data.settings.frontmatter.favicon} />
