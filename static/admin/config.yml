@@ -107,7 +107,7 @@ collections:
     name: "customs"
     create: true
     folder: "src/pages/custom"
-    slug: "{{year}}-{{slug}}"
+    slug: "{{slug}}"
     fields:
       - {label: "Page Type", name: "pageType", widget: "select", options: ["standard", "menu-only"], default: "standard"}
       - {label: "Menu Title", name: "menuTitle", widget: "string"}
