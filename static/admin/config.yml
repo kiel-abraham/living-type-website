@@ -116,7 +116,7 @@ collections:
       ## - {label: "Parent page", name: "parent", widget: "relation", collection: "customs", searchFields: ["title"], valueField: "title", required: false}
       - {label: "Page Title", name: "title", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Slug", name: "slug", widget: "string", pattern: ["([a-z]{0,})", "Must start with a slash and only include letters, numbers or hyphens"], required: false}
+      - {label: "Slug", name: "slug", widget: "string", pattern: ["^/[a-z0-9-]+$", "Must start with a slash and only include lowercase letters, numbers or hyphens"], required: false}
       - {label: "Meta Description", name: "metaDesc", widget: "text", required: false}
       - {label: "Meta Image", name: "metaImage", widget: "image", required: false}
 
