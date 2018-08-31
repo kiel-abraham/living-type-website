@@ -4,6 +4,6 @@ menuTitle: Test
 nav: true
 navSort: 7
 title: Test
-slug: /Test1NN
+slug: ''
 ---
 This is a test page
