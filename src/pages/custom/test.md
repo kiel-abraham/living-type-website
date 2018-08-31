@@ -4,6 +4,6 @@ menuTitle: Test
 nav: true
 navSort: 7
 title: Test
-slug: /test-ad
+slug: /test-ad111
 ---
 This is a test page
