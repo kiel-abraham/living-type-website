@@ -35,24 +35,16 @@ const Layout = ({ children, data }) => {
         {data.settings.frontmatter.favicon &&
           <link rel="shortcut icon" href={data.site.siteMetadata.siteUrl + data.settings.frontmatter.favicon} />
         }
-      </Helmet>
 
-      {/*
-      <script type="application/ld+json">{`
-        {
-          "@context": "http://schema.org",
-          "@type": "Organization",
-          "url": "http://www.example.com",
-          "name": ${data.site.siteMetadata.title},
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+1-401-555-1212",
-            "contactType": "Customer service"
+        <script type="application/ld+json">{`
+          {
+            "@context": "http://schema.org",
+            "@type": "${data.site.siteMetadata.businessType}",
+            "url": "${data.site.siteMetadata.siteUrl}",
+            "name": "${data.site.siteMetadata.title}"
           }
-          ${sameAs}
-        }
-      `}</script>
-      */}
+        `}</script>
+      </Helmet>
 
       <a href="#main-content" className="sr-only sr-only-focusable">Skip to main content</a>
 
@@ -104,6 +96,7 @@ export const query = graphql`
         siteUrl
         title
         tagline
+        businessType
       }
     }
     nav: allMarkdownRemark(

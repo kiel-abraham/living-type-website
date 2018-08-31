@@ -2,7 +2,8 @@ module.exports = {
   siteMetadata: {
     siteUrl: 'https://thkrcms.netlify.com',
     title: 'THKR CMS',
-    tagline: 'Simple websites for small businesses'
+    tagline: 'Simple websites for small businesses',
+    businessType: 'Restaurant'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
