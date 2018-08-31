@@ -78,11 +78,13 @@ const Layout = ({ children, data }) => {
       />
 
       {data.settings.frontmatter.floatingButton.visible &&
-        <FloatButton
-          floatButtonColour={data.settings.frontmatter.floatingButton.colour}
-          floatButton={data.settings.frontmatter.floatingButton.type}
-          phone={data.contact.frontmatter.phone}
-        />
+        <div className="d-lg-none">
+          <FloatButton
+            floatButtonColour={data.settings.frontmatter.floatingButton.colour}
+            floatButton={data.settings.frontmatter.floatingButton.type}
+            phone={data.contact.frontmatter.phone}
+          />
+        </div>
       }
     </div>
   )
