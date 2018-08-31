@@ -5,12 +5,13 @@ import { Row, Col } from 'reactstrap';
 
 const StandardPage = ({ data }) => {
   const frontmatter = data.markdownRemark.frontmatter;
+  const slug = frontmatter.slug || data.markdownRemark.fields.slug;
   return (
     <div>
       <Helmet>
         <title>{`${frontmatter.title} | ${data.site.siteMetadata.title}`}</title>
         <meta property="og:title" content={`${frontmatter.title} | ${data.site.siteMetadata.title}`}/>
-        <meta property="og:url" content={data.site.siteMetadata.siteUrl + frontmatter.slug} />
+        <meta property="og:url" content={data.site.siteMetadata.siteUrl + slug} />
         {frontmatter.metaDesc &&
           <meta name="description" content={frontmatter.metaDesc}/>
         }
@@ -41,8 +42,11 @@ export const query = graphql`
         siteUrl
       }
     }
-    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
       html
+      fields {
+        slug
+      }
       frontmatter {
         title
         slug
