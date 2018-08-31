@@ -3,7 +3,7 @@ module.exports = {
     siteUrl: 'https://thkrcms.netlify.com',
     title: 'THKR CMS',
     tagline: 'Simple websites for small businesses',
-    businessType: 'Restaurant'
+    businessType: 'ProfessionalService'
   },
   plugins: [
     'gatsby-plugin-react-helmet',

@@ -41,7 +41,9 @@ const Layout = ({ children, data }) => {
             "@context": "http://schema.org",
             "@type": "${data.site.siteMetadata.businessType}",
             "url": "${data.site.siteMetadata.siteUrl}",
-            "name": "${data.site.siteMetadata.title}"
+            "name": "${data.site.siteMetadata.title}",
+            "description": "${metaDesc}",
+            "image": "${data.site.siteMetadata.siteUrl + ogImage}"
           }
         `}</script>
       </Helmet>
@@ -67,6 +69,7 @@ const Layout = ({ children, data }) => {
         links={data.settings.frontmatter.socialLinks}
         siteTitle={data.site.siteMetadata.title}
         url={data.site.siteMetadata.siteUrl}
+        businessType={data.site.siteMetadata.businessType}
       />
 
       {data.settings.frontmatter.floatingButton.visible &&
