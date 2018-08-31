@@ -6,7 +6,7 @@ import FaTwitter from 'react-icons/lib/fa/twitter-square';
 import FaYoutube from 'react-icons/lib/fa/youtube-square';
 import FaInstagram from 'react-icons/lib/fa/instagram';
 
-const Footer = ({ background, socialColour, links, siteTitle, url, businessType }) => {
+const Footer = ({ background, socialColour, links, siteTitle }) => {
   const year = new Date().getFullYear();
   const styles = {
     position: "absolute",
@@ -18,14 +18,10 @@ const Footer = ({ background, socialColour, links, siteTitle, url, businessType 
 
   return (
     <footer className={`bg-${background} text-center`} style={styles}>
-      <ul className="nav my-2 d-inline-flex" itemScope itemType={`http://schema.org/${businessType}`}>
-        <meta itemProp="url" content={url}/>
-				{/*<meta itemProp="logo" content="logo"/>*/}
-				<meta itemProp="name" content={siteTitle}/>
+      <ul className="nav my-2 d-inline-flex">
         {links.map((item, index) => {
           return (
             <li className="nav-item" key={index}>
-              <meta itemProp="sameAs" content={item.link}/>
               {(item.link.search("facebook") !== -1) &&
                 <a
                   href={item.link}

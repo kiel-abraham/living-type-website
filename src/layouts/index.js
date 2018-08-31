@@ -19,6 +19,11 @@ const Layout = ({ children, data }) => {
   } else {
     ogImage = null;
   }
+  let sameAsLinks = [];
+  data.settings.frontmatter.socialLinks.map((item, index) => {
+    sameAsLinks.push(`"${item.link}"`);
+  });
+
   return (
     <div>
       <Helmet>
@@ -43,7 +48,8 @@ const Layout = ({ children, data }) => {
             "url": "${data.site.siteMetadata.siteUrl}",
             "name": "${data.site.siteMetadata.title}",
             "description": "${metaDesc}",
-            "image": "${data.site.siteMetadata.siteUrl + ogImage}"
+            "image": "${data.site.siteMetadata.siteUrl + ogImage}",
+            "sameAs": [${sameAsLinks}]
           }
         `}</script>
       </Helmet>
@@ -68,8 +74,6 @@ const Layout = ({ children, data }) => {
         socialColour={data.settings.frontmatter.socialColour}
         links={data.settings.frontmatter.socialLinks}
         siteTitle={data.site.siteMetadata.title}
-        url={data.site.siteMetadata.siteUrl}
-        businessType={data.site.siteMetadata.businessType}
       />
 
       {data.settings.frontmatter.floatingButton.visible &&
