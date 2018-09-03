@@ -6,4 +6,4 @@ nav: true
 navSort: 2
 title: About Us
 ---
-This is the about page. Testing the slug
+This is the about page.

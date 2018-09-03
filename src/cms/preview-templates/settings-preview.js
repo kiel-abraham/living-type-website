@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../../components/header';
 import Footer from '../../components/footer';
 import FloatButton from '../../components/floatButton';
+import SettingsHelp from '../help-templates/settings-help';
 
 const SettingsPreview = ({ entry }) => {
     const entryLinks = entry.getIn(['data', 'socialLinks']);
@@ -34,7 +35,7 @@ const SettingsPreview = ({ entry }) => {
       ];
     return(
         <div>
-            
+            <SettingsHelp />
             <Header 
                 menu={entry.getIn(['data', 'header', 'menu'])}
                 background={entry.getIn(['data', 'header', 'background'])}

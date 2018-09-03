@@ -59,7 +59,13 @@ class Header extends React.Component {
         <header>
           <nav className={`navbar navbar-${invert} bg-${this.props.background}`}>
             <Container style={{padding: 0}}>
-              <Link to="/" className="navbar-brand mx-auto mr-sm-auto ml-sm-0">{this.props.siteTitle}</Link>
+              <Link to="/" className="navbar-brand mx-auto mr-sm-auto ml-sm-0">
+                {this.props.logo === "" ? (
+                  this.props.siteTitle
+                ):(
+                  <img src={this.props.logo} alt={`${this.props.siteTitle} logo`} width="200" />
+                )}
+              </Link>
               <div style={{maxWidth: "100%"}}>
                 <ul className="navbar-nav" style={{overflowX: "auto", whiteSpace: "noWrap", flexDirection: "row"}}>
                   {this.props.nav.map((item, index) => {

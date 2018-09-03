@@ -19,10 +19,6 @@ const Layout = ({ children, data }) => {
   } else {
     ogImage = null;
   }
-  let sameAsLinks = [];
-  data.settings.frontmatter.socialLinks.map((item, index) => {
-    sameAsLinks.push(`"${item.link}"`);
-  });
 
   return (
     <div>
@@ -40,17 +36,6 @@ const Layout = ({ children, data }) => {
         {data.settings.frontmatter.favicon &&
           <link rel="shortcut icon" href={data.site.siteMetadata.siteUrl + data.settings.frontmatter.favicon} />
         }
-        <script type="application/ld+json">{`
-          {
-            "@context": "http://schema.org",
-            "@type": "${data.site.siteMetadata.businessType}",
-            "url": "${data.site.siteMetadata.siteUrl}",
-            "name": "${data.site.siteMetadata.title}",
-            "description": "${metaDesc}",
-            "image": "${data.site.siteMetadata.siteUrl + ogImage}",
-            "sameAs": [${sameAsLinks}]
-          }
-        `}</script>
       </Helmet>
 
       <a href="#main-content" className="sr-only sr-only-focusable">Skip to main content</a>
@@ -102,7 +87,6 @@ export const query = graphql`
         siteUrl
         title
         tagline
-        businessType
       }
     }
     nav: allMarkdownRemark(
