@@ -40,7 +40,6 @@ const Layout = ({ children, data }) => {
         {data.settings.frontmatter.favicon &&
           <link rel="shortcut icon" href={data.site.siteMetadata.siteUrl + data.settings.frontmatter.favicon} />
         }
-
         <script type="application/ld+json">{`
           {
             "@context": "http://schema.org",
