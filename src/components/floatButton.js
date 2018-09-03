@@ -9,8 +9,8 @@ const FloatButton = ({ floatButtonColour, floatButton, phone }) => {
         borderRadius: "50%",
         right: "10px",
         bottom: "10px",
-        width: "50px",
-        height: "50px",
+        width: "55px",
+        height: "55px",
         position: "fixed"
     };
     
