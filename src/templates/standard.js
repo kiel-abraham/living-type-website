@@ -22,7 +22,7 @@ const StandardPage = ({ data }) => {
       
       <section className="container mt-4">
         <Row>
-          <Col>
+          <Col className={`text-${frontmatter.contentAlign}`}>
             <h1>{frontmatter.title}</h1>
             <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
           </Col>
@@ -50,6 +50,7 @@ export const query = graphql`
       frontmatter {
         title
         slug
+        contentAlign
         metaDesc
         metaImage
       }

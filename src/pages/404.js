@@ -4,7 +4,7 @@ import { Row, Col } from 'reactstrap';
 const NotFoundPage = ({ data }) => (
   <section className="container mt-4">
     <Row>
-      <Col>
+      <Col className={`text-${data.markdownRemark.frontmatter.contentAlign}`}>
         <h1>{data.markdownRemark.frontmatter.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
       </Col>
@@ -20,6 +20,7 @@ export const query404 = graphql`
       html
       frontmatter {
         title
+        contentAlign
       }
     }
   }

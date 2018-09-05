@@ -84,9 +84,10 @@ collections:
         file: "src/pages/default/thankyou.md"
         fields:
           - {label: "Page Type", name: "pageType", widget: "hidden", default: "standard"}
-          - {label: "Slug", name: "slug", widget: "hidden", default: "/thankyou"}
+          - {label: "Slug", name: "slug", widget: "hidden", default: "/thank-you"}
           - {label: "Nav", name: "nav", widget: "hidden", default: false}
           - {label: "Page Title", name: "title", widget: "string"}
+          - {label: "Align", name: "contentAlign", widget: "select", options: ["left", "center", "right"], default: "left"}
           - {label: "Body", name: "body", widget: "markdown"}
           - {label: "Meta Description", name: "metaDesc", widget: "text", required: false}
           - {label: "Meta Image", name: "metaImage", widget: "image", required: false}
@@ -100,6 +101,7 @@ collections:
           - {label: "Slug", name: "slug", widget: "hidden", default: "/404"}
           - {label: "Nav", name: "nav", widget: "hidden", default: false}
           - {label: "Page Title", name: "title", widget: "string", default: "Page not found"}
+          - {label: "Align", name: "contentAlign", widget: "select", options: ["left", "center", "right"], default: "left"}
           - {label: "Body", name: "body", widget: "markdown"}
 
   - label: "Custom Pages"
@@ -115,6 +117,7 @@ collections:
       - {label: "Menu sort number", name: "navSort", widget: "number", min: "2", valueType: "int"}
       ## - {label: "Parent page", name: "parent", widget: "relation", collection: "customs", searchFields: ["title"], valueField: "title", required: false}
       - {label: "Page Title", name: "title", widget: "string"}
+      - {label: "Align", name: "contentAlign", widget: "select", options: ["left", "center", "right"], default: "left"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Slug", name: "slug", widget: "string", pattern: ["^/[a-z0-9-]+$", "Must start with a slash and only include lowercase letters, numbers or hyphens"], required: false}
       - {label: "Meta Description", name: "metaDesc", widget: "text", required: false}
