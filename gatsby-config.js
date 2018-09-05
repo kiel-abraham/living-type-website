@@ -29,9 +29,9 @@ module.exports = {
       }
     },
     {
-      resolve: 'gatsby-plugin-netlify-cms',
+      resolve: `gatsby-plugin-sass`,
       options: {
-        modulePath: `${__dirname}/src/cms/cms.js`,
+        precision: 8
       }
     },
     {
@@ -44,6 +44,13 @@ module.exports = {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         policy: [{ userAgent: '*', disallow: ['/admin/*'] }]
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-netlify-cms',
+      options: {
+        modulePath: `${__dirname}/src/cms/cms.js`,
+        htmlTitle: 'THKR CMS'
       }
     },
     'gatsby-plugin-netlify'
