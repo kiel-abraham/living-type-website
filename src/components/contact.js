@@ -38,6 +38,7 @@ const Contact = ({ title, body, phone, email, address, formTitle, buttonColor, b
               <a href={`https://www.google.com/maps/place/${strippedAddress}/`}>
                 <img width="100%" src={`https://maps.googleapis.com/maps/api/staticmap?center=${strippedAddress}&zoom=15&scale=1&size=600x300&maptype=roadmap&format=jpg&key=AIzaSyAhL1Fckv4m2EV8Tw7cdHsupwZ7I4tqWQo&q&format=png&visual_refresh=true&markers=size:small%7Ccolor:0xff0000%7Clabel:%7C${strippedAddress}" alt="Google Map of ${address}"`} />
               </a>
+              <img width="100%" src={`https://maps.googleapis.com/maps/api/staticmap?center=${strippedAddress}&zoom=15&scale=1&size=600x300&maptype=roadmap&key=AIzaSyAhL1Fckv4m2EV8Tw7cdHsupwZ7I4tqWQo&q&format=png&visual_refresh=true&markers=size:small%7Ccolor:0xff0000%7Clabel:%7C${strippedAddress}" alt="Google Map of ${address}"`} />
             </div>
           }
         </Col>
