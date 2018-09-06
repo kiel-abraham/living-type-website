@@ -6,7 +6,6 @@ import FaHome from 'react-icons/lib/fa/home';
 
 const Contact = ({ title, body, phone, email, address, formTitle, buttonColor, buttonText, inputs }) => {
   let strippedAddress = address.replace(/[, ]/g,'+');
-  console.log(strippedAddress);
   return (
     <section className="container mt-4">
       <Row>

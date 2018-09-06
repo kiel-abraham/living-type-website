@@ -12,9 +12,7 @@ banner:
   buttonLink: /about
   fullWidth: false
   image: ''
-  subtitle: >-
-    THKR (Thinker) is an Australian based business helping people create fast,
-    simple sites with custom assistance.
+  subtitle: 'THKR (Thinker) is an Australian based business helping people create fast, simple sites with custom assistance.'
   title: Welcome to THKR
   visible: true
 title: Home
