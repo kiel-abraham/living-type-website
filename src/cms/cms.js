@@ -8,7 +8,7 @@ import ContactPreview from './preview-templates/contact-preview';
 import CustomsPreview from './preview-templates/customs-preview';
 import SettingsPreview from './preview-templates/settings-preview';
 
-CMS.registerPreviewStyle('https://bootswatch.com/4/lux/bootstrap.min.css');
+CMS.registerPreviewStyle('https://bootswatch.com/4/yeti/bootstrap.min.css');
 CMS.registerPreviewTemplate('home', HomePreview);
 CMS.registerPreviewTemplate('contact', ContactPreview);
 CMS.registerPreviewTemplate('thankyou', CustomsPreview);
