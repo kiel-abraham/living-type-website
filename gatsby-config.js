@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://thkrcms.netlify.com',
+    siteUrl: 'https://dev.thkr.com.au',
     title: 'THKR CMS',
     tagline: 'Simple websites for small businesses'
   },

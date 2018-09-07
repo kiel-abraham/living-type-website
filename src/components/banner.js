@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'gatsby-link';
 import { Jumbotron } from 'reactstrap';
 
-const Banner = ({ visible, fullWidth, title, subtitle, image, button, buttonLink, buttonColour, align }) => {
+const Banner = ({ visible, fullWidth, title, subtitle, image, overlay, button, buttonLink, buttonColour, align }) => {
   const bannerImage = image || '';
   const backStyles = {
     backgroundImage: `url(${bannerImage})`,
@@ -13,7 +13,7 @@ const Banner = ({ visible, fullWidth, title, subtitle, image, button, buttonLink
   const container = fullWidth? "container-fluid": "container";
   if (visible) {
     return (
-      <Jumbotron className={`${container} text-${align}`} style={backStyles}>
+      <Jumbotron className={`${container} text-${align} text-${overlay}`} style={backStyles}>
         {title !== "" &&
           <h2 className="display-3">{title}</h2>
         }

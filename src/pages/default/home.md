@@ -15,6 +15,7 @@ banner:
   buttonColour: primary
   align: center
   image: ''
+  overlay: none
 title: Home
 contentAlign: center
 metaDesc: Welcome to THKR CMS. Where we make simple easy
