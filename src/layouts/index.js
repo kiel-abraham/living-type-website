@@ -22,6 +22,7 @@ const Layout = ({ children, data }) => {
   return (
     <div>
       <Helmet>
+        <html lang="en" />
         <title>{data.site.siteMetadata.title} | {data.site.siteMetadata.tagline}</title>
         <meta name="description" content={metaDesc}/>
         <meta property="og:title" content={`${data.site.siteMetadata.title} | ${data.site.siteMetadata.tagline}`}/>
