@@ -11,6 +11,7 @@ const HomePreview = ({ entry, widgetFor }) => {
                 title={entry.getIn(['data', 'banner', 'title'])}
                 subtitle={entry.getIn(['data', 'banner', 'subtitle'])}
                 image={entry.getIn(['data', 'banner', 'image'])}
+                overlay={entry.getIn(['data', 'banner', 'overlay'])}
                 button={entry.getIn(['data', 'banner', 'button'])}
                 buttonLink={entry.getIn(['data', 'banner', 'buttonLink'])}
                 buttonColour={entry.getIn(['data', 'banner', 'buttonColour'])}

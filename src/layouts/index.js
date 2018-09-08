@@ -6,7 +6,7 @@ import Header from '../components/header';
 import Footer from '../components/footer';
 import FloatButton from '../components/floatButton';
 
-import './index.scss';
+import './style.scss';
 
 const Layout = ({ children, data }) => {
   const metaDesc = data.home.frontmatter.metaDesc || data.site.siteMetadata.title;
@@ -22,6 +22,7 @@ const Layout = ({ children, data }) => {
   return (
     <div>
       <Helmet>
+        <html lang="en" />
         <title>{data.site.siteMetadata.title} | {data.site.siteMetadata.tagline}</title>
         <meta name="description" content={metaDesc}/>
         <meta property="og:title" content={`${data.site.siteMetadata.title} | ${data.site.siteMetadata.tagline}`}/>

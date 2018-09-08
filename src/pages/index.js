@@ -12,6 +12,7 @@ const HomePage = ({ data }) => {
         title={frontmatter.banner.title}
         subtitle={frontmatter.banner.subtitle}
         image={frontmatter.banner.image}
+        overlay={frontmatter.banner.overlay}
         button={frontmatter.banner.button}
         buttonLink={frontmatter.banner.buttonLink}
         buttonColour={frontmatter.banner.buttonColour}
@@ -46,6 +47,7 @@ export const IndexQuery = graphql`
           title
           subtitle
           image
+          overlay
           button
           buttonLink
           buttonColour

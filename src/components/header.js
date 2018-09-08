@@ -40,7 +40,7 @@ class Header extends React.Component {
                       return (
                         <NavItem key={ index }>
                           <Link 
-                            exact to={item.node.frontmatter.slug}
+                            exact to={item.node.frontmatter.slug || item.node.fields.slug}
                             activeClassName="active"
                             className="nav-link"
                             onClick={this.toggle}>{item.node.frontmatter.menuTitle || item.node.frontmatter.title}
@@ -63,7 +63,7 @@ class Header extends React.Component {
                 {this.props.logo === "" ? (
                   this.props.siteTitle
                 ):(
-                  <img src={this.props.logo} alt={`${this.props.siteTitle} logo`} width="200" />
+                  <img src={this.props.logo} alt={`${this.props.siteTitle} logo`} width="150" />
                 )}
               </Link>
               <div style={{maxWidth: "100%"}}>
@@ -72,7 +72,7 @@ class Header extends React.Component {
                     return (
                       <NavItem key={ index }>
                         <Link 
-                          exact to={item.node.frontmatter.slug}
+                          exact to={item.node.frontmatter.slug || item.node.fields.slug}
                           activeClassName="active"
                           className="nav-link px-2"
                           onClick={this.toggle}>{item.node.frontmatter.menuTitle || item.node.frontmatter.title}
