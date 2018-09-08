@@ -6,7 +6,7 @@ import Header from '../components/header';
 import Footer from '../components/footer';
 import FloatButton from '../components/floatButton';
 
-import './index.scss';
+import './style.scss';
 
 const Layout = ({ children, data }) => {
   const metaDesc = data.home.frontmatter.metaDesc || data.site.siteMetadata.title;
