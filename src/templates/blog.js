@@ -26,7 +26,7 @@ const BlogPage = ({ data }) => {
             {data.blogs.edges.map((item, index) => {
                 return (
                     <article>
-                        <h2>{item.node.frontmatter.title}</h2>
+                        <h2><a href={item.node.frontmatter.slug || item.node.fields.slug}>{item.node.frontmatter.title}</a></h2>
                         <p className="text-muted">{item.node.frontmatter.date}</p>
                         <div dangerouslySetInnerHTML={{ __html: item.node.html }} />
                     </article>
