@@ -122,6 +122,21 @@ collections:
       - {label: "Slug", name: "slug", widget: "string", pattern: ["^/[a-z0-9-]+$", "Must start with a slash and only include lowercase letters, numbers or hyphens"], required: false}
       - {label: "Meta Description", name: "metaDesc", widget: "text", required: false}
       - {label: "Meta Image", name: "metaImage", widget: "image", required: false}
+  
+  - label: "Blog"
+    name: "blog"
+    create: true
+    folder: "src/pages/blog"
+    slug: "{{slug}}"
+    fields:
+      - {label: "Page Type", name: "pageType", widget: "hidden", default: "standard"}
+      - {label: "Blog page", name: "blog", widget: "hidden", default: true}
+      - {label: "Blog Title", name: "title", widget: "string"}
+      - {label: "Align", name: "contentAlign", widget: "select", options: ["left", "center", "right"], default: "left"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Slug", name: "slug", widget: "string", pattern: ["^/[a-z0-9-]+$", "Must start with a slash and only include lowercase letters, numbers or hyphens"], required: false}
+      - {label: "Meta Description", name: "metaDesc", widget: "text", required: false}
+      - {label: "Meta Image", name: "metaImage", widget: "image", required: false}
 
   - label: "Settings"
     name: "settings"
