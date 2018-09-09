@@ -131,6 +131,7 @@ collections:
     fields:
       - {label: "Page Type", name: "pageType", widget: "hidden", default: "standard"}
       - {label: "Blog page", name: "blog", widget: "hidden", default: true}
+      - {label: "Date", name: "date", widget: "date", required: false}
       - {label: "Blog Title", name: "title", widget: "string"}
       - {label: "Align", name: "contentAlign", widget: "select", options: ["left", "center", "right"], default: "left"}
       - {label: "Body", name: "body", widget: "markdown"}

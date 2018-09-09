@@ -1,7 +1,7 @@
 ---
 pageType: standard
 blog: true
-date: 16-10-2018
+date: 2018-10-27
 title: Blog 2
 slug: ''
 nav: false

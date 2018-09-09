@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 import { Row, Col } from 'reactstrap';
 
@@ -26,9 +27,16 @@ const BlogPage = ({ data }) => {
             {data.blogs.edges.map((item, index) => {
                 return (
                     <article>
-                        <h2><a href={item.node.frontmatter.slug || item.node.fields.slug}>{item.node.frontmatter.title}</a></h2>
+                        <h2>
+                            <Link to={item.node.frontmatter.slug || item.node.fields.slug}>
+                                {item.node.frontmatter.title}
+                            </Link>
+                        </h2>
                         <p className="text-muted">{item.node.frontmatter.date}</p>
-                        <div dangerouslySetInnerHTML={{ __html: item.node.html }} />
+                        <p>{item.node.excerpt }</p>
+                        <Link className="btn btn-primary btn-sm mb-3" to={item.node.frontmatter.slug || item.node.fields.slug}>
+                            Read More
+                        </Link>
                     </article>
                 )
             })}
@@ -70,10 +78,11 @@ export const BlogQuery = graphql`
                     slug
                 }
                 html
+                excerpt
                 frontmatter {
                     title
                     slug
-                    date
+                    date(formatString: "MMMM DD, YYYY")
                 }
             }
         }
