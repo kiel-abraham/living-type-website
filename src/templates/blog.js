@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
-import { Row, Col } from 'reactstrap';
+import { Row, Col, Card, CardBody } from 'reactstrap';
 
 const BlogPage = ({ data }) => {
   const frontmatter = data.markdownRemark.frontmatter;
@@ -24,9 +24,12 @@ const BlogPage = ({ data }) => {
           <Col className={`text-${frontmatter.contentAlign}`}>
             <h1>{frontmatter.title}</h1>
             <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+            <Row>
             {data.blogs.edges.map((item, index) => {
                 return (
-                    <article>
+                    <article className="col-md-6 mt-3">
+                      <Card>
+                        <CardBody>
                         <h2>
                             <Link to={item.node.frontmatter.slug || item.node.fields.slug}>
                                 {item.node.frontmatter.title}
@@ -37,9 +40,12 @@ const BlogPage = ({ data }) => {
                         <Link className="btn btn-primary btn-sm mb-3" to={item.node.frontmatter.slug || item.node.fields.slug}>
                             Read More
                         </Link>
+                        </CardBody>
+                        </Card>
                     </article>
                 )
             })}
+            </Row>
           </Col>
         </Row>
       </section>
