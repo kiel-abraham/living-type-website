@@ -7,7 +7,6 @@ import Footer from '../components/footer';
 import FloatButton from '../components/floatButton';
 
 import './style.scss';
-// this is a test pull into master
 
 const Layout = ({ children, data }) => {
   const metaDesc = data.home.frontmatter.metaDesc || data.site.siteMetadata.title;
@@ -53,7 +52,7 @@ const Layout = ({ children, data }) => {
       <main id="main-content" className="mb-5">
         {children()}
       </main>
-      
+
       <Footer
         background={data.settings.frontmatter.footerBackground}
         socialColour={data.settings.frontmatter.socialColour}
