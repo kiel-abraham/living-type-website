@@ -42,7 +42,8 @@ const Contact = ({ title, body, phone, email, address, formTitle, buttonColor, b
           }
         </Col>
         <Col sm="6">
-          <Form name="contact" method="POST" action="/thank-you" data-netlify="true">
+          <Form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+            <input type="hidden" name="bot-field" />
             <h2>{formTitle}</h2>
             {inputs.map((x, index) => {
               if (Object.keys(inputs[index]).length !== 0) {
