@@ -59,6 +59,7 @@ const Layout = ({ children, data }) => {
         socialColour={data.settings.frontmatter.socialColour}
         links={data.settings.frontmatter.socialLinks}
         siteTitle={data.site.siteMetadata.title}
+        siteUrl={data.site.siteMetadata.siteUrl}
       />
 
       {data.settings.frontmatter.floatingButton.visible &&
