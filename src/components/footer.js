@@ -7,6 +7,7 @@ import FaYoutube from 'react-icons/lib/fa/youtube-square';
 import FaInstagram from 'react-icons/lib/fa/instagram';
 
 const Footer = ({ background, socialColour, links, siteTitle }) => {
+  const copyColour = background === "light" ? "dark" : "light";
   const year = new Date().getFullYear();
   const styles = {
     position: "absolute",
@@ -81,7 +82,7 @@ const Footer = ({ background, socialColour, links, siteTitle }) => {
           )
         })}
       </ul>
-      <p>&copy; {year} {siteTitle}</p>
+      <p className={`text-${copyColour}`}>&copy; {year} {siteTitle}</p>
       <small className="text-muted">Powered by <Link to="//www.thkr.com.au">THKR</Link></small>
     </footer>
   );
