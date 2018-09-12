@@ -27,9 +27,9 @@ const BlogPage = ({ data }) => {
             <Row>
             {data.blogs.edges.map((item, index) => {
                 return (
-                    <article className="col-md-6 mt-3">
-                      <Card>
-                        <CardBody>
+                  <article key={index} className="col-md-6 mt-3">
+                    <Card>
+                      <CardBody>
                         <h2>
                             <Link to={item.node.frontmatter.slug || item.node.fields.slug}>
                                 {item.node.frontmatter.title}
@@ -40,10 +40,10 @@ const BlogPage = ({ data }) => {
                         <Link className="btn btn-primary btn-sm mb-3" to={item.node.frontmatter.slug || item.node.fields.slug}>
                             Read More
                         </Link>
-                        </CardBody>
-                        </Card>
-                    </article>
-                )
+                      </CardBody>
+                    </Card>
+                  </article>
+                );
             })}
             </Row>
           </Col>
