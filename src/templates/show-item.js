@@ -27,7 +27,7 @@ const ShowItem = ({ data }) => {
           <Col sm={frontmatter.image? "6": "12"}>
             <h1>{frontmatter.title} @ {frontmatter.venue}</h1>
             <h3><FaCalendar /> {frontmatter.date}</h3>
-            <h4><FaMarker /> <a href={`https://maps.google.com/maps?q=${frontmatter.address}`} target="_blank" title="View in Google Maps">{frontmatter.address}</a></h4>
+            <address><FaMarker /> <a href={`https://maps.google.com/maps?q=${frontmatter.address}`} target="_blank" title="View in Google Maps">{frontmatter.address}</a></address>
             <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
             {frontmatter.facebook &&
                 <a href={frontmatter.facebook} className="btn btn-sm btn-outline-light" target="_blank">View event on Facebook</a>
