@@ -24,7 +24,7 @@ const ShowsPage = ({ data }) => {
           <Col className={`text-${frontmatter.contentAlign}`}>
             <h1>{frontmatter.title}</h1>
             <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-            <Table hover>
+            <Table dark hover>
                 <thead>
                     <tr>
                         <th>Date</th>
@@ -37,7 +37,9 @@ const ShowsPage = ({ data }) => {
                         return (
                             <tr key={index}>
                                 <td>{item.node.frontmatter.date}</td>
-                                <td className="text-uppercase">{item.node.frontmatter.title}</td>
+                                <td className="text-uppercase">
+                                  <Link to={item.node.frontmatter.slug || item.node.fields.slug}>{item.node.frontmatter.title}</Link>
+                                </td>
                                 <td>{item.node.frontmatter.location}</td>
                             </tr>
                         );

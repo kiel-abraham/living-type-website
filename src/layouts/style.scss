@@ -7,8 +7,11 @@ body {
     background-color: #1a1a1a;
 }
 
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, a {
     color: #919aa1;
+}
+a:hover {
+    color: #e6e5e5 !important;
 }
 
 .nav-item {

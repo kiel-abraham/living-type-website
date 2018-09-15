@@ -1,6 +1,9 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { Row, Col } from 'reactstrap';
+import FaCalendar from 'react-icons/lib/fa/calendar';
+import FaMarker from 'react-icons/lib/fa/map-marker';
+
 
 const ShowItem = ({ data }) => {
   const frontmatter = data.markdownRemark.frontmatter;
@@ -21,18 +24,20 @@ const ShowItem = ({ data }) => {
       
       <section className="container mt-4">
         <Row>
-          <Col className={`text-${frontmatter.contentAlign}`}>
+          <Col sm={frontmatter.image? "6": "12"}>
             <h1>{frontmatter.title}</h1>
-            <h3>{frontmatter.date}</h3>
-            <h4>{frontmatter.location}</h4>
-            {frontmatter.image &&
-                <img src={frontmatter.image} />
-            }
-            {frontmatter.facebook &&
-                <a href={frontmatter.facebook} target="_blank">View event on Facebook</a>
-            }
+            <h3><FaCalendar /> {frontmatter.date}</h3>
+            <h4><FaMarker /> <a href={`https://maps.google.com/maps?q=${frontmatter.location}`} target="_blank" title="View in Google Maps">{frontmatter.location}</a></h4>
             <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+            {frontmatter.facebook &&
+                <a href={frontmatter.facebook} className="btn btn-sm btn-outline-light" target="_blank">View event on Facebook</a>
+            }
           </Col>
+          {frontmatter.image &&
+            <Col sm="6">
+              <img src={frontmatter.image} className="img-fluid" />
+            </Col>
+          }
         </Row>
       </section>
     </div>
@@ -61,7 +66,6 @@ export const query = graphql`
         image
         facebook
         slug
-        contentAlign
         metaDesc
         metaImage
       }
