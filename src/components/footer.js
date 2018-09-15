@@ -5,6 +5,7 @@ import FaGoogle from 'react-icons/lib/fa/google-plus-square';
 import FaTwitter from 'react-icons/lib/fa/twitter-square';
 import FaYoutube from 'react-icons/lib/fa/youtube-square';
 import FaInstagram from 'react-icons/lib/fa/instagram';
+import FaMusic from 'react-icons/lib/fa/music';
 
 const Footer = ({ background, socialColour, links, siteTitle, siteUrl }) => {
   const copyColour = background === "light" ? "dark" : "light";
@@ -79,6 +80,17 @@ const Footer = ({ background, socialColour, links, siteTitle, siteUrl }) => {
                 >
                   <FaYoutube size={28} />
                   <span className="sr-only">YouTube</span>
+                </a>
+              }
+              {(item.link.search("bandcamp") !== -1) &&
+                <a
+                  href={item.link}
+                  className={`nav-link p-0 text-${socialColour}`}
+                  target="_blank"
+                  title={`${siteTitle} on Bandcamp`}
+                >
+                  <FaMusic size={28} />
+                  <span className="sr-only">Bandcamp</span>
                 </a>
               }
             </li>

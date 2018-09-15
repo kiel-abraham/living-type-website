@@ -8,6 +8,7 @@ navSort: 4
 email: info@livingtype.band
 phone: ''
 address: ''
+image: '/images/living-type-live-photo.jpg'
 form:
   buttonColor: primary
   buttonText: Send

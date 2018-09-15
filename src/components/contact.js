@@ -4,7 +4,7 @@ import FaPhone from 'react-icons/lib/fa/phone';
 import FaEmail from 'react-icons/lib/fa/envelope';
 import FaHome from 'react-icons/lib/fa/home';
 
-const Contact = ({ title, body, phone, email, address, formTitle, buttonColor, buttonText, inputs }) => {
+const Contact = ({ title, body, phone, email, address, formTitle, buttonColor, buttonText, inputs, image }) => {
   let strippedAddress = address.replace(/[, ]/g,'+');
   return (
     <section className="container mt-4">
@@ -39,6 +39,9 @@ const Contact = ({ title, body, phone, email, address, formTitle, buttonColor, b
               </a>
               <img width="100%" src={`https://maps.googleapis.com/maps/api/staticmap?center=${strippedAddress}&zoom=15&scale=1&size=600x300&maptype=roadmap&key=AIzaSyAhL1Fckv4m2EV8Tw7cdHsupwZ7I4tqWQo&q&format=png&visual_refresh=true&markers=size:small%7Ccolor:0xff0000%7Clabel:%7C${strippedAddress}" alt="Google Map of ${address}"`} />
             </div>
+          }
+          {image &&
+          <img src={image} className="img-fluid" />
           }
         </Col>
         <Col sm="6">

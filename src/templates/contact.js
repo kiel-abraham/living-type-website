@@ -28,6 +28,7 @@ const ContactPage = ({ data }) => {
         buttonColor={frontmatter.form.buttonColor}
         buttonText={frontmatter.form.buttonText}
         inputs={frontmatter.inputs}
+        image={frontmatter.image}
       />
     </div>
   );
@@ -53,6 +54,7 @@ export const ContactQuery = graphql`
         phone
         email
         address
+        image
         form {
           formTitle
           buttonColor

@@ -17,9 +17,9 @@ banner:
   image: ''
   overlay: none
 title: Home
-contentAlign: center
-metaDesc: ''
-metaImage: ''
+contentAlign: left
+metaDesc: 'The official website of Australian rock band Living Type. Featuring tour dates, music and news.'
+metaImage: '/images/living-type-cover.jpg'
 ---
 This is the home page.
 
