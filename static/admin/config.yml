@@ -147,9 +147,10 @@ collections:
     fields:
       - {label: "Page Type", name: "pageType", widget: "hidden", default: "show-item"}
       - {label: "Show", name: "show", widget: "hidden", default: true}
-      - {label: "Date", name: "date", widget: "date"}
+      - {label: "Date", name: "date", widget: "datetime"}
       - {label: "Show Title", name: "title", widget: "string"}
-      - {label: "Location", name: "location", widget: "string"}
+      - {label: "Venue", name: "venue", widget: "string"}
+      - {label: "Address", name: "address", widget: "string"}
       - {label: "Flyer", name: "image", widget: "image", required: false}
       - {label: "Facebook Event Link", name: "facebook", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown"}

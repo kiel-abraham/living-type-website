@@ -28,8 +28,8 @@ const ShowsPage = ({ data }) => {
                 <thead>
                     <tr>
                         <th>Date</th>
-                        <th>Event</th>
-                        <th>Location</th>
+                        <th>Name</th>
+                        <th>Venue</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -40,7 +40,9 @@ const ShowsPage = ({ data }) => {
                                 <td className="text-uppercase">
                                   <Link to={item.node.frontmatter.slug || item.node.fields.slug}>{item.node.frontmatter.title}</Link>
                                 </td>
-                                <td>{item.node.frontmatter.location}</td>
+                                <td>
+                                  <a href={`https://maps.google.com/maps?q=${item.node.frontmatter.address}`} target="_blank" title="View in Google Maps">{item.node.frontmatter.venue}</a>
+                                </td>
                             </tr>
                         );
                     })}
@@ -87,7 +89,8 @@ export const ShowsQuery = graphql`
                 frontmatter {
                     title
                     slug
-                    location
+                    venue
+                    address
                     date(formatString: "MMMM DD, YYYY")
                 }
             }

@@ -2,11 +2,12 @@
 pageType: show-item
 show: true
 date: 2018-10-18
-title: Rics
+title: Garage Sounds
 slug: ''
-location: '35 boundary rd'
+venue: 'Matts House of blues'
+address: '321 Brunswick St, Fortitude Valley QLD 4006'
 facebook: 'https://www.facebook.com'
-image: ''
+image: '/images/rics-flyer.jpg'
 nav: false
 metaDesc: ''
 metaImage: ''

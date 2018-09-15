@@ -25,9 +25,9 @@ const ShowItem = ({ data }) => {
       <section className="container mt-4">
         <Row>
           <Col sm={frontmatter.image? "6": "12"}>
-            <h1>{frontmatter.title}</h1>
+            <h1>{frontmatter.title} @ {frontmatter.venue}</h1>
             <h3><FaCalendar /> {frontmatter.date}</h3>
-            <h4><FaMarker /> <a href={`https://maps.google.com/maps?q=${frontmatter.location}`} target="_blank" title="View in Google Maps">{frontmatter.location}</a></h4>
+            <h4><FaMarker /> <a href={`https://maps.google.com/maps?q=${frontmatter.address}`} target="_blank" title="View in Google Maps">{frontmatter.address}</a></h4>
             <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
             {frontmatter.facebook &&
                 <a href={frontmatter.facebook} className="btn btn-sm btn-outline-light" target="_blank">View event on Facebook</a>
@@ -62,7 +62,8 @@ export const query = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
-        location
+        venue
+        address
         image
         facebook
         slug
