@@ -4,6 +4,8 @@ import Banner from '../components/banner';
 
 const HomePage = ({ data }) => {
   const frontmatter = data.markdownRemark.frontmatter;
+  const x = frontmatter.latestVideo;
+  const videoId = x.slice((x.lastIndexOf("/") + 1), x.length);
   return (
     <div>
       <Banner
@@ -24,6 +26,14 @@ const HomePage = ({ data }) => {
           <Col className={`text-${frontmatter.contentAlign}`}>
             <h1>{frontmatter.title}</h1>
             <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+            {frontmatter.latestVideo &&
+              <div>
+                <h2>Latest Video</h2>
+                <div className="col-sm-8 offset-sm-2 col-md-6 offset-md-3 embed-responsive embed-responsive-16by9">
+                  <iframe className="embed-responsive-item" src={`https://www.youtube.com/embed/${videoId}`} frameBorder="0" allowFullScreen></iframe>
+                </div>
+              </div>
+            }
           </Col>
         </Row>
       </section>
@@ -40,6 +50,7 @@ export const IndexQuery = graphql`
       frontmatter {
         title
         contentAlign
+        latestVideo
         banner {
           visible
           fullWidth

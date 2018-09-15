@@ -39,6 +39,7 @@ collections:
           - {label: "Page Title", name: "title", widget: "string"}
           - {label: "Align", name: "contentAlign", widget: "select", options: ["left", "center", "right"], default: "left"}
           - {label: "Body", name: "body", widget: "markdown"}
+          - {label: "Latest Video", name: "latestVideo", widget: "string", required: false}
           - {label: "Meta Description", name: "metaDesc", widget: "text", required: false}
           - {label: "Meta Image", name: "metaImage", widget: "image", required: false}
 
@@ -79,20 +80,20 @@ collections:
                   - {label: "Type", name: "type", widget: "select", options: ["text", "textarea", "email", "tel", "number"], default: "text"}
                   - {label: "Required", name: "required", widget: "boolean", default: false}
 
-#      - label: "Blog"
-#        name: "blog"
-#        file: "src/pages/default/blog.md"
-#        fields:
-#          - {label: "Page Type", name: "pageType", widget: "hidden", default: "blog"}
-#          - {label: "Menu Title", name: "menuTitle", widget: "string", default: "Blog"}
-#          - {label: "Slug", name: "slug", widget: "hidden", default: "/blog"}
-#          - {label: "Show in menu", name: "nav", widget: "boolean", default: true}
-#          - {label: "Menu sort number", name: "navSort", widget: "number", min: "2", valueType: "int"}
-#          - {label: "Page Title", name: "title", widget: "string"}
-#          - {label: "Align", name: "contentAlign", widget: "select", options: ["left", "center", "right"], default: "left"}
-#          - {label: "Body", name: "body", widget: "markdown"}
-#          - {label: "Meta Description", name: "metaDesc", widget: "text", required: false}
-#          - {label: "Meta Image", name: "metaImage", widget: "image", required: false}
+      - label: "Shows"
+        name: "shows"
+        file: "src/pages/default/shows.md"
+        fields:
+          - {label: "Page Type", name: "pageType", widget: "hidden", default: "shows"}
+          - {label: "Menu Title", name: "menuTitle", widget: "string", default: "Shows"}
+          - {label: "Slug", name: "slug", widget: "hidden", default: "/shows"}
+          - {label: "Show in menu", name: "nav", widget: "boolean", default: true}
+          - {label: "Menu sort number", name: "navSort", widget: "number", min: "2", valueType: "int"}
+          - {label: "Page Title", name: "title", widget: "string"}
+          - {label: "Align", name: "contentAlign", widget: "select", options: ["left", "center", "right"], default: "left"}
+          - {label: "Body", name: "body", widget: "markdown"}
+          - {label: "Meta Description", name: "metaDesc", widget: "text", required: false}
+          - {label: "Meta Image", name: "metaImage", widget: "image", required: false}
 
       - label: "Thank You"
         name: "thankyou"
@@ -137,22 +138,22 @@ collections:
       - {label: "Meta Description", name: "metaDesc", widget: "text", required: false}
       - {label: "Meta Image", name: "metaImage", widget: "image", required: false}
   
-#  - label: "Blog Posts"
-#    label_singular: "Blog Post"
-#    name: "blog"
-#    create: true
-#    folder: "src/pages/blog"
-#    slug: "{{slug}}"
-#    fields:
-#      - {label: "Page Type", name: "pageType", widget: "hidden", default: "standard"}
-#      - {label: "Blog page", name: "blog", widget: "hidden", default: true}
-#      - {label: "Date", name: "date", widget: "date", required: false}
-#      - {label: "Blog Title", name: "title", widget: "string"}
-#      - {label: "Align", name: "contentAlign", widget: "select", options: ["left", "center", "right"], default: "left"}
-#      - {label: "Body", name: "body", widget: "markdown"}
-#      - {label: "Slug", name: "slug", widget: "string", pattern: ["^/[a-z0-9-]+$", "Must start with a slash and only include lowercase letters, numbers or hyphens"], required: false}
-#      - {label: "Meta Description", name: "metaDesc", widget: "text", required: false}
-#      - {label: "Meta Image", name: "metaImage", widget: "image", required: false}
+  - label: "Shows"
+    label_singular: "Show"
+    name: "custom_shows"
+    create: true
+    folder: "src/pages/shows"
+    slug: "{{slug}}"
+    fields:
+      - {label: "Page Type", name: "pageType", widget: "hidden", default: "standard"}
+      - {label: "Show", name: "show", widget: "hidden", default: true}
+      - {label: "Date", name: "date", widget: "date", required: false}
+      - {label: "Show Title", name: "title", widget: "string"}
+      - {label: "Location", name: "location", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Slug", name: "slug", widget: "string", pattern: ["^/[a-z0-9-]+$", "Must start with a slash and only include lowercase letters, numbers or hyphens"], required: false}
+      - {label: "Meta Description", name: "metaDesc", widget: "text", required: false}
+      - {label: "Meta Image", name: "metaImage", widget: "image", required: false}
 
   - label: "Settings"
     name: "settings"
