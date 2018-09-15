@@ -1,25 +1,12 @@
 @import 'theme.min.css';
-@import url('https://fonts.googleapis.com/css?family=Assistant|Rock+Salt');
 
 body {
     position: relative;
     min-height: 100vh;
     padding-bottom: 6rem;
-    font-family: "Assistant";
     background-color: #1a1a1a;
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-    font-family: "Rock Salt";
     color: #919aa1;
-}
-
-h1 {
-    font-size: 1.5rem;
-}
-h2 {
-    font-size: 1.25rem;
-}
-h3 {
-    font-size: 1.1rem;
 }
