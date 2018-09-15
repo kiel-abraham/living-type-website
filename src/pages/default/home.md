@@ -3,7 +3,7 @@ pageType: none
 homePage: true
 slug: /
 navSort: 1
-navTitle: Home
+menuTitle: Home
 nav: true
 banner:
   visible: true
