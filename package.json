@@ -1,6 +1,6 @@
 {
-  "name": "thkr_cms_dev",
-  "description": "Static CMS using Gatsby for THKR",
+  "name": "living_type",
+  "description": "Living Type website",
   "version": "1.0.0",
   "author": "Kiel Abraham",
   "dependencies": {

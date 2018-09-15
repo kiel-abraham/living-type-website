@@ -6,10 +6,10 @@ navSort: 1
 navTitle: Home
 nav: true
 banner:
-  visible: true
+  visible: false
   fullWidth: false
-  title: Welcome to THKR
-  subtitle: 'THKR (Thinker) is an Australian based business helping people create fast, simple sites with custom assistance.'
+  title: Living Yupe
+  subtitle: ''
   button: About Us
   buttonLink: /about
   buttonColour: primary
@@ -18,7 +18,7 @@ banner:
   overlay: none
 title: Home
 contentAlign: center
-metaDesc: Welcome to THKR CMS. Where we make simple easy
+metaDesc: ''
 metaImage: ''
 ---
 This is the home page.

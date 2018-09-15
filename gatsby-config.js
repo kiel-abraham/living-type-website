@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://dev.thkr.com.au',
-    title: 'THKR CMS',
-    tagline: 'Simple websites for small businesses'
+    siteUrl: 'https://www.livingtype.band',
+    title: 'Living Type',
+    tagline: 'The home of Living Type music'
   },
   plugins: [
     'gatsby-plugin-react-helmet',

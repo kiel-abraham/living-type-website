@@ -1,8 +1,8 @@
 backend:
   name: git-gateway
-  branch: dev
+  branch: living-type
 
-display_url: https://dev.thkr.com.au
+display_url: https://www.livingtype.band
 
 media_folder: static/images 
 public_folder: /images
@@ -79,20 +79,20 @@ collections:
                   - {label: "Type", name: "type", widget: "select", options: ["text", "textarea", "email", "tel", "number"], default: "text"}
                   - {label: "Required", name: "required", widget: "boolean", default: false}
 
-      - label: "Blog"
-        name: "blog"
-        file: "src/pages/default/blog.md"
-        fields:
-          - {label: "Page Type", name: "pageType", widget: "hidden", default: "blog"}
-          - {label: "Menu Title", name: "menuTitle", widget: "string", default: "Blog"}
-          - {label: "Slug", name: "slug", widget: "hidden", default: "/blog"}
-          - {label: "Show in menu", name: "nav", widget: "boolean", default: true}
-          - {label: "Menu sort number", name: "navSort", widget: "number", min: "2", valueType: "int"}
-          - {label: "Page Title", name: "title", widget: "string"}
-          - {label: "Align", name: "contentAlign", widget: "select", options: ["left", "center", "right"], default: "left"}
-          - {label: "Body", name: "body", widget: "markdown"}
-          - {label: "Meta Description", name: "metaDesc", widget: "text", required: false}
-          - {label: "Meta Image", name: "metaImage", widget: "image", required: false}
+#      - label: "Blog"
+#        name: "blog"
+#        file: "src/pages/default/blog.md"
+#        fields:
+#          - {label: "Page Type", name: "pageType", widget: "hidden", default: "blog"}
+#          - {label: "Menu Title", name: "menuTitle", widget: "string", default: "Blog"}
+#          - {label: "Slug", name: "slug", widget: "hidden", default: "/blog"}
+#          - {label: "Show in menu", name: "nav", widget: "boolean", default: true}
+#          - {label: "Menu sort number", name: "navSort", widget: "number", min: "2", valueType: "int"}
+#          - {label: "Page Title", name: "title", widget: "string"}
+#          - {label: "Align", name: "contentAlign", widget: "select", options: ["left", "center", "right"], default: "left"}
+#          - {label: "Body", name: "body", widget: "markdown"}
+#          - {label: "Meta Description", name: "metaDesc", widget: "text", required: false}
+#          - {label: "Meta Image", name: "metaImage", widget: "image", required: false}
 
       - label: "Thank You"
         name: "thankyou"
@@ -130,7 +130,6 @@ collections:
       - {label: "Menu Title", name: "menuTitle", widget: "string"}
       - {label: "Show in menu", name: "nav", widget: "boolean", default: true}
       - {label: "Menu sort number", name: "navSort", widget: "number", min: "2", valueType: "int"}
-      ## - {label: "Parent page", name: "parent", widget: "relation", collection: "customs", searchFields: ["title"], valueField: "title", required: false}
       - {label: "Page Title", name: "title", widget: "string"}
       - {label: "Align", name: "contentAlign", widget: "select", options: ["left", "center", "right"], default: "left"}
       - {label: "Body", name: "body", widget: "markdown"}
@@ -138,22 +137,22 @@ collections:
       - {label: "Meta Description", name: "metaDesc", widget: "text", required: false}
       - {label: "Meta Image", name: "metaImage", widget: "image", required: false}
   
-  - label: "Blog Posts"
-    label_singular: "Blog Post"
-    name: "blog"
-    create: true
-    folder: "src/pages/blog"
-    slug: "{{slug}}"
-    fields:
-      - {label: "Page Type", name: "pageType", widget: "hidden", default: "standard"}
-      - {label: "Blog page", name: "blog", widget: "hidden", default: true}
-      - {label: "Date", name: "date", widget: "date", required: false}
-      - {label: "Blog Title", name: "title", widget: "string"}
-      - {label: "Align", name: "contentAlign", widget: "select", options: ["left", "center", "right"], default: "left"}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Slug", name: "slug", widget: "string", pattern: ["^/[a-z0-9-]+$", "Must start with a slash and only include lowercase letters, numbers or hyphens"], required: false}
-      - {label: "Meta Description", name: "metaDesc", widget: "text", required: false}
-      - {label: "Meta Image", name: "metaImage", widget: "image", required: false}
+#  - label: "Blog Posts"
+#    label_singular: "Blog Post"
+#    name: "blog"
+#    create: true
+#    folder: "src/pages/blog"
+#    slug: "{{slug}}"
+#    fields:
+#      - {label: "Page Type", name: "pageType", widget: "hidden", default: "standard"}
+#      - {label: "Blog page", name: "blog", widget: "hidden", default: true}
+#      - {label: "Date", name: "date", widget: "date", required: false}
+#      - {label: "Blog Title", name: "title", widget: "string"}
+#      - {label: "Align", name: "contentAlign", widget: "select", options: ["left", "center", "right"], default: "left"}
+#      - {label: "Body", name: "body", widget: "markdown"}
+#      - {label: "Slug", name: "slug", widget: "string", pattern: ["^/[a-z0-9-]+$", "Must start with a slash and only include lowercase letters, numbers or hyphens"], required: false}
+#      - {label: "Meta Description", name: "metaDesc", widget: "text", required: false}
+#      - {label: "Meta Image", name: "metaImage", widget: "image", required: false}
 
   - label: "Settings"
     name: "settings"

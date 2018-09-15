@@ -4,18 +4,17 @@ pageType: none
 header:
   background: primary
   invert: false
-  logo: /images/thkr-logo-white.png
+  logo: ''
   menu: Standard
-favicon: /images/thkr-logo.png
+favicon: ''
 footerBackground: dark
 socialColour: secondary
 socialLinks:
-  - link: 'https://www.facebook.com'
-  - link: 'https://www.google.com'
-  - link: 'https://www.twitter.com'
+  - link: 'https://www.facebook.com/livingtype'
+  - link: 'https://www.instagram.com/livingtypeofficial'
 floatingButton:
   colour: primary
   type: Email
-  visible: true
+  visible: false
 ---
 

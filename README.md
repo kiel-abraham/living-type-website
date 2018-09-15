@@ -1,5 +1,5 @@
-# THKR static cms
-Made from GatsbyJs.
-Building a default template.
+# Living Type Website
+Made from GatsbyJs by [THKR](https://www.thkr.com.au)
+
 
 
