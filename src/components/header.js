@@ -58,12 +58,12 @@ class Header extends React.Component {
       return ( 
         <header>
           <nav className={`navbar navbar-${invert} bg-${this.props.background}`}>
-            <Container style={{padding: 0}}>
+            <Container fluid style={{padding: 0}}>
               <Link to="/" className="navbar-brand mx-auto mr-sm-auto ml-sm-0">
                 {this.props.logo === "" ? (
                   this.props.siteTitle
                 ):(
-                  <img src={this.props.logo} alt={`${this.props.siteTitle} logo`} width="150" />
+                  <img src={this.props.logo} alt={`${this.props.siteTitle} logo`} width="200" />
                 )}
               </Link>
               <div style={{maxWidth: "100%"}}>

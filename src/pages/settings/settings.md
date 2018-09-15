@@ -5,7 +5,7 @@ header:
   background: primary
   invert: false
   logo: '/images/living-type-logo.png'
-  menu: Standard
+  menu: Scroll
 favicon: '/images/living-type-favicon.png'
 footerBackground: primary
 socialColour: secondary
