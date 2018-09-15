@@ -20,7 +20,7 @@ collections:
           - {label: "Home Page", name: "homePage", widget: "hidden", default: true}
           - {label: "Slug", name: "slug", widget: "hidden", default: "/"}
           - {label: "Nav Sort", name: "navSort", widget: "hidden", default: 1}
-          - {label: "Menu Title", name: "navTitle", widget: "string", default: "Home"}
+          - {label: "Menu Title", name: "menuTitle", widget: "string", default: "Home"}
           - {label: "Show in menu", name: "nav", widget: "boolean", default: true}
           - label: "Banner"
             name: "banner"
