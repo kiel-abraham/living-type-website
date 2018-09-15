@@ -145,11 +145,13 @@ collections:
     folder: "src/pages/shows"
     slug: "{{slug}}"
     fields:
-      - {label: "Page Type", name: "pageType", widget: "hidden", default: "standard"}
+      - {label: "Page Type", name: "pageType", widget: "hidden", default: "show-item"}
       - {label: "Show", name: "show", widget: "hidden", default: true}
-      - {label: "Date", name: "date", widget: "date", required: false}
+      - {label: "Date", name: "date", widget: "date"}
       - {label: "Show Title", name: "title", widget: "string"}
       - {label: "Location", name: "location", widget: "string"}
+      - {label: "Image", name: "image", widget: "image", required: false}
+      - {label: "Facebook Event Link", name: "facebook", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Slug", name: "slug", widget: "string", pattern: ["^/[a-z0-9-]+$", "Must start with a slash and only include lowercase letters, numbers or hyphens"], required: false}
       - {label: "Meta Description", name: "metaDesc", widget: "text", required: false}

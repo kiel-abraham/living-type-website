@@ -2,7 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { Row, Col } from 'reactstrap';
 
-const StandardPage = ({ data }) => {
+const ShowItem = ({ data }) => {
   const frontmatter = data.markdownRemark.frontmatter;
   const slug = frontmatter.slug || data.markdownRemark.fields.slug;
   return (
@@ -23,6 +23,14 @@ const StandardPage = ({ data }) => {
         <Row>
           <Col className={`text-${frontmatter.contentAlign}`}>
             <h1>{frontmatter.title}</h1>
+            <h3>{frontmatter.date}</h3>
+            <h4>{frontmatter.location}</h4>
+            {frontmatter.image &&
+                <img src={frontmatter.image} />
+            }
+            {frontmatter.facebook &&
+                <a href={frontmatter.facebook} target="_blank">View event on Facebook</a>
+            }
             <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
           </Col>
         </Row>
@@ -31,10 +39,10 @@ const StandardPage = ({ data }) => {
   );
 }
 
-export default StandardPage
+export default ShowItem;
 
 export const query = graphql`
-  query StandardPage($slug: String!) {
+  query ShowItem($slug: String!) {
     site {
       siteMetadata {
         title
@@ -48,6 +56,10 @@ export const query = graphql`
       }
       frontmatter {
         title
+        date(formatString: "MMMM DD, YYYY")
+        location
+        image
+        facebook
         slug
         contentAlign
         metaDesc
