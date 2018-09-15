@@ -28,7 +28,7 @@ const HomePage = ({ data }) => {
             <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
             {frontmatter.latestVideo &&
               <div>
-                <h2>Latest Video</h2>
+                <h3>Latest Video</h3>
                 <div className="col-sm-8 offset-sm-2 col-md-6 offset-md-3 embed-responsive embed-responsive-16by9">
                   <iframe className="embed-responsive-item" src={`https://www.youtube.com/embed/${videoId}`} frameBorder="0" allowFullScreen></iframe>
                 </div>

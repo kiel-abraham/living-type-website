@@ -37,7 +37,7 @@ const ShowsPage = ({ data }) => {
                         return (
                             <tr key={index}>
                                 <td>{item.node.frontmatter.date}</td>
-                                <td>{item.node.frontmatter.title}</td>
+                                <td className="text-uppercase">{item.node.frontmatter.title}</td>
                                 <td>{item.node.frontmatter.location}</td>
                             </tr>
                         );

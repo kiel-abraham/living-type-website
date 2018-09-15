@@ -18,7 +18,7 @@ banner:
   overlay: light
 title: Home
 contentAlign: center
-latestVideo: 'https://youtu.be/2aDe0oMKJHI'
+latestVideo: '2aDe0oMKJHI'
 metaDesc: 'The official website of Australian rock band Living Type. Featuring tour dates, music and news.'
 metaImage: '/images/living-type-cover.jpg'
 ---

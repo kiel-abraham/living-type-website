@@ -17,7 +17,7 @@ const Banner = ({ visible, fullWidth, title, subtitle, image, overlay, button, b
     return (
       <Jumbotron className={`${container} text-${align} text-${overlay}`} style={backStyles}>
         {title !== "" &&
-          <h2 className={`display-4 text-${overlay}`}>{title}</h2>
+          <h2 className={`text-${overlay}`}>{title}</h2>
         }
         {subtitle !== "" &&
           <p className="lead">{subtitle}</p>
