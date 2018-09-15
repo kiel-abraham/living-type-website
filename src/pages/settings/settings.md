@@ -4,10 +4,10 @@ pageType: none
 header:
   background: primary
   invert: false
-  logo: ''
+  logo: '/images/living-type-logo.png'
   menu: Standard
 favicon: '/images/living-type-favicon.png'
-footerBackground: dark
+footerBackground: primary
 socialColour: secondary
 socialLinks:
   - link: 'https://www.facebook.com/livingtype'

@@ -98,7 +98,7 @@ const Footer = ({ background, socialColour, links, siteTitle, siteUrl }) => {
         })}
       </ul>
       <p className={`text-${copyColour}`}>&copy; {year} {siteTitle}</p>
-      <small className="text-muted">Powered by <Link to="//www.thkr.com.au">THKR</Link></small>
+      <small className="text-muted">Powered by <Link to="//www.thkr.com.au" className={`text-${socialColour}`}>THKR</Link></small>
     </footer>
   );
 }

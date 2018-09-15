@@ -7,7 +7,7 @@ const Logo = ({logo, siteTitle}) => (
     {logo === "" ? (
       siteTitle
     ):(
-      <img src={logo} alt={`${siteTitle} logo`} width="150" />
+      <img src={logo} alt={`${siteTitle} logo`} width="200" />
     )}
   </Link>
 );
@@ -80,10 +80,6 @@ class Header extends React.Component {
                       </NavItem>
                     )
                   })}
-                  <NavItem><Link to="/contact" className="nav-link px-2">Testing</Link></NavItem>
-                  <NavItem><Link to="/contact" className="nav-link px-2">Testing</Link></NavItem>
-                  <NavItem><Link to="/contact" className="nav-link px-2">Testing</Link></NavItem>
-                  <NavItem><Link to="/contact" className="nav-link px-2">Testing</Link></NavItem>
                 </ul>
               </div>
             </Container>
@@ -94,7 +90,7 @@ class Header extends React.Component {
       return ( 
         <header>
           <nav className={`navbar navbar-${invert} bg-${this.props.background}`}>
-            <Container style={{padding: 0}}>
+            <Container fluid style={{padding: 0}}>
               <Logo logo={this.props.logo} siteTitle={this.props.siteTitle} />
                 <ul className="navbar-nav" style={{flexDirection: "row"}}>
                   {this.props.nav.map((item, index) => {

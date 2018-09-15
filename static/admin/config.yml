@@ -32,7 +32,7 @@ collections:
               - {label: "Subtitle", name: "subtitle", widget: "text", required: false}
               - {label: "Button text", name: "button", widget: "string", required: false}
               - {label: "Button Link", name: "buttonLink", widget: "string", required: false}
-              - {label: "Button colour", name: "buttonColour", widget: "select", options: ["primary", "secondary", "info", "success", "warning", "danger", "dark"], default: "primary"}
+              - {label: "Button colour", name: "buttonColour", widget: "select", options: ["primary", "secondary", "info", "success", "warning", "danger", "light", "dark"], default: "primary"}
               - {label: "Align", name: "align", widget: "select", options: ["left", "center", "right"], default: "left"}
               - {label: "Background Image", name: "image", widget: "image"}
               - {label: "Image Overlay", name: "overlay", widget: "select", options: ["none", "light", "dark", "primary"], default: "none"}
@@ -174,7 +174,7 @@ collections:
               - {label: "Background Colour", name: "background", widget: "select", options: ["primary", "secondary", "info", "success", "warning", "danger", "dark"], default: "primary"}
               - {label: "Invert", name: "invert", widget: "boolean", default: false}
           - {label: "Favicon", name: "favicon", widget: "image", required: false}
-          - {label: "Footer Background", name: "footerBackground", widget: "select", options: ["dark", "light"], default: "dark"}
+          - {label: "Footer Background", name: "footerBackground", widget: "select", options: ["dark", "light", "primary"], default: "dark"}
           - {label: "Social Links Colour", name: "socialColour", widget: "select", options: ["primary", "secondary", "info", "success", "warning", "danger", "dark"], default: "primary"}
           - {label: "Social Links", name: "socialLinks", widget: "list", fields: [{label: "Link", name: "link", widget: "string"}]}
           - label: "Floating Button"

@@ -7,21 +7,23 @@ const Banner = ({ visible, fullWidth, title, subtitle, image, overlay, button, b
   const backStyles = {
     backgroundImage: `url(${bannerImage})`,
     backgroundSize: 'cover',
-    minHeight: '300px',
-    maxHeight: '400px'
+    backgroundAttachment: 'fixed',
+    minHeight: '400px',
+    maxHeight: '600px',
+    backgroundPosition: 'center'
   };
   const container = fullWidth? "container-fluid": "container";
   if (visible) {
     return (
       <Jumbotron className={`${container} text-${align} text-${overlay}`} style={backStyles}>
         {title !== "" &&
-          <h2 className="display-3">{title}</h2>
+          <h2 className={`display-4 text-${overlay}`}>{title}</h2>
         }
         {subtitle !== "" &&
           <p className="lead">{subtitle}</p>
         }
         {button !== "" &&
-          <Link to={buttonLink} className={`btn btn-${buttonColour}`}>{button}</Link>
+          <Link to={buttonLink} className={`btn btn-outline-${buttonColour}`}>{button}</Link>
         }
       </Jumbotron>
     )

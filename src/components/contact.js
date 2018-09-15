@@ -12,7 +12,7 @@ const Contact = ({ title, body, phone, email, address, formTitle, buttonColor, b
         <Col xs="12">
           <h1>{title}</h1>
         </Col>
-        <Col sm="6">
+        <Col sm="4">
           <div dangerouslySetInnerHTML={{ __html: body }} />
           <br / >
           <address>
@@ -44,7 +44,7 @@ const Contact = ({ title, body, phone, email, address, formTitle, buttonColor, b
           <img src={image} className="img-fluid" />
           }
         </Col>
-        <Col sm="6">
+        <Col sm="8">
           <Form name="contact" method="POST" action="/thank-you" data-netlify="true">
             <h2>{formTitle}</h2>
             {inputs.map((x, index) => {
