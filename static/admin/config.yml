@@ -147,8 +147,8 @@ collections:
     fields:
       - {label: "Page Type", name: "pageType", widget: "hidden", default: "show-item"}
       - {label: "Show", name: "show", widget: "hidden", default: true}
-      - {label: "Date", name: "date", widget: "datetime"}
       - {label: "Show Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
       - {label: "Venue", name: "venue", widget: "string"}
       - {label: "Address", name: "address", widget: "string"}
       - {label: "Flyer", name: "image", widget: "image", required: false}
