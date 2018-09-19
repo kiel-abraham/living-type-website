@@ -5,8 +5,13 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
   const { createNodeField } = boundActionCreators
   if (node.internal.type === `MarkdownRemark`) {
     const slug = createFilePath({ node, getNode });
-    const x = slug.split("/");
-    const alt_slug = "/" + x[x.length - 2];
+    let alt_slug;
+    if (slug.search("custom") !== -1 || slug.search("default") !== -1) {
+      const x = slug.split("/");
+      alt_slug = "/" + x[x.length - 2];
+    } else {
+      alt_slug = slug;
+    }
     createNodeField({
       node,
       name: `slug`,

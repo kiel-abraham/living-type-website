@@ -1,12 +1,12 @@
 import React from 'react';
-import Link from 'gatsby-link';
 import FaFacebook from 'react-icons/lib/fa/facebook-square';
 import FaGoogle from 'react-icons/lib/fa/google-plus-square';
 import FaTwitter from 'react-icons/lib/fa/twitter-square';
 import FaYoutube from 'react-icons/lib/fa/youtube-square';
 import FaInstagram from 'react-icons/lib/fa/instagram';
 
-const Footer = ({ background, socialColour, links, siteTitle }) => {
+const Footer = ({ background, socialColour, links, siteTitle, siteUrl }) => {
+  const copyColour = background === "light" ? "dark" : "light";
   const year = new Date().getFullYear();
   const styles = {
     position: "absolute",
@@ -17,11 +17,14 @@ const Footer = ({ background, socialColour, links, siteTitle }) => {
   };
 
   return (
-    <footer className={`bg-${background} text-center`} style={styles}>
+    <footer className={`bg-${background} text-center`} style={styles} itemScope itemType="http://schema.org/WebSite">
+      <meta itemProp="name" content={siteTitle}/>
+      <meta itemProp="url" content={siteUrl}/>
       <ul className="nav my-2 d-inline-flex">
         {links.map((item, index) => {
           return (
             <li className="nav-item" key={index}>
+              <meta itemProp="sameAs" content={item.link}/>
               {(item.link.search("facebook") !== -1) &&
                 <a
                   href={item.link}
@@ -81,8 +84,8 @@ const Footer = ({ background, socialColour, links, siteTitle }) => {
           )
         })}
       </ul>
-      <p>&copy; {year} {siteTitle}</p>
-      <small className="text-muted">Powered by <Link to="//www.thkr.com.au">THKR</Link></small>
+      <p className={`text-${copyColour}`}>&copy; {year} {siteTitle}</p>
+      <small className="text-muted">Powered by <a href="https//www.thkr.com.au" target="_blank">THKR</a></small>
     </footer>
   );
 }

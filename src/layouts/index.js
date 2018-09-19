@@ -7,7 +7,6 @@ import Footer from '../components/footer';
 import FloatButton from '../components/floatButton';
 
 import './style.scss';
-// this is a test pull into master
 
 const Layout = ({ children, data }) => {
   const metaDesc = data.home.frontmatter.metaDesc || data.site.siteMetadata.title;
@@ -42,9 +41,8 @@ const Layout = ({ children, data }) => {
       <a href="#main-content" className="sr-only sr-only-focusable">Skip to main content</a>
 
       <Header 
-        menu={data.settings.frontmatter.header.menu}
         background={data.settings.frontmatter.header.background}
-        invert={data.settings.frontmatter.header.invert}
+        invert={data.settings.frontmatter.header.invert ? "light": "dark"}
         siteTitle={data.site.siteMetadata.title}
         nav={data.nav.edges}
         logo={data.settings.frontmatter.header.logo}
@@ -53,12 +51,13 @@ const Layout = ({ children, data }) => {
       <main id="main-content" className="mb-5">
         {children()}
       </main>
-      
+
       <Footer
         background={data.settings.frontmatter.footerBackground}
         socialColour={data.settings.frontmatter.socialColour}
         links={data.settings.frontmatter.socialLinks}
         siteTitle={data.site.siteMetadata.title}
+        siteUrl={data.site.siteMetadata.siteUrl}
       />
 
       {data.settings.frontmatter.floatingButton.visible &&

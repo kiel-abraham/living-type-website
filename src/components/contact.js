@@ -51,13 +51,13 @@ const Contact = ({ title, body, phone, email, address, formTitle, buttonColor, b
                 return (
                   x.item.required ? (
                     <FormGroup key={index}>
-                      <Label for={`${y}${index}`}>{x.item.name} *</Label>
-                      <Input type={x.item.type} name={`${y}${index}`} id={index} placeholder={x.item.placeholder} required/>
+                      <Label for={y}>{x.item.name} *</Label>
+                      <Input type={x.item.type} name={y} id={y} placeholder={x.item.placeholder} required/>
                     </FormGroup>
                     ):(
                     <FormGroup key={index}>
-                      <Label for={`${y}${index}`}>{x.item.name}</Label>
-                      <Input type={x.item.type} name={`${y}${index}`} id={index} placeholder={x.item.placeholder}/>
+                      <Label for={y}>{x.item.name}</Label>
+                      <Input type={x.item.type} name={y} id={y} placeholder={x.item.placeholder}/>
                     </FormGroup>
                   )
                 )
