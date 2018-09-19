@@ -1,16 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import Logo from './logo';
 import { Container, NavbarToggler, Collapse, NavItem } from 'reactstrap';
-
-const Logo = ({logo, siteTitle}) => (
-  <Link to="/" className="navbar-brand" title={siteTitle}>
-    {logo === "" ? (
-      siteTitle
-    ):(
-      <img src={logo} alt={`${siteTitle} logo`} width="150" />
-    )}
-  </Link>
-);
 
 class Slide extends React.Component {
     constructor(props) {
