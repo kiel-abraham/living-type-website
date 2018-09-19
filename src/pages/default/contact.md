@@ -4,7 +4,7 @@ slug: /contact
 title: Contact
 menuTitle: "Contact"
 nav: true
-navSort: 4
+navSort: 10
 email: info@test.com
 phone: '1300222111'
 address: '35 Boundary Rd, West End, Qld 4101'
