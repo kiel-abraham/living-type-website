@@ -35,7 +35,6 @@ const SettingsPreview = ({ entry }) => {
     return(
         <div>
             <Header 
-                menu={entry.getIn(['data', 'header', 'menu'])}
                 background={entry.getIn(['data', 'header', 'background'])}
                 invert={entry.getIn(['data', 'header', 'invert'])}
                 nav={navList}

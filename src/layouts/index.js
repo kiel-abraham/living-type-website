@@ -41,9 +41,8 @@ const Layout = ({ children, data }) => {
       <a href="#main-content" className="sr-only sr-only-focusable">Skip to main content</a>
 
       <Header 
-        menu={data.settings.frontmatter.header.menu}
         background={data.settings.frontmatter.header.background}
-        invert={data.settings.frontmatter.header.invert}
+        invert={data.settings.frontmatter.header.invert ? "light": "dark"}
         siteTitle={data.site.siteMetadata.title}
         nav={data.nav.edges}
         logo={data.settings.frontmatter.header.logo}

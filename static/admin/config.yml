@@ -170,8 +170,6 @@ collections:
             widget: "object"
             fields:
               - {label: "Logo", name: "logo", widget: "image"}
-              # - {label: "Menu Style", name: "menu", widget: "select", options: ["Standard", "Scroll", "Slide"], default: "Standard"}
-              - {label: "Menu Style", name: "menu", widget: "hidden", default: "Standard"}
               - {label: "Background Colour", name: "background", widget: "select", options: ["primary", "secondary", "info", "success", "warning", "danger", "dark"], default: "primary"}
               - {label: "Invert", name: "invert", widget: "boolean", default: false}
           - {label: "Favicon", name: "favicon", widget: "image", required: false}
