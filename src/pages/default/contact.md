@@ -1,16 +1,15 @@
 ---
 pageType: contact
 slug: /contact
-title: Contact
-menuTitle: "Contact"
+menuTitle: Contact
 nav: true
 navSort: 4
+title: Contact
 email: info@livingtype.band
 phone: ''
 address: ''
-image: '/images/living-type-live-photo.jpg'
 form:
-  buttonColor: primary
+  buttonColor: secondary
   buttonText: Send
   formTitle: Send a message
 inputs:
@@ -30,3 +29,4 @@ inputs:
       required: true
       type: textarea
 ---
+
