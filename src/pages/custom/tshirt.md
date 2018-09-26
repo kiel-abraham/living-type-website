@@ -5,7 +5,7 @@ menuTitle: Tshirt
 nav: false
 navSort: 8
 title: T-Shirt Preorder
-contentAlign: center
+contentAlign: left
 metaDesc: 'Enter your details to preorder in the first run of Living Type t-shirts'
 metaImage: '/images/tshirt-plan.jpg'
 ---
