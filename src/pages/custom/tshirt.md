@@ -1,13 +1,13 @@
 ---
-slug: /tshirt
 pageType: standard
 menuTitle: Tshirt
 nav: false
 navSort: 8
 title: T-Shirt Preorder
 contentAlign: left
-metaDesc: 'Enter your details to preorder in the first run of Living Type t-shirts'
-metaImage: '/images/tshirt-plan.jpg'
+slug: /tshirt
+metaDesc: Enter your details to preorder in the first run of Living Type t-shirts
+metaImage: /images/tshirt-plan.jpg
 ---
 <div class="row">
     <div class="col-sm-6 mb-5">
@@ -18,7 +18,7 @@ metaImage: '/images/tshirt-plan.jpg'
     <div class="col-sm-6">
         <img src="/images/tshirt-plan.jpg" alt="Living Type tshirt plan" class="img-fluid">
     </div>
-    <div class="col-sm-12">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc5hjYHg-96NHkjrHkaBsBQXW_wPZ57OKJ1qkIUNtHea_80gg/viewform?embedded=true" width="640" height="907" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+    <div class="col-sm-12 embed-responsive embed-responsive-1by1">
+        <iframe class="embed-responsive-item"  src="https://docs.google.com/forms/d/e/1FAIpQLSc5hjYHg-96NHkjrHkaBsBQXW_wPZ57OKJ1qkIUNtHea_80gg/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
     </div>
 </div>
