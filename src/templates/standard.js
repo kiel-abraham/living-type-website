@@ -14,6 +14,7 @@ const StandardPage = ({ data }) => {
         <meta property="og:url" content={data.site.siteMetadata.siteUrl + slug} />
         {frontmatter.metaDesc &&
           <meta name="description" content={frontmatter.metaDesc}/>
+          <meta property="og:description" content={frontmatter.metaDesc}/>
         }
         {frontmatter.metaImage &&
           <meta property="og:image" content={data.site.siteMetadata.siteUrl + frontmatter.metaImage} />
