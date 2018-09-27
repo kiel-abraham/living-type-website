@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import UtilHelmet from '../components/utils/utilHelmet';
-import { Row, Col, Card, CardBody } from 'reactstrap';
+import { Row, Col, Card, CardImg, CardBody } from 'reactstrap';
 
 const BlogPage = ({ data }) => {
   return (
@@ -18,6 +18,11 @@ const BlogPage = ({ data }) => {
                 return (
                   <article key={index} className="col-md-6 mt-3">
                     <Card>
+                      {item.node.frontmatter.featuredImage &&
+                        <Link to={item.node.frontmatter.slug || item.node.fields.slug}>
+                          <CardImg top src={item.node.frontmatter.featuredImage} alt={item.node.frontmatter.title} />
+                        </Link>
+                      }
                       <CardBody>
                         <h2>
                             <Link to={item.node.frontmatter.slug || item.node.fields.slug}>
@@ -75,6 +80,7 @@ export const BlogQuery = graphql`
                 html
                 excerpt
                 frontmatter {
+                    featuredImage
                     title
                     slug
                     date(formatString: "MMMM DD, YYYY")
