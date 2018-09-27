@@ -165,15 +165,11 @@ collections:
         fields:
           - {label: "Settings Page", name: "settingsPage", widget: "hidden", default: true}
           - {label: "Page Type", name: "pageType", widget: "hidden", default: "none"}
-          - label: "Header"
-            name: "header"
-            widget: "object"
-            fields:
-              - {label: "Logo", name: "logo", widget: "image"}
-              - {label: "Background Colour", name: "background", widget: "select", options: ["primary", "secondary", "info", "success", "warning", "danger", "dark"], default: "primary"}
-              - {label: "Invert", name: "invert", widget: "boolean", default: false}
+          - {label: "Logo", name: "logo", widget: "image", required: false}
+          - {label: "Header Background Colour", name: "headerBackground", widget: "select", options: ["primary", "secondary", "info", "success", "warning", "danger", "dark"], default: "primary"}
+          - {label: "Invert", name: "invert", widget: "boolean", default: false}
           - {label: "Favicon", name: "favicon", widget: "image", required: false}
-          - {label: "Footer Background", name: "footerBackground", widget: "select", options: ["dark", "light"], default: "dark"}
+          - {label: "Footer Background Colour", name: "footerBackground", widget: "select", options: ["dark", "light"], default: "dark"}
           - {label: "Social Links Colour", name: "socialColour", widget: "select", options: ["primary", "secondary", "info", "success", "warning", "danger", "dark"], default: "primary"}
           - {label: "Social Links", name: "socialLinks", widget: "list", fields: [{label: "Link", name: "link", widget: "string"}]}
           - label: "Floating Button"
