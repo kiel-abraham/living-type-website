@@ -31,7 +31,7 @@ const ShowItem = ({ data }) => {
             <address><FaMarker /> <a href={`https://maps.google.com/maps?q=${frontmatter.address}`} target="_blank" title="View in Google Maps">{frontmatter.address}</a></address>
             <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
             {frontmatter.facebook &&
-                <a href={frontmatter.facebook} className="btn btn-sm btn-outline-light mb-5" target="_blank">View event on Facebook</a>
+                <a href={frontmatter.facebook} className="btn btn-sm btn-outline-light mb-5 test" target="_blank">View event on Facebook</a>
             }
           </Col>
           {frontmatter.image &&
