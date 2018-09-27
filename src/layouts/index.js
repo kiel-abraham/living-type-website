@@ -13,8 +13,8 @@ const Layout = ({ children, data }) => {
   let ogImage;
   if (data.home.frontmatter.metaImage) {
     ogImage = data.home.frontmatter.metaImage;
-  } else if (data.settings.frontmatter.header.logo) {
-    ogImage = data.settings.frontmatter.header.logo;
+  } else if (data.settings.frontmatter.logo) {
+    ogImage = data.settings.frontmatter.logo;
   } else {
     ogImage = null;
   }

@@ -35,8 +35,8 @@ const SettingsPreview = ({ entry }) => {
     return(
         <div>
             <Header 
-                background={entry.getIn(['data', 'background'])}
-                invert={entry.getIn(['data', 'invert'])}
+                background={entry.getIn(['data', 'headerBackground'])}
+                invert={entry.getIn(['data', 'invert']) ? "light": "dark"}
                 nav={navList}
                 siteTitle="THKR CMS"
                 logo={entry.getIn(['data', 'logo'])}
