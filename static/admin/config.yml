@@ -126,11 +126,10 @@ collections:
     folder: "src/pages/custom"
     slug: "{{slug}}"
     fields:
-      - {label: "Page Type", name: "pageType", widget: "select", options: ["standard", "menu-only"], default: "standard"}
+      - {label: "Page Type", name: "pageType", widget: "hidden", default: "standard"}
       - {label: "Menu Title", name: "menuTitle", widget: "string"}
       - {label: "Show in menu", name: "nav", widget: "boolean", default: true}
-      - {label: "Menu sort number", name: "navSort", widget: "number", min: "2", valueType: "int"}
-      ## - {label: "Parent page", name: "parent", widget: "relation", collection: "customs", searchFields: ["title"], valueField: "title", required: false}
+      - {label: "Menu sort number", name: "navSort", widget: "number", min: "2", valueType: "int", default: "8", required: false}
       - {label: "Page Title", name: "title", widget: "string"}
       - {label: "Align", name: "contentAlign", widget: "select", options: ["left", "center", "right"], default: "left"}
       - {label: "Body", name: "body", widget: "markdown"}

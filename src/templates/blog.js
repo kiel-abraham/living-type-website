@@ -1,31 +1,17 @@
 import React from 'react';
 import Link from 'gatsby-link';
-import Helmet from 'react-helmet';
+import UtilHelmet from '../components/utils/utilHelmet';
 import { Row, Col, Card, CardBody } from 'reactstrap';
 
 const BlogPage = ({ data }) => {
-  const frontmatter = data.markdownRemark.frontmatter;
   return (
     <div>
-      <Helmet>
-        <title>{`${frontmatter.title} | ${data.site.siteMetadata.title}`}</title>
-        <meta property="og:title" content={`${frontmatter.title} | ${data.site.siteMetadata.title}`}/>
-        <meta property="og:url" content={data.site.siteMetadata.siteUrl + frontmatter.slug} />
-        {frontmatter.metaDesc &&
-          <meta name="description" content={frontmatter.metaDesc}/>
-        }
-        {frontmatter.metaDesc &&
-          <meta property="og:description" content={frontmatter.metaDesc}/>
-        }
-        {frontmatter.metaImage &&
-          <meta property="og:image" content={data.site.siteMetadata.siteUrl + frontmatter.metaImage} />
-        }
-      </Helmet>
+      <UtilHelmet data={data} />
 
       <section className="container mt-4">
         <Row>
-          <Col className={`text-${frontmatter.contentAlign}`}>
-            <h1>{frontmatter.title}</h1>
+          <Col className={`text-${data.markdownRemark.frontmatter.contentAlign}`}>
+            <h1>{data.markdownRemark.frontmatter.title}</h1>
             <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
             <Row>
             {data.blogs.edges.map((item, index) => {

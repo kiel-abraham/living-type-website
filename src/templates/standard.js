@@ -1,39 +1,21 @@
 import React from 'react';
-import Helmet from 'react-helmet';
-import Banner from '../components/banner';
+import UtilHelmet from '../components/utils/utilHelmet';
 import { Row, Col } from 'reactstrap';
 
-const StandardPage = ({ data }) => {
-  const frontmatter = data.markdownRemark.frontmatter;
-  const slug = frontmatter.slug || data.markdownRemark.fields.slug;
-  return (
-    <div>
-      <Helmet>
-        <title>{`${frontmatter.title} | ${data.site.siteMetadata.title}`}</title>
-        <meta property="og:title" content={`${frontmatter.title} | ${data.site.siteMetadata.title}`}/>
-        <meta property="og:url" content={data.site.siteMetadata.siteUrl + slug} />
-        {frontmatter.metaDesc &&
-          <meta name="description" content={frontmatter.metaDesc}/>
-        }
-        {frontmatter.metaDesc &&
-          <meta property="og:description" content={frontmatter.metaDesc}/>
-        }
-        {frontmatter.metaImage &&
-          <meta property="og:image" content={data.site.siteMetadata.siteUrl + frontmatter.metaImage} />
-        }
-      </Helmet>
-      
-      <section className="container mt-4">
-        <Row>
-          <Col className={`text-${frontmatter.contentAlign}`}>
-            <h1>{frontmatter.title}</h1>
-            <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-          </Col>
-        </Row>
-      </section>
-    </div>
-  );
-}
+const StandardPage = ({ data }) => (
+  <div>
+    <UtilHelmet data={data} />
+    
+    <section className="container mt-4">
+      <Row>
+        <Col className={`text-${data.markdownRemark.frontmatter.contentAlign}`}>
+          <h1>{data.markdownRemark.frontmatter.title}</h1>
+          <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+        </Col>
+      </Row>
+    </section>
+  </div>
+);
 
 export default StandardPage
 

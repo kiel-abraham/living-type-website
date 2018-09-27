@@ -1,36 +1,23 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 import Contact from '../components/contact';
+import UtilHelmet from '../components/utils/utilHelmet';
 
 const ContactPage = ({ data }) => {
-  const frontmatter = data.markdownRemark.frontmatter;
+  const f = data.markdownRemark.frontmatter;
   return (
     <div>
-      <Helmet>
-        <title>{`${frontmatter.title} | ${data.site.siteMetadata.title}`}</title>
-        <meta property="og:title" content={`${frontmatter.title} | ${data.site.siteMetadata.title}`}/>
-        <meta property="og:url" content={data.site.siteMetadata.siteUrl + frontmatter.slug} />
-        {frontmatter.metaDesc &&
-          <meta name="description" content={frontmatter.metaDesc}/>
-        }
-        {frontmatter.metaDesc &&
-          <meta property="og:description" content={frontmatter.metaDesc}/>
-        }
-        {frontmatter.metaImage &&
-          <meta property="og:image" content={data.site.siteMetadata.siteUrl + frontmatter.metaImage} />
-        }
-      </Helmet>
+      <UtilHelmet data={data} />
 
       <Contact
-        title={frontmatter.title}
+        title={f.title}
         body={data.markdownRemark.html}
-        phone={frontmatter.phone}
-        email={frontmatter.email}
-        address={frontmatter.address}
-        formTitle={frontmatter.form.formTitle}
-        buttonColor={frontmatter.form.buttonColor}
-        buttonText={frontmatter.form.buttonText}
-        inputs={frontmatter.inputs}
+        phone={f.phone}
+        email={f.email}
+        address={f.address}
+        formTitle={f.form.formTitle}
+        buttonColor={f.form.buttonColor}
+        buttonText={f.form.buttonText}
+        inputs={f.inputs}
       />
     </div>
   );
