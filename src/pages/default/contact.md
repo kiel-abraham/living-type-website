@@ -8,6 +8,7 @@ title: Contact
 email: info@livingtype.band
 phone: ''
 address: ''
+image: '/images/living-type-live-photo.jpg'
 form:
   buttonColor: secondary
   buttonText: Send
