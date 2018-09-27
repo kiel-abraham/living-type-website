@@ -17,6 +17,7 @@ metaImage: /images/tshirt-plan.jpg
         <img src="/images/tshirt-plan.jpg" alt="Living Type tshirt plan" class="img-fluid mt-3">
     </div>
     <div class="col-md-6 embed-responsive embed-responsive-1by1">
-        <iframe class="embed-responsive-item"  src="https://docs.google.com/forms/d/e/1FAIpQLSc5hjYHg-96NHkjrHkaBsBQXW_wPZ57OKJ1qkIUNtHea_80gg/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc5hjYHg-96NHkjrHkaBsBQXW_wPZ57OKJ1qkIUNtHea_80gg/viewform?embedded=true" width="640" height="1057" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
     </div>
 </div>
