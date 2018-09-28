@@ -1,11 +1,9 @@
 ---
 settingsPage: true
 pageType: none
-header:
-  background: primary
-  invert: false
-  logo: /images/thkr-logo-white.png
-  menu: Standard
+headerBackground: primary
+invert: false
+logo: /images/thkr-logo-white.png
 favicon: /images/thkr-logo.png
 footerBackground: dark
 socialColour: secondary

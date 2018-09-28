@@ -13,8 +13,8 @@ const Layout = ({ children, data }) => {
   let ogImage;
   if (data.home.frontmatter.metaImage) {
     ogImage = data.home.frontmatter.metaImage;
-  } else if (data.settings.frontmatter.header.logo) {
-    ogImage = data.settings.frontmatter.header.logo;
+  } else if (data.settings.frontmatter.logo) {
+    ogImage = data.settings.frontmatter.logo;
   } else {
     ogImage = null;
   }
@@ -41,11 +41,11 @@ const Layout = ({ children, data }) => {
       <a href="#main-content" className="sr-only sr-only-focusable">Skip to main content</a>
 
       <Header 
-        background={data.settings.frontmatter.header.background}
-        invert={data.settings.frontmatter.header.invert ? "light": "dark"}
+        background={data.settings.frontmatter.headerBackground}
+        invert={data.settings.frontmatter.invert ? "light": "dark"}
         siteTitle={data.site.siteMetadata.title}
         nav={data.nav.edges}
-        logo={data.settings.frontmatter.header.logo}
+        logo={data.settings.frontmatter.logo}
       />
 
       <main id="main-content" className="mb-5">
@@ -114,12 +114,9 @@ export const query = graphql`
     }
     settings: markdownRemark(frontmatter: { settingsPage: { eq: true } }) {
       frontmatter {
-        header {
-          menu
-          background
-          invert
-          logo
-        }
+        headerBackground
+        invert
+        logo
         favicon
         footerBackground
         floatingButton {

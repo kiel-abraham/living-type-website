@@ -7,10 +7,12 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
     const slug = createFilePath({ node, getNode });
     let alt_slug;
     if (slug.search("custom") !== -1 || slug.search("default") !== -1) {
+      // remove "custom" or "default" folder from path
       const x = slug.split("/");
       alt_slug = "/" + x[x.length - 2];
     } else {
-      alt_slug = slug;
+      // remove trailing slash
+      alt_slug = slug.slice(0, slug.length -1);
     }
     createNodeField({
       node,

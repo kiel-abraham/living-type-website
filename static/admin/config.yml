@@ -2,6 +2,7 @@ backend:
   name: git-gateway
   branch: dev
 
+# publish_mode: editorial_workflow
 display_url: https://dev.thkr.com.au
 
 media_folder: static/images 
@@ -126,11 +127,10 @@ collections:
     folder: "src/pages/custom"
     slug: "{{slug}}"
     fields:
-      - {label: "Page Type", name: "pageType", widget: "select", options: ["standard", "menu-only"], default: "standard"}
+      - {label: "Page Type", name: "pageType", widget: "hidden", default: "standard"}
       - {label: "Menu Title", name: "menuTitle", widget: "string"}
       - {label: "Show in menu", name: "nav", widget: "boolean", default: true}
-      - {label: "Menu sort number", name: "navSort", widget: "number", min: "2", valueType: "int"}
-      ## - {label: "Parent page", name: "parent", widget: "relation", collection: "customs", searchFields: ["title"], valueField: "title", required: false}
+      - {label: "Menu sort number", name: "navSort", widget: "number", min: "2", valueType: "int", default: "8", required: false}
       - {label: "Page Title", name: "title", widget: "string"}
       - {label: "Align", name: "contentAlign", widget: "select", options: ["left", "center", "right"], default: "left"}
       - {label: "Body", name: "body", widget: "markdown"}
@@ -145,10 +145,11 @@ collections:
     folder: "src/pages/blog"
     slug: "{{slug}}"
     fields:
-      - {label: "Page Type", name: "pageType", widget: "hidden", default: "standard"}
+      - {label: "Page Type", name: "pageType", widget: "hidden", default: "blog-item"}
       - {label: "Blog page", name: "blog", widget: "hidden", default: true}
       - {label: "Date", name: "date", widget: "date", required: false}
       - {label: "Blog Title", name: "title", widget: "string"}
+      - {label: "Featured Image", name: "featuredImage", widget: "image", required: false}
       - {label: "Align", name: "contentAlign", widget: "select", options: ["left", "center", "right"], default: "left"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Slug", name: "slug", widget: "string", pattern: ["^/[a-z0-9-]+$", "Must start with a slash and only include lowercase letters, numbers or hyphens"], required: false}
@@ -165,15 +166,11 @@ collections:
         fields:
           - {label: "Settings Page", name: "settingsPage", widget: "hidden", default: true}
           - {label: "Page Type", name: "pageType", widget: "hidden", default: "none"}
-          - label: "Header"
-            name: "header"
-            widget: "object"
-            fields:
-              - {label: "Logo", name: "logo", widget: "image"}
-              - {label: "Background Colour", name: "background", widget: "select", options: ["primary", "secondary", "info", "success", "warning", "danger", "dark"], default: "primary"}
-              - {label: "Invert", name: "invert", widget: "boolean", default: false}
+          - {label: "Logo", name: "logo", widget: "image", required: false}
+          - {label: "Header Background Colour", name: "headerBackground", widget: "select", options: ["primary", "secondary", "info", "success", "warning", "danger", "dark"], default: "primary"}
+          - {label: "Menu Colour Invert", name: "invert", widget: "boolean", default: false}
           - {label: "Favicon", name: "favicon", widget: "image", required: false}
-          - {label: "Footer Background", name: "footerBackground", widget: "select", options: ["dark", "light"], default: "dark"}
+          - {label: "Footer Background Colour", name: "footerBackground", widget: "select", options: ["dark", "light"], default: "dark"}
           - {label: "Social Links Colour", name: "socialColour", widget: "select", options: ["primary", "secondary", "info", "success", "warning", "danger", "dark"], default: "primary"}
           - {label: "Social Links", name: "socialLinks", widget: "list", fields: [{label: "Link", name: "link", widget: "string"}]}
           - label: "Floating Button"

@@ -1,5 +1,6 @@
 ---
 pageType: blog
+menuTitle: Blog
 title: Blog
 slug: /blog
 nav: true

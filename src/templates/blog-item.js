@@ -2,25 +2,32 @@ import React from 'react';
 import UtilHelmet from '../components/utils/utilHelmet';
 import { Row, Col } from 'reactstrap';
 
-const StandardPage = ({ data }) => (
+const BlogItem = ({ data }) => (
   <div>
     <UtilHelmet data={data} />
     
     <section className="container mt-4">
-      <Row>
-        <Col className={`text-${data.markdownRemark.frontmatter.contentAlign}`}>
+      <Row className={`text-${data.markdownRemark.frontmatter.contentAlign}`}>
+        <Col sm={12}>
           <h1>{data.markdownRemark.frontmatter.title}</h1>
-          <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+        </Col>
+        {data.markdownRemark.frontmatter.featuredImage &&
+            <Col sm={3} className="order-sm-last">
+                <img src={data.markdownRemark.frontmatter.featuredImage} alt={data.markdownRemark.frontmatter.title} className="img-fluid" />
+            </Col>
+        }
+        <Col sm={9}>
+            <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
         </Col>
       </Row>
     </section>
   </div>
 );
 
-export default StandardPage
+export default BlogItem
 
 export const query = graphql`
-  query StandardPage($slug: String!) {
+  query BlogItem($slug: String!) {
     site {
       siteMetadata {
         title
@@ -35,6 +42,7 @@ export const query = graphql`
       frontmatter {
         title
         slug
+        featuredImage
         contentAlign
         metaDesc
         metaImage
