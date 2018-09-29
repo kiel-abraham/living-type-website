@@ -1,8 +1,6 @@
 import React from 'react';
 import { Row, Col, Button, Form, FormGroup, Label, Input } from 'reactstrap';
-import FaPhone from 'react-icons/lib/fa/phone';
-import FaEmail from 'react-icons/lib/fa/envelope';
-import FaHome from 'react-icons/lib/fa/home';
+import { FaPhone, FaEnvelope, FaHome } from 'react-icons/fa';
 
 const Contact = ({ title, body, phone, email, address, formTitle, buttonColor, buttonText, inputs }) => {
   return (
@@ -19,7 +17,7 @@ const Contact = ({ title, body, phone, email, address, formTitle, buttonColor, b
               <p><FaPhone /> <a href={`tel:${phone}`}>{phone}</a></p>
             }
             {email &&
-              <p><FaEmail /> <a href={`mailto:${email}`}>{email}</a></p>
+              <p><FaEnvelope /> <a href={`mailto:${email}`}>{email}</a></p>
             }
             {address &&
               <p><FaHome /> {address}</p>
@@ -28,6 +26,7 @@ const Contact = ({ title, body, phone, email, address, formTitle, buttonColor, b
           {address &&
             <div className="mb-3">
               <iframe
+                title="contact-map"
                 frameBorder="0"
                 width="100%"
                 src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyAhL1Fckv4m2EV8Tw7cdHsupwZ7I4tqWQo&q=${address}`}

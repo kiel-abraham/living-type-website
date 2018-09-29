@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import { Link } from 'gatsby';
 import { Jumbotron } from 'reactstrap';
 
 const Banner = ({ visible, fullWidth, title, subtitle, image, overlay, button, buttonLink, buttonColour, align }) => {

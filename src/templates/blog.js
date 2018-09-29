@@ -1,11 +1,12 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import { Link, graphql } from 'gatsby';
 import UtilHelmet from '../components/utils/utilHelmet';
+import Layout from '../components/layout';
 import { Row, Col, Card, CardImg, CardBody } from 'reactstrap';
 
 const BlogPage = ({ data }) => {
 	return (
-		<div>
+		<Layout>
 			<UtilHelmet data={data} />
 
 			<section className="container mt-4">
@@ -47,14 +48,14 @@ const BlogPage = ({ data }) => {
 					</Col>
 				</Row>
 			</section>
-		</div>
+		</Layout>
 	);
 };
 
 export default BlogPage;
 
-export const BlogQuery = graphql`
-  query BlogQuery {
+export const query = graphql`
+  query {
     site {
       siteMetadata {
         title

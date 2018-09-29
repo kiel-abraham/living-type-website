@@ -1,9 +1,11 @@
 import React from 'react';
+import { graphql } from "gatsby"
 import UtilHelmet from '../components/utils/utilHelmet';
+import Layout from '../components/layout';
 import { Row, Col } from 'reactstrap';
 
 const StandardPage = ({ data }) => (
-  <div>
+  <Layout>
     <UtilHelmet data={data} />
     
     <section className="container mt-4">
@@ -14,13 +16,13 @@ const StandardPage = ({ data }) => (
         </Col>
       </Row>
     </section>
-  </div>
+  </Layout>
 );
 
 export default StandardPage
 
 export const query = graphql`
-  query StandardPage($slug: String!) {
+  query ($slug: String!) {
     site {
       siteMetadata {
         title

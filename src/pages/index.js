@@ -1,11 +1,13 @@
 import React from 'react';
+import { graphql } from "gatsby"
 import { Row, Col } from 'reactstrap';
 import Banner from '../components/banner';
+import Layout from '../components/layout';
 
 const HomePage = ({ data }) => {
   const frontmatter = data.markdownRemark.frontmatter;
   return (
-    <div>
+    <Layout>
       <Banner
         visible={frontmatter.banner.visible}
         fullWidth={frontmatter.banner.fullWidth}
@@ -27,14 +29,14 @@ const HomePage = ({ data }) => {
           </Col>
         </Row>
       </section>
-    </div>
+    </Layout>
   )
 }
 
 export default HomePage
 
-export const IndexQuery = graphql`
-  query IndexQuery {
+export const query = graphql`
+  query {
     markdownRemark(frontmatter: { homePage: { eq: true } }) {
       html
       frontmatter {

@@ -1,9 +1,5 @@
 import React from 'react';
-import FaFacebook from 'react-icons/lib/fa/facebook-square';
-import FaGoogle from 'react-icons/lib/fa/google-plus-square';
-import FaTwitter from 'react-icons/lib/fa/twitter-square';
-import FaYoutube from 'react-icons/lib/fa/youtube-square';
-import FaInstagram from 'react-icons/lib/fa/instagram';
+import { FaFacebook, FaGoogle, FaTwitter, FaYoutube, FaInstagram } from 'react-icons/fa';
 
 const Footer = ({ background, socialColour, links, siteTitle, siteUrl }) => {
   const copyColour = background === "light" ? "dark" : "light";
@@ -28,55 +24,60 @@ const Footer = ({ background, socialColour, links, siteTitle, siteUrl }) => {
               {(item.link.search("facebook") !== -1) &&
                 <a
                   href={item.link}
-                  className={`nav-link p-0 text-${socialColour}`}
+                  className={`nav-link px-1 text-${socialColour}`}
                   target="_blank"
+                  rel="noopener noreferrer"
                   title={`${siteTitle} on Facebook`}
                 >
-                  <FaFacebook size={28} />
+                  <FaFacebook size={20} />
                   <span className="sr-only">Facebook</span>
                 </a>
               }
               {(item.link.search("google") !== -1) &&
                 <a
                   href={item.link}
-                  className={`nav-link p-0 text-${socialColour}`}
+                  className={`nav-link px-1 text-${socialColour}`}
                   target="_blank"
+                  rel="noopener noreferrer"
                   title={`${siteTitle} on Google`}
                 >
-                  <FaGoogle size={28} />
+                  <FaGoogle size={20} />
                   <span className="sr-only">Google</span>
                 </a>
               }
               {(item.link.search("twitter") !== -1) &&
                 <a 
                   href={item.link}
-                  className={`nav-link p-0 text-${socialColour}`}
+                  className={`nav-link px-1 text-${socialColour}`}
                   target="_blank"
+                  rel="noopener noreferrer"
                   title={`${siteTitle} on Twitter`}
                 >
-                  <FaTwitter size={28} />
+                  <FaTwitter size={20} />
                   <span className="sr-only">Twitter</span>
                 </a>
               }
               {(item.link.search("instagram") !== -1) &&
                 <a
                   href={item.link}
-                  className={`nav-link p-0 text-${socialColour}`}
+                  className={`nav-link px-1 text-${socialColour}`}
                   target="_blank"
+                  rel="noopener noreferrer"
                   title={`${siteTitle} on Instagram`}
                 >
-                  <FaInstagram size={28} />
+                  <FaInstagram size={20} />
                   <span className="sr-only">Instagram</span>
                 </a>
               }
               {(item.link.search("youtube") !== -1) &&
                 <a
                   href={item.link}
-                  className={`nav-link p-0 text-${socialColour}`}
+                  className={`nav-link px-1 text-${socialColour}`}
                   target="_blank"
+                  rel="noopener noreferrer"
                   title={`${siteTitle} on YouTube`}
                 >
-                  <FaYoutube size={28} />
+                  <FaYoutube size={20} />
                   <span className="sr-only">YouTube</span>
                 </a>
               }
@@ -85,7 +86,7 @@ const Footer = ({ background, socialColour, links, siteTitle, siteUrl }) => {
         })}
       </ul>
       <p className={`text-${copyColour}`}>&copy; {year} {siteTitle}</p>
-      <small className="text-muted">Powered by <a href="https//www.thkr.com.au" target="_blank">THKR</a></small>
+      <small className="text-muted">Powered by <a href="https://www.thkr.com.au" target="_blank" rel="noopener noreferrer">THKR</a></small>
     </footer>
   );
 }
