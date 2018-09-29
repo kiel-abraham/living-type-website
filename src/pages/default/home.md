@@ -40,6 +40,6 @@ Greg - Drums
 
    <p class="card-text">We've got our first run on shirt in process. </p>
 
-   <a href="/tshirt" class="btn btn-warning">Order Now</a></div>
+   <a href="/tshirt" class="btn btn-outline-warning">Order Now</a></div>
 
 </div>
