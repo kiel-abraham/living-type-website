@@ -26,11 +26,20 @@ metaImage: /images/living-type-cover.jpg
 ---
 Brisbane based alternative rock band. With straight hitting guitar and drums, and honest vocals, to deliver their driving sound!
 
-
 MEMBERS
 
 Ben - Vocals / Bass
 Kiel - Guitar
 Greg - Drums
 
-<br><br>
+<div class="card text-white bg-dark mb-3">
+
+<div class="card-body">
+
+   <h3 class="card-title">T-Shirt Preorder Now Open</h3>
+
+   <p class="card-text">We've got our first run on shirt in process. </p>
+
+   <a href="/tshirt" class="btn btn-warning">Order Now</a></div>
+
+</div>
