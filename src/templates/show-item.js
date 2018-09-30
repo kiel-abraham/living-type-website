@@ -1,9 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { Row, Col } from 'reactstrap';
-import FaCalendar from 'react-icons/lib/fa/calendar';
-import FaMarker from 'react-icons/lib/fa/map-marker';
-
+import { FaCalendar, FaMarker } from 'react-icons/fa';
 
 const ShowItem = ({ data }) => {
   const frontmatter = data.markdownRemark.frontmatter;

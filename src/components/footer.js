@@ -1,10 +1,5 @@
 import React from 'react';
-import FaFacebook from 'react-icons/lib/fa/facebook-square';
-import FaGoogle from 'react-icons/lib/fa/google-plus-square';
-import FaTwitter from 'react-icons/lib/fa/twitter-square';
-import FaYoutube from 'react-icons/lib/fa/youtube-square';
-import FaInstagram from 'react-icons/lib/fa/instagram';
-import FaMusic from 'react-icons/lib/fa/music';
+import { FaFacebook, FaGoogle, FaTwitter, FaYoutube, FaInstagram, FaMusic, FaBandcamp } from 'react-icons/fa';
 
 const Footer = ({ background, socialColour, links, siteTitle, siteUrl }) => {
   const copyColour = background === "light" ? "dark" : "light";
@@ -88,7 +83,7 @@ const Footer = ({ background, socialColour, links, siteTitle, siteUrl }) => {
                   target="_blank"
                   title={`${siteTitle} on Bandcamp`}
                 >
-                  <FaMusic size={28} />
+                  <FaBandcamp size={28} />
                   <span className="sr-only">Bandcamp</span>
                 </a>
               }

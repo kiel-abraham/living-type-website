@@ -1,8 +1,6 @@
 import React from 'react';
 import { Row, Col, Button, Form, FormGroup, Label, Input } from 'reactstrap';
-import FaPhone from 'react-icons/lib/fa/phone';
-import FaEmail from 'react-icons/lib/fa/envelope';
-import FaHome from 'react-icons/lib/fa/home';
+import { FaPhone, FaEnvelope, FaHome } from 'react-icons/fa';
 
 const Contact = ({ title, body, phone, email, address, formTitle, buttonColor, buttonText, inputs, image }) => {
   let strippedAddress = address.replace(/[, ]/g,'+');
@@ -20,7 +18,7 @@ const Contact = ({ title, body, phone, email, address, formTitle, buttonColor, b
               <p><FaPhone /> <a href={`tel:${phone}`}>{phone}</a></p>
             }
             {email &&
-              <p><FaEmail /> <a href={`mailto:${email}`}>{email}</a></p>
+              <p><FaEnvelope /> <a href={`mailto:${email}`}>{email}</a></p>
             }
             {address &&
               <p><FaHome /> {address}</p>

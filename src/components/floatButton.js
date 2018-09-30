@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'gatsby-link';
-import FaPhone from 'react-icons/lib/fa/phone';
-import FaEnvelope from 'react-icons/lib/fa/envelope';
+import { FaPhone, FaEnvelope } from 'react-icons/fa';
 
 const FloatButton = ({ floatButtonColour, floatButton, phone }) => {
 
