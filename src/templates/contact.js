@@ -1,11 +1,13 @@
 import React from 'react';
+import { graphql } from "gatsby"
 import Contact from '../components/contact';
+import Layout from '../components/layout';
 import UtilHelmet from '../components/utils/utilHelmet';
 
 const ContactPage = ({ data }) => {
   const f = data.markdownRemark.frontmatter;
   return (
-    <div>
+    <Layout>
       <UtilHelmet data={data} />
 
       <Contact
@@ -19,14 +21,14 @@ const ContactPage = ({ data }) => {
         buttonText={f.form.buttonText}
         inputs={f.inputs}
       />
-    </div>
+    </Layout>
   );
 }
 
 export default ContactPage
 
-export const ContactQuery = graphql`
-  query ContactQuery {
+export const query = graphql`
+  query {
     site {
       siteMetadata {
         title

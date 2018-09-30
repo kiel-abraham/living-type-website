@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import { Link } from 'gatsby';
 import { Container, NavItem } from 'reactstrap';
 
 const Scroll = (props) => (
@@ -19,7 +19,7 @@ const Scroll = (props) => (
             return (
                 <NavItem key={ index }>
                 <Link 
-                    exact to={item.node.frontmatter.slug || item.node.fields.slug}
+                    to={item.node.frontmatter.slug || item.node.fields.slug}
                     activeClassName="active"
                     className="nav-link px-2">
                         {item.node.frontmatter.menuTitle || item.node.frontmatter.title}

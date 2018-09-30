@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import { Link } from 'gatsby';
 import Logo from './logo';
 import { Container, NavbarToggler, Collapse, NavItem } from 'reactstrap';
 
@@ -29,7 +29,7 @@ class Slide extends React.Component {
                     return (
                     <NavItem key={ index }>
                         <Link 
-                        exact to={item.node.frontmatter.slug || item.node.fields.slug}
+                        to={item.node.frontmatter.slug || item.node.fields.slug}
                         activeClassName="active"
                         className="nav-link"
                         onClick={this.toggle}>{item.node.frontmatter.menuTitle || item.node.frontmatter.title}
