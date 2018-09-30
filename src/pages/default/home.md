@@ -38,7 +38,7 @@ Greg - Drums
 
    <h3 class="card-title">T-Shirt Preorder Now Open</h3>
 
-   <p class="card-text">We've got our first run on shirt in process. </p>
+   <p class="card-text">We've got our first run of shirts in process. </p>
 
    <a href="/tshirt" class="btn btn-outline-warning">Order Now</a></div>
 
