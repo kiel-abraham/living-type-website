@@ -4,22 +4,24 @@
   "version": "1.0.0",
   "author": "Kiel Abraham",
   "dependencies": {
-    "gatsby": "^1.9.247",
-    "gatsby-link": "^1.6.40",
-    "gatsby-plugin-netlify": "^1.0.21",
-    "gatsby-plugin-netlify-cms": "^2.0.1",
-    "gatsby-plugin-react-helmet": "^2.0.10",
-    "gatsby-plugin-robots-txt": "^1.3.0",
-    "gatsby-plugin-sass": "^1.0.26",
-    "gatsby-plugin-sharp": "^1.6.48",
-    "gatsby-plugin-sitemap": "^1.2.25",
-    "gatsby-remark-images": "^1.5.67",
-    "gatsby-source-filesystem": "^1.5.39",
-    "gatsby-transformer-remark": "^1.7.44",
-    "netlify-cms": "^1.9.3",
-    "react-helmet": "^5.2.0",
+    "gatsby": "latest",
+    "gatsby-plugin-netlify": "latest",
+    "gatsby-plugin-netlify-cms": "latest",
+    "gatsby-plugin-react-helmet": "latest",
+    "gatsby-plugin-robots-txt": "latest",
+    "gatsby-plugin-sass": "latest",
+    "gatsby-plugin-sharp": "latest",
+    "gatsby-plugin-sitemap": "latest",
+    "gatsby-remark-images": "latest",
+    "gatsby-source-filesystem": "latest",
+    "gatsby-transformer-remark": "latest",
+    "netlify-cms": "latest",
+    "react-helmet": "latest",
     "react-icons": "^3.1.0",
-    "reactstrap": "^6.1.0"
+    "reactstrap": "latest",
+    "node-sass": "^4.9.3",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
   },
   "keywords": [
     "gatsby"
@@ -32,7 +34,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "gatsby-plugin-remove-trailing-slashes": "^1.0.9",
+    "gatsby-plugin-remove-trailing-slashes": "latest",
     "prettier": "^1.12.0"
   },
   "repository": {

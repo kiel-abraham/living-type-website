@@ -1,11 +1,13 @@
 import React from 'react';
+import { graphql } from "gatsby";
 import Helmet from 'react-helmet';
 import Contact from '../components/contact';
+import Layout from '../components/layout';
 
 const ContactPage = ({ data }) => {
   const frontmatter = data.markdownRemark.frontmatter;
   return (
-    <div>
+    <Layout>
       <Helmet>
         <title>{`${frontmatter.title} | ${data.site.siteMetadata.title}`}</title>
         <meta property="og:title" content={`${frontmatter.title} | ${data.site.siteMetadata.title}`}/>
@@ -33,14 +35,14 @@ const ContactPage = ({ data }) => {
         inputs={frontmatter.inputs}
         image={frontmatter.image}
       />
-    </div>
+    </Layout>
   );
 }
 
 export default ContactPage
 
-export const ContactQuery = graphql`
-  query ContactQuery {
+export const query = graphql`
+  query {
     site {
       siteMetadata {
         title

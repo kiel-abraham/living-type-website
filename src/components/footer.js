@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaFacebook, FaGoogle, FaTwitter, FaYoutube, FaInstagram, FaMusic, FaBandcamp } from 'react-icons/fa';
+import { FaFacebook, FaGoogle, FaTwitter, FaYoutube, FaInstagram, FaBandcamp } from 'react-icons/fa';
 
 const Footer = ({ background, socialColour, links, siteTitle, siteUrl }) => {
   const copyColour = background === "light" ? "dark" : "light";
@@ -26,6 +26,7 @@ const Footer = ({ background, socialColour, links, siteTitle, siteUrl }) => {
                   href={item.link}
                   className={`nav-link p-0 text-${socialColour}`}
                   target="_blank"
+                  rel="noopener noreferrer"
                   title={`${siteTitle} on Facebook`}
                 >
                   <FaFacebook size={28} />
@@ -37,6 +38,7 @@ const Footer = ({ background, socialColour, links, siteTitle, siteUrl }) => {
                   href={item.link}
                   className={`nav-link p-0 text-${socialColour}`}
                   target="_blank"
+                  rel="noopener noreferrer"
                   title={`${siteTitle} on Google`}
                 >
                   <FaGoogle size={28} />
@@ -48,6 +50,7 @@ const Footer = ({ background, socialColour, links, siteTitle, siteUrl }) => {
                   href={item.link}
                   className={`nav-link p-0 text-${socialColour}`}
                   target="_blank"
+                  rel="noopener noreferrer"
                   title={`${siteTitle} on Twitter`}
                 >
                   <FaTwitter size={28} />
@@ -59,6 +62,7 @@ const Footer = ({ background, socialColour, links, siteTitle, siteUrl }) => {
                   href={item.link}
                   className={`nav-link p-0 text-${socialColour}`}
                   target="_blank"
+                  rel="noopener noreferrer"
                   title={`${siteTitle} on Instagram`}
                 >
                   <FaInstagram size={28} />
@@ -70,6 +74,7 @@ const Footer = ({ background, socialColour, links, siteTitle, siteUrl }) => {
                   href={item.link}
                   className={`nav-link p-0 text-${socialColour}`}
                   target="_blank"
+                  rel="noopener noreferrer"
                   title={`${siteTitle} on YouTube`}
                 >
                   <FaYoutube size={28} />
@@ -81,6 +86,7 @@ const Footer = ({ background, socialColour, links, siteTitle, siteUrl }) => {
                   href={item.link}
                   className={`nav-link p-0 text-${socialColour}`}
                   target="_blank"
+                  rel="noopener noreferrer"
                   title={`${siteTitle} on Bandcamp`}
                 >
                   <FaBandcamp size={28} />
@@ -92,7 +98,7 @@ const Footer = ({ background, socialColour, links, siteTitle, siteUrl }) => {
         })}
       </ul>
       <p className={`text-${copyColour}`}>&copy; {year} {siteTitle}</p>
-      <small className="text-muted">Powered by <a href="https://www.thkr.com.au" target="_blank" className={`text-${socialColour}`}>THKR</a></small>
+      <small className="text-muted">Powered by <a href="https://www.thkr.com.au" target="_blank" rel="noopener noreferrer" className={`text-${socialColour}`}>THKR</a></small>
     </footer>
   );
 }

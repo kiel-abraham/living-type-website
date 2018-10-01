@@ -1,4 +1,6 @@
 import React from 'react';
+import { graphql } from "gatsby";
+import Layout from '../components/layout';
 import { Row, Col } from 'reactstrap';
 import Banner from '../components/banner';
 
@@ -7,7 +9,7 @@ const HomePage = ({ data }) => {
   const x = frontmatter.latestVideo;
   const videoId = x.slice((x.lastIndexOf("/") + 1), x.length);
   return (
-    <div>
+    <Layout>
       <Banner
         visible={frontmatter.banner.visible}
         fullWidth={frontmatter.banner.fullWidth}
@@ -30,21 +32,21 @@ const HomePage = ({ data }) => {
               <div>
                 <h3>Latest Video</h3>
                 <div className="col-sm-8 offset-sm-2 col-md-6 offset-md-3 embed-responsive embed-responsive-16by9">
-                  <iframe className="embed-responsive-item" src={`https://www.youtube.com/embed/${videoId}`} frameBorder="0" allowFullScreen></iframe>
+                  <iframe title="youtube" className="embed-responsive-item" src={`https://www.youtube.com/embed/${videoId}`} frameBorder="0" allowFullScreen></iframe>
                 </div>
               </div>
             }
           </Col>
         </Row>
       </section>
-    </div>
+    </Layout>
   )
 }
 
 export default HomePage
 
-export const IndexQuery = graphql`
-  query IndexQuery {
+export const query = graphql`
+  query {
     markdownRemark(frontmatter: { homePage: { eq: true } }) {
       html
       frontmatter {

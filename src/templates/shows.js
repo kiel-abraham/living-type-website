@@ -1,12 +1,13 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import { Link, graphql } from 'gatsby';
 import Helmet from 'react-helmet';
+import Layout from '../components/layout';
 import { Row, Col, Table } from 'reactstrap';
 
 const ShowsPage = ({ data }) => {
   const frontmatter = data.markdownRemark.frontmatter;
   return (
-    <div>
+    <Layout>
       <Helmet>
         <title>{`${frontmatter.title} | ${data.site.siteMetadata.title}`}</title>
         <meta property="og:title" content={`${frontmatter.title} | ${data.site.siteMetadata.title}`}/>
@@ -44,7 +45,7 @@ const ShowsPage = ({ data }) => {
                                   <Link to={item.node.frontmatter.slug || item.node.fields.slug}>{item.node.frontmatter.title}</Link>
                                 </td>
                                 <td>
-                                  <a href={`https://maps.google.com/maps?q=${item.node.frontmatter.address}`} target="_blank" title="View in Google Maps">{item.node.frontmatter.venue}</a>
+                                  <a href={`https://maps.google.com/maps?q=${item.node.frontmatter.address}`} target="_blank" rel="noopener noreferrer" title="View in Google Maps">{item.node.frontmatter.venue}</a>
                                 </td>
                             </tr>
                         );
@@ -55,14 +56,14 @@ const ShowsPage = ({ data }) => {
         </Row>
       </section>
       
-    </div>
+    </Layout>
   );
 }
 
 export default ShowsPage;
 
-export const ShowsQuery = graphql`
-  query ShowsQuery {
+export const query = graphql`
+  query {
     site {
       siteMetadata {
         title

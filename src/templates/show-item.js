@@ -1,13 +1,15 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import { graphql } from "gatsby";
+import Layout from '../components/layout';
 import { Row, Col } from 'reactstrap';
-import { FaCalendar, FaMarker } from 'react-icons/fa';
+import { FaCalendar, FaMapMarker } from 'react-icons/fa';
 
 const ShowItem = ({ data }) => {
   const frontmatter = data.markdownRemark.frontmatter;
   const slug = frontmatter.slug || data.markdownRemark.fields.slug;
   return (
-    <div>
+    <Layout>
       <Helmet>
         <title>{`${frontmatter.title} | ${data.site.siteMetadata.title}`}</title>
         <meta property="og:title" content={`${frontmatter.title} | ${data.site.siteMetadata.title}`}/>
@@ -28,27 +30,27 @@ const ShowItem = ({ data }) => {
           <Col sm={frontmatter.image? "6": "12"}>
             <h1>{frontmatter.title} @ {frontmatter.venue}</h1>
             <h3><FaCalendar /> {frontmatter.date}</h3>
-            <address><FaMarker /> <a href={`https://maps.google.com/maps?q=${frontmatter.address}`} target="_blank" title="View in Google Maps">{frontmatter.address}</a></address>
+            <address><FaMapMarker /> <a href={`https://maps.google.com/maps?q=${frontmatter.address}`} target="_blank" rel="noopener noreferrer" title="View in Google Maps">{frontmatter.address}</a></address>
             <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
             {frontmatter.facebook &&
-                <a href={frontmatter.facebook} className="btn btn-sm btn-outline-light mb-5" target="_blank">View event on Facebook</a>
+                <a href={frontmatter.facebook} className="btn btn-sm btn-outline-light mb-5" target="_blank" rel="noopener noreferrer">View event on Facebook</a>
             }
           </Col>
           {frontmatter.image &&
             <Col sm="6">
-              <img src={frontmatter.image} className="img-fluid" />
+              <img src={frontmatter.image} alt={frontmatter.title} className="img-fluid" />
             </Col>
           }
         </Row>
       </section>
-    </div>
+    </Layout>
   );
 }
 
 export default ShowItem;
 
 export const query = graphql`
-  query ShowItem($slug: String!) {
+  query ($slug: String!) {
     site {
       siteMetadata {
         title

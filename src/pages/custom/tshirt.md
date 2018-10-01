@@ -12,8 +12,8 @@ metaImage: /images/tshirt-plan.jpg
 <div class="row">
     <div class="col-md-6 mb-5">
         <p>Please see example design. Print will be in white so don't order a white t-shirt. Men's and women's available. Have a look at colours and sizes using the shirt guides below. Preorder your shirt now.</p>
-        <a href="/images/mens-shirt-guide.pdf" class="btn btn-outline-secondary" target="_blank">Men's shirt guide</a>
-        <a href="/images/womens-shirt-guide.pdf" class="btn btn-outline-secondary" target="_blank">Women's shirt guide</a>
+        <a href="/images/mens-shirt-guide.pdf" class="btn btn-outline-secondary" target="_blank" rel="noopener noreferrer">Men's shirt guide</a>
+        <a href="/images/womens-shirt-guide.pdf" class="btn btn-outline-secondary" target="_blank" rel="noopener noreferrer">Women's shirt guide</a>
         <img src="/images/tshirt-plan.jpg" alt="Living Type tshirt plan" class="img-fluid mt-3">
     </div>
     <div class="col-md-6 embed-responsive embed-responsive-1by1" style="overflow:auto;-webkit-overflow-scrolling:touch">

@@ -1,12 +1,14 @@
 import React from 'react';
+import { graphql } from "gatsby";
 import Helmet from 'react-helmet';
+import Layout from '../components/layout';
 import { Row, Col } from 'reactstrap';
 
 const StandardPage = ({ data }) => {
   const frontmatter = data.markdownRemark.frontmatter;
   const slug = frontmatter.slug || data.markdownRemark.fields.slug;
   return (
-    <div>
+    <Layout>
       <Helmet>
         <title>{`${frontmatter.title} | ${data.site.siteMetadata.title}`}</title>
         <meta property="og:title" content={`${frontmatter.title} | ${data.site.siteMetadata.title}`}/>
@@ -30,14 +32,14 @@ const StandardPage = ({ data }) => {
           </Col>
         </Row>
       </section>
-    </div>
+    </Layout>
   );
 }
 
 export default StandardPage
 
 export const query = graphql`
-  query StandardPage($slug: String!) {
+  query ($slug: String!) {
     site {
       siteMetadata {
         title

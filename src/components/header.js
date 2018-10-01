@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import { Link } from 'gatsby';
 import { Container, Collapse, NavbarToggler, NavItem } from 'reactstrap';
 
 const Logo = ({logo, siteTitle}) => (
