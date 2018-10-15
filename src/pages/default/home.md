@@ -21,5 +21,5 @@ contentAlign: center
 metaDesc: Welcome to THKR CMS. Where we make simple easy
 metaImage: ''
 ---
-This is the home page.
+This is the home page test.
 
