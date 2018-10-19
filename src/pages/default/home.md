@@ -31,17 +31,3 @@ MEMBERS
 Ben - Vocals / Bass
 Kiel - Guitar
 Greg - Drums
-
-<div class="card text-white bg-dark mb-3">
-
-<div class="card-body">
-
-   <h3 class="card-title">T-Shirt Preorder Now Open</h3>
-
-   <p class="card-text">We've got our first run of shirts in process. </p>
-
-<p>Cut off date - Friday October 19</p>
-
-   <a href="/tshirt" class="btn btn-outline-warning">Order Now</a></div>
-
-</div>
