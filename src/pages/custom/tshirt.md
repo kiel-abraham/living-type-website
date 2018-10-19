@@ -18,8 +18,4 @@ metaImage: /images/tshirt-plan.jpg
         <a href="/images/womens-shirt-guide.pdf" class="btn btn-outline-secondary" target="_blank" rel="noopener noreferrer">Women's shirt guide</a>
         <img src="/images/tshirt-plan.jpg" alt="Living Type tshirt plan" class="img-fluid mt-3">
     </div>
-    <div class="col-md-6 embed-responsive embed-responsive-1by1" style="overflow:auto;-webkit-overflow-scrolling:touch">
-
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc5hjYHg-96NHkjrHkaBsBQXW_wPZ57OKJ1qkIUNtHea_80gg/viewform?embedded=true" width="640" height="1057" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
-    </div>
 </div>
