@@ -89,7 +89,7 @@ const Footer = ({ background, socialColour, links, siteTitle, siteUrl }) => {
                   rel="noopener noreferrer"
                   title={`${siteTitle} on Spotify`}
                 >
-                  <FaSpotify size={20} />
+                  <FaSpotify size={28} />
                   <span className="sr-only">Spotify</span>
                 </a>
               }
