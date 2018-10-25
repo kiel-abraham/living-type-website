@@ -39,10 +39,22 @@ const Footer = ({ background, socialColour, links, siteTitle, siteUrl }) => {
                   className={`nav-link p-0 text-${socialColour}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  title={`${siteTitle} on Google`}
+                  title={`${siteTitle} on Google Plus`}
                 >
                   <FaGooglePlus size={28} />
-                  <span className="sr-only">Google</span>
+                  <span className="sr-only">Google Plus</span>
+                </a>
+              }
+              {(item.link.search("play.google") !== -1) &&
+                <a
+                  href={item.link}
+                  className={`nav-link p-0 text-${socialColour}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title={`${siteTitle} on Google Play`}
+                >
+                  <FaGooglePlay size={28} />
+                  <span className="sr-only">Google Play</span>
                 </a>
               }
               {(item.link.search("twitter") !== -1) &&
@@ -115,18 +127,6 @@ const Footer = ({ background, socialColour, links, siteTitle, siteUrl }) => {
                 >
                   <FaItunes size={28} />
                   <span className="sr-only">iTunes</span>
-                </a>
-              }
-              {(item.link.search("play.google") !== -1) &&
-                <a
-                  href={item.link}
-                  className={`nav-link p-0 text-${socialColour}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title={`${siteTitle} on Google Play`}
-                >
-                  <FaGooglePlay size={28} />
-                  <span className="sr-only">Google Play</span>
                 </a>
               }
             </li>
