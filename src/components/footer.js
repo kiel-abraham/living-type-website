@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaFacebook, FaGoogle, FaTwitter, FaYoutube, FaInstagram, FaBandcamp } from 'react-icons/fa';
+import { FaFacebook, FaGoogle, FaTwitter, FaYoutube, FaInstagram, FaBandcamp, FaSpotify } from 'react-icons/fa';
 
 const Footer = ({ background, socialColour, links, siteTitle, siteUrl }) => {
   const copyColour = background === "light" ? "dark" : "light";
@@ -79,6 +79,18 @@ const Footer = ({ background, socialColour, links, siteTitle, siteUrl }) => {
                 >
                   <FaYoutube size={28} />
                   <span className="sr-only">YouTube</span>
+                </a>
+              }
+              {(item.link.search("spotify") !== -1) &&
+                <a
+                  href={item.link}
+                  className={`nav-link px-1 text-${socialColour}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title={`${siteTitle} on Spotify`}
+                >
+                  <FaSpotify size={20} />
+                  <span className="sr-only">Spotify</span>
                 </a>
               }
               {(item.link.search("bandcamp") !== -1) &&
