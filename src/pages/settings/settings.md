@@ -15,6 +15,7 @@ socialLinks:
   - link: 'https://open.spotify.com/artist/2IQEc43d5HvELQg2lSgBrD'
   - link: 'https://www.youtube.com/channel/UCgGeqr6xUH3C71ohNZcXb2w'
   - link: 'https://livingtype.bandcamp.com/'
+  - link: 'https://itunes.apple.com/au/artist/living-type/1439884608'
 floatingButton:
   colour: primary
   type: Email
