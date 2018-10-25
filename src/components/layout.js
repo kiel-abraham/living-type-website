@@ -1,8 +1,6 @@
 import React from 'react';
 import { StaticQuery, graphql } from "gatsby"
-import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-
 import Header from './header';
 import Footer from './footer';
 import FloatButton from './floatButton';
@@ -129,9 +127,5 @@ const Layout = ({ children, data }) => (
     )}
   />
 );
-
-Layout.propTypes = {
-  children: PropTypes.func,
-}
 
 export default Layout;

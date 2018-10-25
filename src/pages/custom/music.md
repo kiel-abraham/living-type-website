@@ -6,6 +6,7 @@ navSort: 2
 title: Music
 contentAlign: center
 slug: /music
+metaDesc: 'Living Type debut EP Eleven is out now! Listen here or stream via Spotify, Apple Music and more'
 ---
 <div class="col-sm-10 offset-sm-1 mt-3 mb-5">
     <h4>Spotify or Apple Music user?</h4>
