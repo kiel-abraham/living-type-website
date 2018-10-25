@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaFacebook, FaGoogle, FaTwitter, FaYoutube, FaInstagram, FaBandcamp, FaSpotify, FaItunes } from 'react-icons/fa';
+import { FaFacebook, FaGooglePlus, FaGooglePlay, FaTwitter, FaYoutube, FaInstagram, FaBandcamp, FaSpotify, FaItunes } from 'react-icons/fa';
 
 const Footer = ({ background, socialColour, links, siteTitle, siteUrl }) => {
   const copyColour = background === "light" ? "dark" : "light";
@@ -33,7 +33,7 @@ const Footer = ({ background, socialColour, links, siteTitle, siteUrl }) => {
                   <span className="sr-only">Facebook</span>
                 </a>
               }
-              {(item.link.search("google") !== -1) &&
+              {(item.link.search("plus.google") !== -1) &&
                 <a
                   href={item.link}
                   className={`nav-link p-0 text-${socialColour}`}
@@ -41,7 +41,7 @@ const Footer = ({ background, socialColour, links, siteTitle, siteUrl }) => {
                   rel="noopener noreferrer"
                   title={`${siteTitle} on Google`}
                 >
-                  <FaGoogle size={28} />
+                  <FaGooglePlus size={28} />
                   <span className="sr-only">Google</span>
                 </a>
               }
@@ -115,6 +115,18 @@ const Footer = ({ background, socialColour, links, siteTitle, siteUrl }) => {
                 >
                   <FaItunes size={28} />
                   <span className="sr-only">iTunes</span>
+                </a>
+              }
+              {(item.link.search("play.google") !== -1) &&
+                <a
+                  href={item.link}
+                  className={`nav-link p-0 text-${socialColour}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title={`${siteTitle} on Google Play`}
+                >
+                  <FaGooglePlay size={28} />
+                  <span className="sr-only">Google Play</span>
                 </a>
               }
             </li>
