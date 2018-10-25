@@ -31,3 +31,17 @@ MEMBERS
 Ben - Vocals / Bass
 Kiel - Guitar
 Greg - Drums
+
+
+
+<div class="card text-white bg-dark mb-3">
+
+<div class="card-body">
+
+<h4 class="card-title">Debut EP out now</h4>
+
+<a href="/music" class="btn btn-outline-warning">Listen</a>
+
+  </div>
+
+</div>
