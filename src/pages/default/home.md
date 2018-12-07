@@ -7,14 +7,14 @@ menuTitle: Home
 nav: true
 banner:
   align: left
-  button: View Show
+  button: ""
   buttonColour: light
   buttonLink: /shows/living-type-debut-ep-launch/
   fullWidth: true
   image: /images/living-type-banner.jpg
   overlay: light
-  subtitle: Nov 30th
-  title: EP Launch
+  subtitle: Feb 2nd
+  title: Next Show
   visible: true
 title: Living Type
 contentAlign: center
