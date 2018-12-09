@@ -7,14 +7,14 @@ menuTitle: Home
 nav: true
 banner:
   align: left
-  button: ""
+  button: "View Show"
   buttonColour: light
-  buttonLink: /shows/living-type-debut-ep-launch/
+  buttonLink: /shows/living-type-unplugged/
   fullWidth: true
   image: /images/living-type-banner.jpg
   overlay: light
   subtitle: Feb 2nd
-  title: Next Show
+  title: Living Type Unplugged
   visible: true
 title: Living Type
 contentAlign: center
