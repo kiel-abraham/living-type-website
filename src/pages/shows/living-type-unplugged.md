@@ -11,7 +11,4 @@ slug: ''
 metaDesc: 'Living Type live event. Unplugged and free at Birkdale Craft Bar & Kitchen'
 metaImage: /images/brew-house-flyer.jpg
 ---
-Living Type Unplugged at Birkdale Craft Bar & Kitchen
-
-February 2nd, 7pm
-190 Birkdale Road
+7pm
