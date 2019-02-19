@@ -7,14 +7,14 @@ menuTitle: Home
 nav: true
 banner:
   align: left
-  button: "View Show"
+  button: Learn More
   buttonColour: light
-  buttonLink: /shows/living-type-unplugged/
+  buttonLink: 'https://www.woopfest.com.au/'
   fullWidth: true
   image: /images/living-type-banner.jpg
   overlay: light
-  subtitle: Feb 2nd
-  title: Living Type Unplugged
+  subtitle: Woopfest 2019
+  title: Latest News
   visible: true
 title: Living Type
 contentAlign: center
