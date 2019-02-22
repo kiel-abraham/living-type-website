@@ -7,7 +7,7 @@ menuTitle: Home
 nav: true
 banner:
   align: left
-  button: Learn More
+  button: ''
   buttonColour: light
   buttonLink: 'https://www.woopfest.com.au/'
   fullWidth: true
