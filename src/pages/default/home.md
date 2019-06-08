@@ -18,7 +18,7 @@ banner:
   visible: true
 title: Living Type
 contentAlign: center
-latestVideo: 2aDe0oMKJHI
+latestVideo: CQJcYZMWv0A
 metaDesc: >-
   The official website of Australian rock band Living Type. Featuring tour
   dates, music and news.
