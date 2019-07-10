@@ -13,7 +13,7 @@ const Footer = ({ background, socialColour, links, siteTitle, siteUrl }) => {
   };
 
   return (
-    <footer className={`bg-${background} text-center`} style={styles} itemScope itemType="http://schema.org/WebSite">
+    <footer className={`pt-5 bg-${background} text-center`} style={styles} itemScope itemType="http://schema.org/WebSite">
       <meta itemProp="name" content={siteTitle}/>
       <meta itemProp="url" content={siteUrl}/>
       <ul className="nav my-2 d-inline-flex">
@@ -133,8 +133,7 @@ const Footer = ({ background, socialColour, links, siteTitle, siteUrl }) => {
           )
         })}
       </ul>
-      <p className={`text-${copyColour}`}>&copy; {year} {siteTitle}</p>
-      <small className="text-muted">Powered by <a href="https://www.thkr.com.au" target="_blank" rel="noopener noreferrer" className={`text-${socialColour}`}>THKR</a></small>
+      <p className={`text-${copyColour} mt-3`}>&copy; {year} {siteTitle}</p>
     </footer>
   );
 }

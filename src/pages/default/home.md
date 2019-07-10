@@ -13,7 +13,7 @@ banner:
   fullWidth: true
   image: /images/living-type-banner.jpg
   overlay: light
-  subtitle: Woopfest 2019
+  subtitle: Woopfest Postponed
   title: Latest News
   visible: true
 title: Living Type
@@ -28,9 +28,9 @@ Brisbane based alternative rock band. With straight hitting guitar and drums, an
 
 MEMBERS
 
-Ben - Vocals / Bass
-Kiel - Guitar
-Greg - Drums
+Ben - Vocals / Bass<br/>
+Kiel - Guitar<br/>
+Greg - Drums<br/>
 
 
 
