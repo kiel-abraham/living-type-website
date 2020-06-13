@@ -1,31 +1,14 @@
-import React from 'react';
-import { graphql } from "gatsby"
-import { Row, Col } from 'reactstrap';
-import Layout from '../components/layout';
+import React from "react"
 
-const NotFoundPage = ({ data }) => (
+import Layout from "../components/layout"
+import SEO from "../components/seo"
+
+const NotFoundPage = () => (
   <Layout>
-    <section className="container mt-4">
-      <Row>
-        <Col className={`text-${data.markdownRemark.frontmatter.contentAlign}`}>
-          <h1>{data.markdownRemark.frontmatter.title}</h1>
-          <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-        </Col>
-      </Row>
-    </section>
+    <SEO title="404: Not found" />
+    <h1>NOT FOUND</h1>
+    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
   </Layout>
 )
 
 export default NotFoundPage
-
-export const query = graphql`
-  query {
-    markdownRemark(frontmatter: { page404: { eq: true } }) {
-      html
-      frontmatter {
-        title
-        contentAlign
-      }
-    }
-  }
-`;

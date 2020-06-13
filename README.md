@@ -1,7 +1,2 @@
-# THKR static cms
-Made from GatsbyJs.
-Building a default template.
-
-Test to sync with Netlify
-
-
+# Living Type website
+Using GatsbyJS, Airtable and TailwindCSS
