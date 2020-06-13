@@ -18,6 +18,11 @@
   *
   * @import "tailwindcss/components";
   */
+
+  nav li a.active {
+    @apply text-orange-400;
+  }
+
  @tailwind components;
  
  /**
