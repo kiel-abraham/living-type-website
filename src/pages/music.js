@@ -11,27 +11,29 @@ const Music = ({ data }) => {
     return (
         <Layout>
             <SEO title="Music" />
-            <h1>Music</h1>
 
-            <h2>{first.Album_name}</h2>
-            {first.Artwork && 
-                <img src={first.Artwork[0].url} alt={`${first.Album_name} artwork`} />
-            }
-            
-            {reverse(allAirtableSongs.edges).map((item, index) => {
-                const { data } = item.node;
-                return (
-                    <div key={index}>
-                        <h3>{data.Name}</h3>
-                        {data.MP3 &&
-                            <audio controls>
-                                <source src={data.MP3[0].url} type="audio/mpeg" />
-                                Your browser does not support the audio element.
-                            </audio>
-                        }
-                    </div>
-                );
-            })}
+            <div className="container">
+                <h1>Music</h1>
+                <h2>{first.Album_name}</h2>
+                {first.Artwork && 
+                    <img src={first.Artwork[0].url} alt={`${first.Album_name} artwork`} />
+                }
+                
+                {reverse(allAirtableSongs.edges).map((item, index) => {
+                    const { data } = item.node;
+                    return (
+                        <div key={index}>
+                            <h3>{data.Name}</h3>
+                            {data.MP3 &&
+                                <audio controls>
+                                    <source src={data.MP3[0].url} type="audio/mpeg" />
+                                    Your browser does not support the audio element.
+                                </audio>
+                            }
+                        </div>
+                    );
+                })}
+            </div>
         </Layout>
     );
 }

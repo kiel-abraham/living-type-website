@@ -10,24 +10,27 @@ const Shows = ({ data }) => {
     return (
         <Layout>
             <SEO title="Shows" />
-            <h1>Shows</h1>
+            
+            <div className="container">
+                <h1>Shows</h1>
 
-            {allAirtableShows.edges.map((item, index) => {
-                const { data } = item.node;
-                return (
-                    <div key={index}>
-                        <h2>
-                            <Link to={`/shows/${kebabCase(data.Name)}`}>{data.Name}</Link>
-                        </h2>
-                        <p>{data.Date}</p>
-                        <p>
-                            <a href={`https://maps.google.com/maps?q=${data.Address}`} title="Open address in Google maps" target="_blank" rel="noreferrer">
-                                {data.Venue_name}
-                            </a>
-                        </p>
-                    </div>
-                );
-            })}
+                {allAirtableShows.edges.map((item, index) => {
+                    const { data } = item.node;
+                    return (
+                        <div key={index}>
+                            <h2>
+                                <Link to={`/shows/${kebabCase(data.Name)}`}>{data.Name}</Link>
+                            </h2>
+                            <p>{data.Date}</p>
+                            <p>
+                                <a href={`https://maps.google.com/maps?q=${data.Address}`} title="Open address in Google maps" target="_blank" rel="noreferrer">
+                                    {data.Venue_name}
+                                </a>
+                            </p>
+                        </div>
+                    );
+                })}
+            </div>
         </Layout>
     );
 }

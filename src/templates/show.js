@@ -10,16 +10,19 @@ const Show = ({ pageContext, data }) => {
     return (
         <Layout>
             <SEO title={pageContext.name} />
-            <h1>{pageContext.name}</h1>
-            <p>{airtableShows.data.Address}</p>
-            <p>{airtableShows.data.Venue_name}</p>
 
-            {airtableShows.data.Facebook_event && 
-                <a href={`${airtableShows.data.Facebook_event}`} target="_blank" rel="noreferrer">Facebook event</a>
-            }
+            <div className="container">
+                <h1>{pageContext.name}</h1>
+                <p>{airtableShows.data.Address}</p>
+                <p>{airtableShows.data.Venue_name}</p>
 
-            <div>
-                <img src={`${airtableShows.data.Flyer[0].url}`} alt={`${pageContext.name} flyer`} />
+                {airtableShows.data.Facebook_event && 
+                    <a href={`${airtableShows.data.Facebook_event}`} target="_blank" rel="noreferrer">Facebook event</a>
+                }
+
+                <div>
+                    <img src={`${airtableShows.data.Flyer[0].url}`} alt={`${pageContext.name} flyer`} />
+                </div>
             </div>
         </Layout>
     );

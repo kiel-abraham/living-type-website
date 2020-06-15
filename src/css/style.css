@@ -19,10 +19,6 @@
   * @import "tailwindcss/components";
   */
 
-  nav li a.active {
-    @apply text-orange-400;
-  }
-
  @tailwind components;
  
  /**
@@ -40,6 +36,15 @@
   * @import "components/buttons";
   * @import "components/forms";
   */
+
+  h1 {
+    @apply text-5xl;
+  }
+
+  nav li a.active,
+  nav li a:hover {
+    @apply text-orange-400;
+  }
  
  /**
   * This injects all of Tailwind's utility classes, generated based on your

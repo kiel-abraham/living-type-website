@@ -36,9 +36,7 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata.title} menu={data.site.siteMetadata.menu} />
 
       <main className="bg-gray-100">
-        <div className="container">
-          {children}
-        </div>
+        {children}
       </main>
 
       <footer className="bg-gray-300">
