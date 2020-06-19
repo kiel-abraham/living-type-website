@@ -10,13 +10,13 @@ const IndexPage = () => (
 		<SEO title="Home" />
 
 		<div 
-			className="bg-fixed bg-cover bg-center"
+			className="bg-fixed bg-cover bg-center pt-4"
 			style={{
 				backgroundImage: `url('${background}')`,
-				height: `350px`
+				height: `400px`
 			}}
 		>
-			<div className="container text-primary">
+			<div className="container">
 				<div className="">
 					<h1>Banner</h1>
 				</div>
@@ -26,9 +26,6 @@ const IndexPage = () => (
 		<div className="container">
 			<h1>Living Type</h1>
 			<p>Welcome to the home of Living Type.</p>
-			<button className="transition duration-500 ease-in-out bg-blue-500 hover:bg-red-500 transform hover:-translate-y-1 hover:scale-110 ...">
-				Hover me
-			</button>
 		</div>
 	</Layout>
 );

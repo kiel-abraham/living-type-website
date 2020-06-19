@@ -35,11 +35,11 @@ const Layout = ({ children }) => {
     <>
       <Header siteTitle={data.site.siteMetadata.title} menu={data.site.siteMetadata.menu} />
 
-      <main className="bg-gray-100">
+      <main className="bg-gray-100 pb-20">
         {children}
       </main>
 
-      <footer className="bg-gray-300">
+      <footer className="bg-lt-dark text-gray-100">
         <div className="container">
 
         <Img fluid={data.logo.childImageSharp.fluid} alt={data.site.siteMetadata.title} className="w-1/4" />

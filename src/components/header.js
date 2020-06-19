@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import logo from "../images/living-type-logo.png";
 
 const Header = ({ siteTtitle, menu }) => (
-  <header className="bg-black">
+  <header className="bg-lt-dark">
     <nav className="container flex flex-col sm:flex-row justify-center sm:justify-between items-center py-3">
       <Link to="/" className="">
         <img src={logo} alt={siteTtitle} />

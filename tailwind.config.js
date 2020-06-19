@@ -10,6 +10,11 @@ module.exports = {
                 lg: '4rem',
                 xl: '5rem',
             }
+        },
+        extend: {
+            colors: {
+                'lt-dark': '#1a1a1a'
+            }
         }
     },
     variants: {},

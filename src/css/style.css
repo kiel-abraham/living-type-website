@@ -39,6 +39,13 @@
 
   h1 {
     @apply text-5xl;
+    @apply uppercase;
+    @apply leading-tight;
+    @apply py-3;
+  }
+
+  h2 {
+    @apply text-3xl;
   }
 
   nav li a.active,
