@@ -17,7 +17,6 @@ const Shows = ({ data }) => {
 
                 <div className="mb-4">
                     <h1>Shows</h1>
-                    <p>Catch the latest show</p>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 row-gap-8">
@@ -54,7 +53,7 @@ export default Shows;
 
 export const query = graphql`
     query {
-        allAirtableShows {
+        allAirtableShows(sort: {fields: data___Date, order: DESC}) {
             edges {
                 node {
                     data {
