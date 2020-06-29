@@ -3,7 +3,6 @@ import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 
 import Header from "./header";
-// import "./layout.css"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -39,7 +38,7 @@ const Layout = ({ children }) => {
         {children}
       </main>
 
-      <footer className="bg-lt-dark text-gray-100">
+      <footer className="bg-lt-black text-gray-100">
         <div className="container">
 
         <Img fluid={data.logo.childImageSharp.fluid} alt={data.site.siteMetadata.title} className="w-1/4" />

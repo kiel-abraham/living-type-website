@@ -29,7 +29,9 @@ const Show = ({ pageContext, data }) => {
                 <div className="flex flex-col sm:flex-row-reverse">
 
                     <div className="sm:w-1/2">
+                    {airtableShows.data.Flyer &&
                         <img src={`${airtableShows.data.Flyer[0].url}`} alt={`${pageContext.name} flyer`} />
+                    }
                     </div>
 
                     <div className="sm:w-1/2">

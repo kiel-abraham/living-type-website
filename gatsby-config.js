@@ -36,7 +36,7 @@ module.exports = {
       resolve: `gatsby-plugin-purgecss`,
       options: {
         tailwind: true,
-        purgeOnly: [`src/components/layout.css`, `src/css/style.css`]
+        purgeOnly: [`src/css/style.css`]
       }
     },
     `gatsby-transformer-sharp`,

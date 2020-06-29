@@ -25,9 +25,9 @@ const Shows = ({ data }) => {
                         const { data } = item.node;
                         const image = data.Flyer !== null ? data.Flyer[0].url : placeholder;
                         return (
-                            <div key={index} className="rounded overflow-hidden shadow-lg">
+                            <div key={index} className="rounded overflow-hidden shadow-lg transform transition ease-in-out hover:scale-105">
                                 <Link to={`/shows/${kebabCase(data.Name)}`}>
-                                    <div className="w-full" className="bg-cover bg-center" style={{backgroundImage: `url('${image}')`, minHeight: `200px`}} alt={`${data.Name} flyer`}></div>
+                                    <div className="w-full bg-cover bg-center" style={{backgroundImage: `url('${image}')`, minHeight: `200px`}} alt={`${data.Name} flyer`}></div>
                                     <div className="px-6 py-4">
                                         <h3 className="font-bold text-xl mb-2">{data.Name}</h3>
                                         <p className="text-gray-700 text-base">{data.Date}</p>

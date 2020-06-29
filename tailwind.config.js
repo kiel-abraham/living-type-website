@@ -13,9 +13,12 @@ module.exports = {
         },
         extend: {
             colors: {
-                'lt-dark': '#1a1a1a'
+                'lt-black': '#1a1a1a'
             }
         }
+    },
+    purge: {
+        enabled: false // purging via gatsby-config. This just stops a warning message
     },
     variants: {},
     plugins: []

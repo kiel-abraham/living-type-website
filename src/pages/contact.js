@@ -33,7 +33,7 @@ const SecondPage = () => (
             <textarea className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-message" placeholder="I love your music..." />
           </div>
         </div>
-        <button class="shadow bg-orange-400 hover:bg-orange-500 focus:shadow-outline focus:outline-none text-lt-dark font-bold py-2 px-4 rounded" type="button">
+        <button class="shadow bg-orange-400 hover:bg-orange-500 focus:shadow-outline focus:outline-none text-lt-black font-bold py-2 px-4 rounded" type="button">
           Send
         </button>
       </form>
