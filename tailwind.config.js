@@ -11,6 +11,9 @@ module.exports = {
                 xl: '5rem',
             }
         },
+        fontFamily: {
+            'sans': ['Open sans', '-apple-system', 'BlinkMacSystemFont']
+        },
         extend: {
             colors: {
                 'lt-black': '#1a1a1a'

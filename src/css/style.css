@@ -42,6 +42,7 @@
     @apply uppercase;
     @apply leading-tight;
     @apply py-3;
+    font-family: 'Permanent Marker';
   }
 
   h2 {

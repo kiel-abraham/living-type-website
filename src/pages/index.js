@@ -10,15 +10,15 @@ const IndexPage = () => (
 		<SEO title="Home" />
 
 		<div 
-			className="bg-fixed bg-cover bg-center pt-4"
+			className="relative bg-fixed bg-cover bg-center pt-4"
 			style={{
 				backgroundImage: `url('${background}')`,
 				height: `400px`
 			}}
 		>
-			<div className="container">
-				<div className="">
-					<h1>Banner</h1>
+			<div className="absolute bottom-0 left-0">
+				<div className="bg-lt-black text-white p-8 hover:bg-orange-400 hover:text-lt-black">
+					New EP coming soon
 				</div>
 			</div>
 		</div>
