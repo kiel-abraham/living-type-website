@@ -9,9 +9,9 @@ module.exports = {
     author: `Kiel`,
     menu: [
       { name: `Home`, link: `/` },
-      { name: `Music`, link: `/music` },
-      { name: `Shows`, link: `/shows` },
-      { name: `Contact`, link: `/contact` },
+      { name: `Music`, link: `/music/` },
+      { name: `Shows`, link: `/shows/` },
+      { name: `Contact`, link: `/contact/` },
     ],
     socials: [
       { name: `Facebook`, link: `https://www.facebook.com/livingtype` },

@@ -5,7 +5,7 @@ import logo from "../images/living-type-logo.png";
 const Header = ({ siteTtitle, menu }) => (
   <header className="bg-lt-black">
     <nav className="container flex flex-col sm:flex-row justify-center sm:justify-between items-center py-3">
-      <Link to="/" className="">
+      <Link to="/" className="pb-3 sm:pb-0">
         <img src={logo} alt={siteTtitle} />
       </Link>
       <ul className="flex space-x-4 uppercase">

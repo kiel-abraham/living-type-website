@@ -37,21 +37,76 @@
   * @import "components/forms";
   */
 
+  body {
+    @apply bg-gray-100;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: 'Permanent Marker';
+    @apply leading-none;
+  }
+
   h1 {
     @apply text-5xl;
     @apply uppercase;
-    @apply leading-tight;
-    @apply py-3;
-    font-family: 'Permanent Marker';
+    @apply my-8;
   }
 
   h2 {
-    @apply text-3xl;
+    @apply text-4xl;
+    @apply my-2;
+  }
+
+  h3 {
+    @apply text-2xl;
+    @apply my-2;
+  }
+
+  p {
+    @apply mb-2;
   }
 
   nav li a.active,
   nav li a:hover {
     @apply text-orange-400;
+  }
+
+  label {
+    @apply block;
+    @apply uppercase;
+    @apply tracking-wide;
+    @apply text-gray-700;
+    @apply text-xs;
+    @apply font-bold;
+    @apply mb-2;
+  }
+
+  input,
+  textarea {
+    @apply appearance-none;
+    @apply block;
+    @apply w-full;
+    @apply bg-gray-200;
+    @apply text-gray-700;
+    @apply border;
+    @apply rounded;
+    @apply py-3;
+    @apply px-4;
+    @apply mb-3;
+    @apply leading-tight;
+  }
+
+  .embed-responsive {
+    @apply relative;
+    padding-bottom: 56.25%;
+  }
+
+  .embed-responsive-item {
+    @apply absolute;
+    @apply w-full;
+    @apply h-full;
   }
  
  /**

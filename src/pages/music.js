@@ -23,7 +23,7 @@ const Music = ({ data }) => {
                         }
                     </div>
 
-                    <div className="sm:w-1/2 bg-lt-black text-white px-8">
+                    <div className="sm:w-1/2 bg-lt-black text-white px-8 py-8 sm:py-0">
 
                         <h2 className="mb-4">{first.Album_name}</h2>
                 

@@ -34,7 +34,7 @@ const Show = ({ pageContext, data }) => {
                     }
                     </div>
 
-                    <div className="sm:w-1/2">
+                    <div className="sm:w-1/2 pt-4 sm:pt-0">
                         <h3>{airtableShows.data.Venue_name}</h3>
                         <p>
                             <a href="#" onClick={mapsSelector} title="Open address in maps" target="_blank" rel="noreferrer">
