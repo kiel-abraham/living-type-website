@@ -10,7 +10,7 @@ const Music = ({ data }) => {
     const first = allAirtableSongs.edges[0].node.data;
     return (
         <Layout>
-            <SEO title="Music" />
+            <SEO title="Music" description="Living Type debut EP Eleven is out now! Listen here or stream via Spotify, Apple Music and more." />
 
             <div className="container">
                 <h1>Music</h1>

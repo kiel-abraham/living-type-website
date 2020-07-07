@@ -10,7 +10,7 @@ const SecondPage = () => (
     <div className="container">
       <h1>Contact</h1>
       
-      <form className="w-full max-w-lg">
+      <form className="w-full max-w-lg" name="contact-form" method="POST" action="/thankyou" data-netlify="true">
         <div className="flex flex-wrap">
           <label htmlFor="name">
             Name
