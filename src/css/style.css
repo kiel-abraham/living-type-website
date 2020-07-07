@@ -108,6 +108,18 @@
     @apply w-full;
     @apply h-full;
   }
+
+  .chip {
+    @apply inline-block;
+    @apply bg-gray-200;
+    @apply rounded-full;
+    @apply px-3;
+    @apply py-1;
+    @apply text-sm;
+    @apply font-semibold;
+    @apply text-gray-700;
+    @apply mb-1;
+  }
  
  /**
   * This injects all of Tailwind's utility classes, generated based on your

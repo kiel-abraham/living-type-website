@@ -13,14 +13,6 @@ module.exports = {
       { name: `Music`, link: `/music/` },
       { name: `Shows`, link: `/shows/` },
       { name: `Contact`, link: `/contact/` },
-    ],
-    socials: [
-      { name: `Facebook`, link: `https://www.facebook.com/livingtype` },
-      { name: `Instagram`, link: `https://www.instagram.com/livingtypeofficial/` },
-      { name: `Youtube`, link: `https://www.youtube.com/channel/UCgGeqr6xUH3C71ohNZcXb2w` },
-      { name: `Spotify`, link: `https://open.spotify.com/artist/2IQEc43d5HvELQg2lSgBrD` },
-      { name: `Apple Music`, link: `https://itunes.apple.com/au/artist/living-type/1439884608` },
-      { name: `Google Play`, link: `https://play.google.com/store/music/album/Living_Type_Eleven_EP?id=Bfpyccvlitkyozku7gt7w5drvla` },
     ]
   },
   plugins: [

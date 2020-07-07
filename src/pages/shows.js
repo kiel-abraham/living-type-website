@@ -35,7 +35,7 @@ const Shows = ({ data }) => {
                                     </div>
                                     <div className="px-6 py-4 space-x-2">
                                         {data.Band_names && data.Band_names.map((item, index) => (
-                                            <span key={index} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mb-1">{item}</span>
+                                            <span key={index} className="chip">{item}</span>
                                         ))}
                                     </div>
                                 </Link>

@@ -41,10 +41,16 @@ const Show = ({ pageContext, data }) => {
                                 {airtableShows.data.Address}
                             </a>
                         </p>
+                        <p>{airtableShows.data.Date}</p>
                         {airtableShows.data.Facebook_event && 
                             <a href={`${airtableShows.data.Facebook_event}`} target="_blank" rel="noreferrer" className="underline">Facebook event</a>
                         }
-                    </div>    
+                        <div className="py-4 space-x-2">
+                            {airtableShows.data.Band_names && airtableShows.data.Band_names.map((item, index) => (
+                                <span key={index} className="chip">{item}</span>
+                            ))}
+                        </div>
+                    </div> 
 
                 </div>
             </div>
@@ -60,7 +66,7 @@ export const query = graphql`
             data {
                 Address
                 Band_names
-                Date(formatString: "MMMMM DD, YYYY")
+                Date(formatString: "DD MMMM, Y")
                 Facebook_event
                 Venue_name
                 Flyer {
