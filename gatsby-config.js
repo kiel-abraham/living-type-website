@@ -5,7 +5,8 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `Living Type`,
-    description: `Home of Living Type music Brisbane.`,
+    description: `Home of Living Type music Brisbane`,
+    siteUrl: `https://www.livingtype.band`,
     author: `Kiel`,
     menu: [
       { name: `Home`, link: `/` },
@@ -24,6 +25,8 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-robots-txt`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
