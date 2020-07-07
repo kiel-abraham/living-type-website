@@ -27,7 +27,7 @@ const SecondPage = () => (
           </label>
           <textarea className="focus:outline-none focus:bg-white mb-6" id="message" placeholder="I love your music..." />
 
-          <button class="shadow bg-orange-400 hover:bg-orange-500 focus:shadow-outline focus:outline-none text-lt-black font-bold py-2 px-4 rounded" type="button">
+          <button class="shadow bg-orange-400 hover:bg-orange-500 focus:shadow-outline focus:outline-none text-lt-black font-bold py-2 px-4 rounded" type="submit">
             Send
           </button>
         </div>
