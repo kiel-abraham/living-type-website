@@ -64,7 +64,7 @@ const Footer = () => (
 
     </div>
     
-    <p className="text-center">© {new Date().getFullYear()}</p>
+    <p className="text-center text-gray-400">© {new Date().getFullYear()}</p>
   </footer>
 );
 

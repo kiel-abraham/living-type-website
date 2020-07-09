@@ -56,7 +56,7 @@
 
   h2 {
     @apply text-4xl;
-    @apply my-2;
+    @apply my-4;
   }
 
   h3 {
@@ -119,6 +119,14 @@
     @apply font-semibold;
     @apply text-gray-700;
     @apply mb-1;
+  }
+
+  .track-title:hover span {
+    @apply text-orange-400;
+  }
+
+  .rhap_footer {
+    @apply text-lt-black;
   }
  
  /**

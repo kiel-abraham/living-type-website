@@ -25,14 +25,16 @@ const IndexPage = () => {
 			<SEO title="Home" />
 
 			<div 
-				className="relative bg-fixed bg-cover bg-center pt-4 shadow-lg"
+				className="relative bg-cover pt-4 shadow-lg"
 				style={{
 					backgroundImage: `url('${background}')`,
-					height: `400px`
+					backgroundPositionX: `50%`,
+					backgroundPositionY: `25%`,
+					height: `450px`
 				}}
 			>
 				<div className="absolute bottom-0 left-0">
-					<div className="bg-lt-black text-white p-8 hover:bg-orange-400 hover:text-lt-black">
+					<div className="bg-lt-black text-white p-8">
 						New EP coming soon
 					</div>
 				</div>
@@ -41,15 +43,17 @@ const IndexPage = () => {
 			<section className="container">
 				<h1>Living Type</h1>
 
-				<div className="flex flex-col sm:flex-row">
+				<div className="flex flex-col sm:flex-row mb-12">
 
 					<div className="sm:w-1/2">
 						<p className="mb-8">Brisbane based alternative rock band. With straight hitting guitar and drums, and honest vocals, to deliver their driving sound!</p>
 
-						<h3>Members</h3>
-						<p>Ben - Vocals / Bass</p>
-						<p>Kiel - Guitar</p>
-						<p>Greg - Drums</p>
+						<div className="mb-8">
+							<h3>Members</h3>
+							<p>Ben - Vocals / Bass</p>
+							<p>Kiel - Guitar</p>
+							<p>Greg - Drums</p>
+						</div>
 					</div>
 
 					<div className="sm:w-1/2">

@@ -1,13 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import { graphql } from "gatsby";
 import { reverse } from "lodash";
+import AudioPlayer from "react-h5-audio-player";
+import "react-h5-audio-player/lib/styles.css";
+import { RiPlayCircleLine, RiPauseCircleLine } from "react-icons/ri";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
 const Music = ({ data }) => {
+
     const { allAirtableSongs } = data;
-    const first = allAirtableSongs.edges[0].node.data;
+    // data from Airtable comes in reverse order so using flex below to switch around
+    let songs = allAirtableSongs.edges;
+    const first = songs[songs.length - 1].node.data;
+    
+    const [audioTitle, setAudioTitle] = useState(first.Name);
+    const [audioTrack, setAudioTrack] = useState(first.MP3[0].url);
+
+    function playTrack(name) {
+        let selected = songs.find(x => x.node.data.Name == name);
+        setAudioTitle(selected.node.data.Name);
+        setAudioTrack(selected.node.data.MP3[0].url);
+    }
+
     return (
         <Layout>
             <SEO title="Music" description="Living Type debut EP Eleven is out now! Listen here or stream via Spotify, Apple Music and more." />
@@ -25,22 +41,34 @@ const Music = ({ data }) => {
 
                     <div className="sm:w-1/2 bg-lt-black text-white px-8 py-8 sm:py-0">
 
-                        <h2 className="mb-4">{first.Album_name}</h2>
+                        <h2>{first.Album_name}</h2>
+
+                        <div className="flex flex-col-reverse py-8">
                 
-                        {reverse(allAirtableSongs.edges).map((item, index) => {
-                            const { data } = item.node;
-                            return (
-                                <div key={index}>
-                                    <h3>{data.Name}</h3>
-                                    {data.MP3 &&
-                                        <audio controls>
-                                            <source src={data.MP3[0].url} type="audio/mpeg" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    }
-                                </div>
-                            );
-                        })}
+                            {songs.map((item, index) => {
+                                const { data } = item.node;
+                                return (
+                                    <h3
+                                        key={index}
+                                        onClick={() => playTrack(data.Name)}
+                                        className="track-title cursor-pointer"
+                                    >
+                                        {data.Name} 
+                                        <span className="inline-block float-right"><RiPlayCircleLine /></span>
+                                    </h3>
+                                );
+                            })}
+                        
+                        </div>
+
+                        <AudioPlayer
+                            autoPlay={false}
+                            footer={audioTitle}
+                            src={audioTrack}
+                            volume={0.8}
+                            customAdditionalControls={[]}
+                            // customIcons={{ play: <RiPlayCircleLine />, pause: <RiPauseCircleLine /> }}
+                        />
 
                     </div>
 
