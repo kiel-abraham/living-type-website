@@ -9,7 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
-import logo from "../images/living-type-logo.png";
+import defaultImage from "../images/living-type-cover.jpg";
 
 function SEO({ description, lang, meta, title, metaImage }) {
   const { site } = useStaticQuery(
@@ -26,7 +26,7 @@ function SEO({ description, lang, meta, title, metaImage }) {
   )
 
   const metaDescription = description || site.siteMetadata.description;
-  const image = metaImage || logo;
+  const image = metaImage || defaultImage;
 
   return (
     <Helmet
