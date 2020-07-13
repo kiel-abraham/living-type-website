@@ -21,7 +21,10 @@ const Show = ({ pageContext, data }) => {
 
     return (
         <Layout>
-            <SEO title={pageContext.name} />
+            <SEO
+                title={pageContext.name}
+                metaImage={airtableShows.data.Flyer && airtableShows.data.Flyer[0].url}
+            />
 
             <div className="container">
                 <h1>{pageContext.name}</h1>

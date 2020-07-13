@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { graphql } from "gatsby";
-import { reverse } from "lodash";
+// import { reverse } from "lodash";
 import AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
-import { RiPlayCircleLine, RiPauseCircleLine } from "react-icons/ri";
+import { RiPlayCircleLine } from "react-icons/ri";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -19,7 +19,7 @@ const Music = ({ data }) => {
     const [audioTrack, setAudioTrack] = useState(first.MP3[0].url);
 
     function playTrack(name) {
-        let selected = songs.find(x => x.node.data.Name == name);
+        let selected = songs.find(x => x.node.data.Name === name);
         setAudioTitle(selected.node.data.Name);
         setAudioTrack(selected.node.data.MP3[0].url);
     }
@@ -48,27 +48,31 @@ const Music = ({ data }) => {
                             {songs.map((item, index) => {
                                 const { data } = item.node;
                                 return (
-                                    <h3
+                                    <a
+                                        href="#"
                                         key={index}
                                         onClick={() => playTrack(data.Name)}
-                                        className="track-title cursor-pointer"
                                     >
-                                        {data.Name} 
-                                        <span className="inline-block float-right"><RiPlayCircleLine /></span>
-                                    </h3>
+                                        <h3 className="track-title cursor-pointer">
+                                            {data.Name} 
+                                            <span className="inline-block float-right"><RiPlayCircleLine /></span>
+                                        </h3>
+                                    </a>
                                 );
                             })}
                         
                         </div>
 
-                        <AudioPlayer
-                            autoPlay={false}
-                            footer={audioTitle}
-                            src={audioTrack}
-                            volume={0.8}
-                            customAdditionalControls={[]}
-                            // customIcons={{ play: <RiPlayCircleLine />, pause: <RiPauseCircleLine /> }}
-                        />
+                        <div className="text-lt-black">
+                            <AudioPlayer
+                                autoPlay={false}
+                                footer={audioTitle}
+                                src={audioTrack}
+                                volume={0.8}
+                                customAdditionalControls={[]}
+                                // customIcons={{ play: <RiPlayCircleLine />, pause: <RiPauseCircleLine /> }}
+                            />
+                        </div>
 
                     </div>
 

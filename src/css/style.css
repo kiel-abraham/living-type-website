@@ -41,6 +41,10 @@
     @apply bg-gray-100;
   }
 
+  main {
+    min-height: 70vh;
+  }
+
   h1,
   h2,
   h3 {
@@ -123,10 +127,6 @@
 
   .track-title:hover span {
     @apply text-orange-400;
-  }
-
-  .rhap_footer {
-    @apply text-lt-black;
   }
  
  /**

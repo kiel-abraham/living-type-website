@@ -22,7 +22,7 @@ const IndexPage = () => {
 
 	return (
 		<Layout>
-			<SEO title="Home" />
+			<SEO title="The home of Living Type Music" />
 
 			<div 
 				className="relative bg-cover pt-4 shadow-lg"
@@ -34,7 +34,7 @@ const IndexPage = () => {
 				}}
 			>
 				<div className="absolute bottom-0 left-0">
-					<div className="bg-lt-black text-white p-8">
+					<div className="bg-lt-black text-orange-400 p-8">
 						New EP coming soon
 					</div>
 				</div>
@@ -63,7 +63,7 @@ const IndexPage = () => {
 
 				<h2>Latest video</h2>
 				<div className="embed-responsive">
-					<iframe className="embed-responsive-item" src="https://www.youtube.com/embed/CQJcYZMWv0A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<iframe className="embed-responsive-item" src="https://www.youtube.com/embed/CQJcYZMWv0A" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 				</div>
 				
 			</section>

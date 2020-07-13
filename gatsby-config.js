@@ -5,9 +5,8 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `Living Type`,
-    description: `The official website of Australian rock band Living Type. Featuring tour dates, music and news.`,
+    description: `The official website of Australian rock band Living Type. Featuring music and events.`,
     siteUrl: `https://www.livingtype.band`,
-    author: `Kiel`,
     menu: [
       { name: `Home`, link: `/` },
       { name: `Music`, link: `/music/` },
@@ -76,8 +75,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `living-type-wesbite`,
+        short_name: `livingtype`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,

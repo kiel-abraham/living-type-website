@@ -9,8 +9,9 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import logo from "../images/living-type-logo.png";
 
-function SEO({ description, lang, meta, title }) {
+function SEO({ description, lang, meta, title, metaImage }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -18,14 +19,14 @@ function SEO({ description, lang, meta, title }) {
           siteMetadata {
             title
             description
-            author
           }
         }
       }
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
+  const metaDescription = description || site.siteMetadata.description;
+  const image = metaImage || logo;
 
   return (
     <Helmet
@@ -48,16 +49,16 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
         {
+          property: `og:image`,
+          content: image,
+        },
+        {
           property: `og:type`,
           content: `website`,
         },
         {
           name: `twitter:card`,
           content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
         },
         {
           name: `twitter:title`,
