@@ -1,5 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
+import { Helmet } from "react-helmet"
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -25,6 +26,32 @@ const Show = ({ pageContext, data }) => {
                 title={pageContext.name}
                 metaImage={airtableShows.data.Flyer && airtableShows.data.Flyer[0].url}
             />
+
+            <Helmet>
+                <script type="application/ld+json">{`
+                    {
+                        "@context": "http://schema.org",
+                        "@type": "MusicEvent",
+                        "name": "${pageContext.name}",
+                        "startDate": "${airtableShows.data.Date}",
+                        "location": {
+                            "@type": "Place",
+                            "name": "${airtableShows.data.Venue_name}",
+                            "address": {
+                                "@type": "PostalAddress",
+                                "addressCountry": "Australia",
+                                "streetAddress": "${airtableShows.data.Address}"
+                            }
+                        },
+                        "performers": [
+                            {
+                                "@type": "MusicGroup",
+                                "name": "Living Type"
+                            }
+                        ]
+                    }
+                `}</script>
+            </Helmet>
 
             <div className="container">
                 <h1>{pageContext.name}</h1>

@@ -19,11 +19,12 @@ function SEO({ description, lang, meta, title, metaImage }) {
           siteMetadata {
             title
             description
+            siteUrl
           }
         }
       }
     `
-  )
+  );
 
   const metaDescription = description || site.siteMetadata.description;
   const image = metaImage || defaultImage;
@@ -69,7 +70,16 @@ function SEO({ description, lang, meta, title, metaImage }) {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      <script type="application/ld+json">{`
+        {
+          "@context": "http://schema.org",
+          "@type": "WebSite",
+          "name": "${site.siteMetadata.title}",
+          "url": "${site.siteMetadata.siteUrl}"
+        }
+      `}</script>
+    </Helmet>
   )
 }
 

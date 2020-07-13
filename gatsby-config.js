@@ -5,7 +5,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `Living Type`,
-    description: `The official website of Australian rock band Living Type. Featuring music and events.`,
+    description: `The official website of Australian rock band Living Type. Check out music and events.`,
     siteUrl: `https://www.livingtype.band`,
     menu: [
       { name: `Home`, link: `/` },

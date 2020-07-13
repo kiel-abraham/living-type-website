@@ -22,7 +22,7 @@ const IndexPage = () => {
 
 	return (
 		<Layout>
-			<SEO title="The home of Living Type Music" />
+			<SEO title="The home of Living Type music" />
 
 			<div 
 				className="relative bg-cover pt-4 shadow-lg"
