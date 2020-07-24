@@ -73,14 +73,14 @@ const Show = ({ pageContext, data }) => {
                         </p>
                         <p>{airtableShows.data.Date}</p>
                         {airtableShows.data.Facebook_event && 
-                            <a href={`${airtableShows.data.Facebook_event}`} target="_blank" rel="noreferrer" className="underline">Facebook event</a>
+                            <a href={`${airtableShows.data.Facebook_event}`} target="_blank" rel="noreferrer" className="underline hover:no-underline">Facebook event</a>
                         }
                         {/*airtableShows.data.Description && 
                             <div>{airtableShows.data.Description}</div>
                         */}
                         <div className="py-4 space-x-2">
                             {airtableShows.data.Band_names && airtableShows.data.Band_names.map((item, index) => (
-                                <span key={index} className="chip">{item}</span>
+                                <span key={index} className="chip bg-lt-black">{item}</span>
                             ))}
                         </div>
                     </div> 

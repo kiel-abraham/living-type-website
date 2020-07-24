@@ -18,7 +18,7 @@ const Header = () => {
   `);
   
   return (
-    <header className="bg-lt-black">
+    <header className="bg-lt-black shadow-md">
       <nav className="container flex flex-col sm:flex-row justify-center sm:justify-between items-center py-3">
         <Link to="/" className="pb-3 sm:pb-0">
           <img src={logo} alt={data.site.siteMetadata.title} />

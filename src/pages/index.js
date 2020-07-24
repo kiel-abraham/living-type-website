@@ -25,7 +25,7 @@ const IndexPage = () => {
 			<SEO title="The home of Living Type music" />
 
 			<div 
-				className="relative bg-cover pt-4 shadow-lg"
+				className="relative bg-cover pt-4"
 				style={{
 					backgroundImage: `url('${background}')`,
 					backgroundPositionX: `50%`,

@@ -16,7 +16,8 @@ module.exports = {
         },
         extend: {
             colors: {
-                'lt-black': '#1a1a1a'
+                'lt-black': '#181a1d',
+                'lt-black-body': '#24262B'
             }
         }
     },

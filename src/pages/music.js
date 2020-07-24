@@ -31,7 +31,7 @@ const Music = ({ data }) => {
             <div className="container">
                 <h1>Music</h1>
 
-                <div className="flex flex-col sm:flex-row">
+                <div className="flex flex-col sm:flex-row shadow-md">
 
                     <div className="sm:w-1/2">
                         {first.Artwork && 

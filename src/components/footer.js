@@ -2,7 +2,7 @@ import React from "react";
 import { RiFacebookBoxLine, RiInstagramLine, RiYoutubeLine, RiSpotifyLine, RiAppleLine, RiGooglePlayLine } from "react-icons/ri";
 
 const Footer = () => (
-  <footer className="bg-lt-black text-gray-100 py-4">
+  <footer className="bg-lt-black py-4">
     <div className="container">
 
       <div className="flex flex-wrap justify-center">
@@ -11,7 +11,7 @@ const Footer = () => (
           target="_blank"
           rel="noreferrer"
           title="Facebook"
-          className="p-1 text-orange-400 text-2xl"
+          className="social-link"
         >
           <RiFacebookBoxLine />
         </a>
@@ -20,7 +20,7 @@ const Footer = () => (
           target="_blank"
           rel="noreferrer"
           title="Instagram"
-          className="p-1 text-orange-400 text-2xl"
+          className="social-link"
         >
           <RiInstagramLine />
         </a>
@@ -29,7 +29,7 @@ const Footer = () => (
           target="_blank"
           rel="noreferrer"
           title="Youtube"
-          className="p-1 text-orange-400 text-2xl"
+          className="social-link"
         >
           <RiYoutubeLine />
         </a>
@@ -38,7 +38,7 @@ const Footer = () => (
           target="_blank"
           rel="noreferrer"
           title="Spotify"
-          className="p-1 text-orange-400 text-2xl"
+          className="social-link"
         >
           <RiSpotifyLine />
         </a>
@@ -47,7 +47,7 @@ const Footer = () => (
           target="_blank"
           rel="noreferrer"
           title="Apple Music"
-          className="p-1 text-orange-400 text-2xl"
+          className="social-link"
         >
           <RiAppleLine />
         </a>
@@ -56,7 +56,7 @@ const Footer = () => (
           target="_blank"
           rel="noreferrer"
           title="Google Play"
-          className="p-1 text-orange-400 text-2xl"
+          className="social-link"
         >
           <RiGooglePlayLine />
         </a>
@@ -64,7 +64,7 @@ const Footer = () => (
 
     </div>
     
-    <p className="text-center text-gray-400">© {new Date().getFullYear()}</p>
+    <p className="text-center">© {new Date().getFullYear()}</p>
   </footer>
 );
 

@@ -38,7 +38,8 @@
   */
 
   body {
-    @apply bg-gray-100;
+    @apply bg-lt-black-body;
+    @apply text-gray-300;
   }
 
   main {
@@ -50,6 +51,7 @@
   h3 {
     font-family: 'Permanent Marker';
     @apply leading-none;
+    @apply text-white;
   }
 
   h1 {
@@ -81,7 +83,6 @@
     @apply block;
     @apply uppercase;
     @apply tracking-wide;
-    @apply text-gray-700;
     @apply text-xs;
     @apply font-bold;
     @apply mb-2;
@@ -115,14 +116,18 @@
 
   .chip {
     @apply inline-block;
-    @apply bg-gray-200;
     @apply rounded-full;
     @apply px-3;
     @apply py-1;
     @apply text-sm;
     @apply font-semibold;
-    @apply text-gray-700;
     @apply mb-1;
+  }
+
+  .social-link {
+    @apply p-1;
+    @apply text-orange-400;
+    @apply text-2xl;
   }
 
   .track-title:hover span {

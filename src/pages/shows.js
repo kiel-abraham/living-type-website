@@ -25,17 +25,17 @@ const Shows = ({ data }) => {
                         const { data } = item.node;
                         const image = data.Flyer !== null ? data.Flyer[0].url : placeholder;
                         return (
-                            <div key={index} className="rounded overflow-hidden shadow-lg bg-white">
+                            <div key={index} className="shadow-md bg-lt-black transform transition duration-500 ease-in-out hover:scale-105">
                                 <Link to={`/shows/${kebabCase(data.Name)}`}>
                                     <div className="w-full bg-cover bg-center" style={{backgroundImage: `url('${image}')`, minHeight: `200px`}} alt={`${data.Name} flyer`}></div>
                                     <div className="px-6 py-4">
                                         <h3 className="mb-2">{data.Name}</h3>
-                                        <p className="text-gray-700 text-base">{data.Date}</p>
-                                        <p className="text-gray-700 text-base">{data.Venue_name}</p>
+                                        <p className="text-base">{data.Date}</p>
+                                        <p className="text-base">{data.Venue_name}</p>
                                     </div>
                                     <div className="px-6 py-4 space-x-2">
                                         {data.Band_names && data.Band_names.map((item, index) => (
-                                            <span key={index} className="chip">{item}</span>
+                                            <span key={index} className="chip bg-lt-black-body">{item}</span>
                                         ))}
                                     </div>
                                 </Link>
