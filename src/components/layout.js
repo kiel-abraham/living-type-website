@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./header";
 import Footer from "./footer";
+import MusicPlayer from "./musicPlayer";
 
 const Layout = ({ children }) => (
   <>
@@ -11,6 +12,8 @@ const Layout = ({ children }) => (
     </main>
 
     <Footer />
+
+    <MusicPlayer />
   </>
 );
 

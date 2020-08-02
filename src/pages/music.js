@@ -1,28 +1,21 @@
-import React, { useState } from "react";
-import { graphql } from "gatsby";
-// import { reverse } from "lodash";
-import AudioPlayer from "react-h5-audio-player";
-import "react-h5-audio-player/lib/styles.css";
+import React, { useContext } from "react";
 import { RiPlayCircleLine } from "react-icons/ri";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-const Music = ({ data }) => {
+import { MusicPlayerContext } from "../components/musicPlayerContext";
 
-    const { allAirtableSongs } = data;
-    // data from Airtable comes in reverse order so using flex below to switch around
-    let songs = allAirtableSongs.edges;
-    const first = songs[songs.length - 1].node.data;
-    
-    const [audioTitle, setAudioTitle] = useState(first.Name);
-    const [audioTrack, setAudioTrack] = useState(first.MP3[0].url);
+const Music = () => {
 
-    function playTrack(name) {
-        let selected = songs.find(x => x.node.data.Name === name);
-        setAudioTitle(selected.node.data.Name);
-        setAudioTrack(selected.node.data.MP3[0].url);
+    const [state, setState] = useContext(MusicPlayerContext);
+
+    const playTrack = (index) => {
+        setState(state => ({ ...state, current: index }));
     }
+
+    const songs = state.tracks;
+    const first = songs[0];
 
     return (
         <Layout>
@@ -43,35 +36,23 @@ const Music = ({ data }) => {
 
                         <h2>{first.Album_name}</h2>
 
-                        <div className="flex flex-col-reverse py-8">
+                        <div className="flex flex-col py-8">
                 
-                            {songs.map((item, index) => {
-                                const { data } = item.node;
+                            {songs.map((track, index) => {
                                 return (
                                     <a
                                         href="#"
                                         key={index}
-                                        onClick={() => playTrack(data.Name)}
+                                        onClick={() => playTrack(index)}
                                     >
                                         <h3 className="track-title cursor-pointer">
-                                            {data.Name} 
+                                            {track.Name} 
                                             <span className="inline-block float-right"><RiPlayCircleLine /></span>
                                         </h3>
                                     </a>
                                 );
                             })}
                         
-                        </div>
-
-                        <div className="text-lt-black">
-                            <AudioPlayer
-                                autoPlay={false}
-                                footer={audioTitle}
-                                src={audioTrack}
-                                volume={0.8}
-                                customAdditionalControls={[]}
-                                // customIcons={{ play: <RiPlayCircleLine />, pause: <RiPauseCircleLine /> }}
-                            />
                         </div>
 
                     </div>
@@ -84,24 +65,3 @@ const Music = ({ data }) => {
 }
 
 export default Music;
-
-export const query = graphql`
-    query {
-        allAirtableSongs {
-            edges {
-                node {
-                    data {
-                        Album_name
-                        Name
-                        Artwork {
-                            url
-                        }
-                        MP3 {
-                            url
-                        }
-                    }
-                }
-            }
-        }
-    }
-`;

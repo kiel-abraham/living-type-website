@@ -4,5 +4,13 @@
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
 
-// You can delete this file if you're not using it
 import "./src/css/style.css";
+
+import React from "react";
+import PageWrapper from "./src/components/pageWrapper";
+
+export const wrapPageElement = ({ element, props }) => (
+    <PageWrapper {...props}>
+        {element}
+    </PageWrapper>
+);

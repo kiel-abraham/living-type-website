@@ -2,7 +2,7 @@ import React from "react";
 import { RiFacebookBoxLine, RiInstagramLine, RiYoutubeLine, RiSpotifyLine, RiAppleLine, RiGooglePlayLine } from "react-icons/ri";
 
 const Footer = () => (
-  <footer className="bg-lt-black py-4">
+  <footer className="bg-lt-black py-4 mb-20 sm:mb-12">
     <div className="container">
 
       <div className="flex flex-wrap justify-center">
