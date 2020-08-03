@@ -15,17 +15,17 @@ const SecondPage = () => (
           <label htmlFor="name">
             Name
           </label>
-          <input className="focus:outline-none focus:bg-white" id="name" type="text" placeholder="Jane" />
+          <input id="name" className="focus:outline-none focus:bg-white" type="text" placeholder="Jane" />
 
           <label htmlFor="email">
             Email
           </label>
-          <input className="focus:outline-none focus:bg-white" id="email" type="email" placeholder="jane@email.com" />
+          <input id="email" className="focus:outline-none focus:bg-white" type="email" placeholder="jane@email.com" />
 
           <label htmlFor="message">
             Message
           </label>
-          <textarea className="focus:outline-none focus:bg-white mb-6" id="message" placeholder="I love your music..." />
+          <textarea id="message" className="focus:outline-none focus:bg-white mb-6" placeholder="I love your music..." />
 
           <button class="shadow bg-orange-400 hover:bg-orange-500 focus:shadow-outline focus:outline-none text-lt-black font-bold py-2 px-4 rounded" type="submit">
             Send

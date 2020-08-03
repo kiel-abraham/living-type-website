@@ -55,18 +55,18 @@
   }
 
   h1 {
-    @apply text-5xl;
+    @apply text-4xl;
     @apply uppercase;
     @apply my-8;
   }
 
   h2 {
-    @apply text-4xl;
+    @apply text-3xl;
     @apply my-4;
   }
 
   h3 {
-    @apply text-2xl;
+    @apply text-xl;
     @apply my-2;
   }
 
@@ -116,6 +116,7 @@
 
   .chip {
     @apply inline-block;
+    @apply bg-lt-black-body;
     @apply rounded-full;
     @apply px-3;
     @apply py-1;

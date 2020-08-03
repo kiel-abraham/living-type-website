@@ -10,7 +10,8 @@ const Music = () => {
 
     const [state, setState] = useContext(MusicPlayerContext);
 
-    const playTrack = (index) => {
+    const playTrack = (e, index) => {
+        e.preventDefault();
         setState(state => ({ ...state, current: index }));
     }
 
@@ -32,7 +33,7 @@ const Music = () => {
                         }
                     </div>
 
-                    <div className="sm:w-1/2 bg-lt-black text-white px-8 py-8 sm:py-0">
+                    <div className="sm:w-1/2 bg-lt-black text-white px-8 py-4">
 
                         <h2>{first.Album_name}</h2>
 
@@ -41,9 +42,9 @@ const Music = () => {
                             {songs.map((track, index) => {
                                 return (
                                     <a
-                                        href="#"
+                                        href="/#"
                                         key={index}
-                                        onClick={() => playTrack(index)}
+                                        onClick={(e) => playTrack(e, index)}
                                     >
                                         <h3 className="track-title cursor-pointer">
                                             {track.Name} 

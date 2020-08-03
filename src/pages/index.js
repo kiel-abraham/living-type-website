@@ -63,7 +63,14 @@ const IndexPage = () => {
 
 				<h2>Latest video</h2>
 				<div className="embed-responsive">
-					<iframe className="embed-responsive-item" src="https://www.youtube.com/embed/CQJcYZMWv0A" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+					<iframe
+						title="Living Type - Free [Official video]"
+						className="embed-responsive-item"
+						src="https://www.youtube.com/embed/CQJcYZMWv0A"
+						frameBorder="0"
+						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+						allowFullScreen
+					></iframe>
 				</div>
 				
 			</section>

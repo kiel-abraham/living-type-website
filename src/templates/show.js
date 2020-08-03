@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
-import { Helmet } from "react-helmet"
+import { Helmet } from "react-helmet";
+import { RiMapPinLine } from "react-icons/ri";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -56,7 +57,7 @@ const Show = ({ pageContext, data }) => {
             <div className="container">
                 <h1>{pageContext.name}</h1>
 
-                <div className="flex flex-col sm:flex-row-reverse">
+                <div className="flex flex-col sm:flex-row-reverse shadow-md">
 
                     <div className="sm:w-1/2">
                     {airtableShows.data.Flyer &&
@@ -64,10 +65,13 @@ const Show = ({ pageContext, data }) => {
                     }
                     </div>
 
-                    <div className="sm:w-1/2 pt-4 sm:pt-0">
+                    <div className="sm:w-1/2 bg-lt-black text-white px-8 py-4">
                         <h3>{airtableShows.data.Venue_name}</h3>
                         <p>
-                            <a href="#" onClick={mapsSelector} title="Open address in maps" target="_blank" rel="noreferrer">
+                            <span className="inline-block mr-2">
+                                <RiMapPinLine />
+                            </span>
+                            <a href="/#" onClick={mapsSelector} className="hover:underline" title="Open address in maps" target="_blank" rel="noreferrer">
                                 {airtableShows.data.Address}
                             </a>
                         </p>
@@ -80,7 +84,7 @@ const Show = ({ pageContext, data }) => {
                         */}
                         <div className="py-4 space-x-2">
                             {airtableShows.data.Band_names && airtableShows.data.Band_names.map((item, index) => (
-                                <span key={index} className="chip bg-lt-black">{item}</span>
+                                <span key={index} className="chip">{item}</span>
                             ))}
                         </div>
                     </div> 
