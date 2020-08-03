@@ -1,0 +1,58 @@
+#music-player .rhap_container {
+    position: relative;
+    background-color: transparent;
+    height: 5rem;
+}
+
+#music-player .rhap_progress-section,
+#music-player .rhap_controls-section,
+#music-player .rhap_header {
+    position: absolute;
+    top: 10%;
+}
+
+#music-player .rhap_header {
+    left: 0;
+}
+
+#music-player .rhap_progress-section {
+    top: 60%;
+    left: 0;
+    width: 100%;
+}
+
+#music-player .rhap_controls-section {
+    right: 0;
+    margin-top: 0;
+}
+
+#music-player .rhap_time,
+#music-player .rhap_main-controls-button {
+    color: #ffffff;
+}
+
+@media (min-width: 640px) {
+
+    #music-player .rhap_container {
+        height: 3rem;
+    }
+
+    #music-player .rhap_progress-section,
+    #music-player .rhap_controls-section,
+    #music-player .rhap_header {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    #music-player .rhap_progress-section {
+        right: 0;
+        left: auto;
+        width: 50%;
+    }
+
+    #music-player .rhap_controls-section {
+        left: 20%;
+        right: auto;
+    }
+}

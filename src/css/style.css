@@ -134,65 +134,6 @@
   .track-title:hover span {
     @apply text-orange-400;
   }
-
-  #music-player .rhap_container {
-    background-color: transparent;
-    @apply relative;
-    @apply h-20;
-  }
-
-  #music-player .rhap_progress-section,
-  #music-player .rhap_controls-section,
-  #music-player .rhap_header {
-    @apply absolute;
-    top: 10%;
-  }
-
-  #music-player .rhap_header {
-    @apply left-0;
-  }
-
-  #music-player .rhap_progress-section {
-    top: 60%;
-    @apply left-0;
-    width: 100%;
-  }
-
-  #music-player .rhap_controls-section {
-    @apply right-0;
-    @apply mt-0;
-  }
-
-  #music-player .rhap_time,
-  #music-player .rhap_main-controls-button {
-    @apply text-white;
-  }
-
-  @media (min-width: 640px) {
-
-    #music-player .rhap_container {
-      @apply h-12;
-    }
-
-    #music-player .rhap_progress-section,
-    #music-player .rhap_controls-section,
-    #music-player .rhap_header {
-      @apply absolute;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-
-    #music-player .rhap_progress-section {
-      @apply right-0;
-      left: auto;
-      width: 50%;
-    }
-
-    #music-player .rhap_controls-section {
-      left: 20%;
-      right: auto;
-    }
-  }
  
  /**
   * This injects all of Tailwind's utility classes, generated based on your

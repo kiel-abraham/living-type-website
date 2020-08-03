@@ -1,9 +1,8 @@
 import React, { useContext } from "react";
 import AudioPlayer from "react-h5-audio-player";
-import "react-h5-audio-player/lib/styles.css";
-
 import { MusicPlayerContext } from "./musicPlayerContext";
-// import { RiPlayCircleLine } from "react-icons/ri";
+import "react-h5-audio-player/lib/styles.css";
+import "../css/musicplayer.css";
 
 const MusicPlayer = () => {
 
