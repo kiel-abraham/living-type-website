@@ -1,176 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="The official website of Australian rock band Living Type"
-    />
-    <meta
-      name="og:image"
-      content="https://www.livingtype.band/background.jpg"
-    />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Living Type</title>
-    <link rel="icon" href="favicon.png" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
-      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
-      crossorigin="anonymous"
-    />
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        height: 100vh;
-        background: -webkit-gradient(
-            linear,
-            left top,
-            left bottom,
-            from(rgba(0, 0, 0, 0.3)),
-            to(rgba(0, 0, 0, 0.3))
-          ),
-          url("background.jpg") no-repeat center center fixed;
-        background: -o-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-          url("background.jpg") no-repeat center center fixed;
-        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-          url("background.jpg") no-repeat center center fixed;
-        background-size: cover;
-      }
-      .container {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-      }
-      img {
-        max-width: 25em;
-        width: 100%;
-        height: auto;
-      }
-      .logo {
-        margin: 1em 0;
-      }
-      ul {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        list-style: none;
-        padding: 0;
-      }
-      .fa {
-        font-size: 2em;
-        color: white;
-        margin: 0 5px;
-        text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.8);
-      }
-      .fa-calendar {
-        font-size: 1.8em;
-      }
-      .fa-envelope-o {
-        font-size: 1.9em;
-      }
-      .sr-only {
-        display: none;
-      }
-    </style>
-  </head>
-  <body>
-    <h1 class="sr-only">Living Type</h1>
-    <img src="text_logo_white.png" alt="Living Type" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The official website of Australian rock band Living Type" />
+  <meta name="og:image" content="https://www.livingtype.band/background.jpg" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Living Type</title>
+  <link rel="icon" href="favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="header-img">
     <img src="logo.png" alt="Living Type logo" class="logo" />
-    <div class="container">
-      <ul>
+  </div>
+  <main>
+    <div class="header">
+      <h1 class="sr-only">Living Type</h1>
+      <img src="text_logo_white.png" alt="Living Type" />
+    </div>
+
+    <div>
+      <ul class="content">
         <li>
-          <a
-            href="https://open.spotify.com/artist/2IQEc43d5HvELQg2lSgBrD"
-            target="_blank"
-            rel="noreferrer"
-            title="Spotify"
-          >
-            <i class="fa fa-spotify" aria-hidden="true"></i
-            ><span class="sr-only">Spotify</span>
+          <a href="https://www.facebook.com/events/825600938750074" target="_blank" rel="noreferrer">
+            Next show - Dec 10
           </a>
         </li>
         <li>
-          <a
-            href="https://music.apple.com/au/artist/living-type/1439884608"
-            target="_blank"
-            rel="noreferrer"
-            title="Apple Music"
-          >
-            <i class="fa fa-apple" aria-hidden="true"></i
-            ><span class="sr-only">Apple Music</span>
+          <a href="https://music.youtube.com/channel/UC5M77CY2mginxDfJ9jpxH1Q" target="_blank" rel="noreferrer">
+            Listen online
           </a>
         </li>
         <li>
-          <a
-            href="https://www.facebook.com/livingtype"
-            target="_blank"
-            rel="noreferrer"
-            title="Facebook"
-          >
-            <i class="fa fa-facebook" aria-hidden="true"></i
-            ><span class="sr-only">Facebook</span>
+          <a href="https://www.youtube.com/watch?v=A5kbPjPACuo" target="_blank" rel="noreferrer">
+            Latest video
           </a>
         </li>
         <li>
-          <a
-            href="https://www.youtube.com/channel/UCgGeqr6xUH3C71ohNZcXb2w"
-            target="_blank"
-            rel="noreferrer"
-            title="YouTube"
-          >
-            <i class="fa fa-youtube-play" aria-hidden="true"></i
-            ><span class="sr-only">YouTube</span>
+          <a href="https://open.spotify.com/artist/2IQEc43d5HvELQg2lSgBrD" target="_blank" rel="noreferrer">
+            Spotify
           </a>
         </li>
         <li>
-          <a
-            href="https://www.instagram.com/livingtypeofficial/"
-            target="_blank"
-            rel="noreferrer"
-            title="Instagram"
-          >
-            <i class="fa fa-instagram" aria-hidden="true"></i
-            ><span class="sr-only">Instagram</span>
+          <a href="https://music.apple.com/au/artist/living-type/1439884608" target="_blank" rel="noreferrer">
+            Apple Music
           </a>
         </li>
         <li>
-          <a
-            href="https://www.facebook.com/livingtype/events/"
-            target="_blank"
-            rel="noreferrer"
-            title="Events"
-          >
-            <i class="fa fa-calendar" aria-hidden="true"></i
-            ><span class="sr-only">Events</span>
+          <a href="https://www.facebook.com/livingtype" target="_blank" rel="noreferrer">
+            Facebook
           </a>
         </li>
         <li>
-          <a href="mailto:info@livingtype.band" title="Email">
-            <i class="fa fa-envelope-o" aria-hidden="true"></i
-            ><span class="sr-only">Email</span>
+          <a href="https://www.youtube.com/@livingtypeofficial" target="_blank" rel="noreferrer">
+            YouTube
           </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/livingtypeofficial" target="_blank" rel="noreferrer">
+            Instagram
+          </a>
+        </li>
+        <li>
+          <a href="https://www.abc.net.au/triplejunearthed/artist/living-type" target="_blank" rel="noreferrer">
+            Triple J Unearthed
+          </a>
+        </li>
+        <li>
+          <button class="collapsible">
+            Contact
+          </button>
+          <div class="collapse-content">
+            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+
+              <label class="sr-only">
+                Don't fill this out if you're human: <input name="bot-field" />
+              </label>
+
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Name" required>
+
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="Email" required>
+
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Message" cols="3" required></textarea>
+
+              <button type="submit">Send</button>
+            </form>
+          </div>
         </li>
       </ul>
     </div>
-  </body>
+  </main>
+  <footer>
+    <div>
+      <p>&copy; Living Type 2022</p>
+    </div>
+  </footer>
+</body>
+
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+</script>
+
 </html>
