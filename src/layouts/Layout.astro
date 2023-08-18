@@ -36,13 +36,13 @@ const year = d.getFullYear();
   <body>
     <div class="header-img">
       <a href="/">
-        <img src="assets/logo.png" alt="Living Type logo" class="logo" />
+        <img src="/assets/logo.png" alt="Living Type logo" class="logo" />
       </a>
     </div>
     <main>
       <div class="header">
         <h1 class="sr-only">Living Type</h1>
-        <img src="assets/text_logo_white.png" alt="Living Type" />
+        <img src="/assets/text_logo_white.png" alt="Living Type" />
       </div>
 
       <slot />
@@ -68,11 +68,11 @@ const year = d.getFullYear();
         from(rgba(0, 0, 0, 0.3)),
         to(rgba(0, 0, 0, 0.3))
       ),
-      url("assets/background_blurred.jpg") no-repeat center center fixed;
+      url("/assets/background_blurred.jpg") no-repeat center center fixed;
     background: -o-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-      url("assets/background_blurred.jpg") no-repeat center center fixed;
+      url("/assets/background_blurred.jpg") no-repeat center center fixed;
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-      url("assets/background_blurred.jpg") no-repeat center center fixed;
+      url("/assets/background_blurred.jpg") no-repeat center center fixed;
     background-size: cover;
     background-color: black;
   }
