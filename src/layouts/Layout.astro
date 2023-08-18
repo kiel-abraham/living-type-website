@@ -1,0 +1,271 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+
+const d = new Date();
+const year = d.getFullYear();
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="The official website of Australian rock band Living Type"
+    />
+    <meta
+      name="og:image"
+      content="https://www.livingtype.band/assets/background.jpg"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>{title}</title>
+    <link rel="icon" href="favicon.png" />
+    <link rel="DNS-prefetch" href="//fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+    />
+  </head>
+
+  <body>
+    <div class="header-img">
+      <a href="/">
+        <img src="assets/logo.png" alt="Living Type logo" class="logo" />
+      </a>
+    </div>
+    <main>
+      <div class="header">
+        <h1 class="sr-only">Living Type</h1>
+        <img src="assets/text_logo_white.png" alt="Living Type" />
+      </div>
+
+      <slot />
+    </main>
+    <footer>
+      <div>
+        <p>&copy; Living Type {year}</p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style is:global>
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: "Roboto", sans-serif;
+    background: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        from(rgba(0, 0, 0, 0.3)),
+        to(rgba(0, 0, 0, 0.3))
+      ),
+      url("assets/background_blurred.jpg") no-repeat center center fixed;
+    background: -o-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("assets/background_blurred.jpg") no-repeat center center fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("assets/background_blurred.jpg") no-repeat center center fixed;
+    background-size: cover;
+    background-color: black;
+  }
+
+  main {
+    width: 400px;
+    max-width: 90vw;
+    margin: 0 auto;
+    padding: 1rem;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+  }
+
+  footer {
+    position: relative;
+    height: 10rem;
+  }
+
+  footer div {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+  }
+
+  footer p {
+    text-align: center;
+  }
+
+  .header-img {
+    text-align: center;
+    width: 400px;
+    max-width: 90vw;
+    margin: 0 auto;
+    margin-top: 3rem;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header img {
+    margin-bottom: 1rem;
+  }
+
+  .header p {
+    text-align: center;
+    margin: 0.25rem;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .logo {
+    width: 40%;
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    list-style: none;
+    margin: 2rem 0 0;
+    padding: 0;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content li {
+    width: 100%;
+    background: white;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  /* .content ul li:hover {
+    box-shadow: 0px 2px 5px orange;
+} */
+
+  .content li a,
+  .collapsible {
+    display: block;
+    padding: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+  }
+
+  .content li a {
+    text-decoration: none;
+  }
+
+  .collapsible {
+    background: none;
+    font-size: inherit;
+    font-family: inherit;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    outline: inherit;
+  }
+
+  .collapse-content {
+    padding: 1rem;
+    display: none;
+    overflow: hidden;
+  }
+
+  li:hover {
+    transform: scale(1.02);
+  }
+
+  .socials {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .socials li {
+    background: white;
+    border-radius: 0.5rem;
+    text-align: center;
+  }
+
+  .socials li a {
+    display: block;
+    padding: 0.3rem 0.6rem;
+    min-width: 2rem;
+  }
+
+  .fa {
+    font-size: 2em;
+    color: black;
+  }
+
+  label {
+    display: none;
+  }
+
+  form input,
+  form textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+
+  form button {
+    text-transform: uppercase;
+    float: right;
+    padding: 0.4rem 0.8rem;
+    background: black;
+    color: white;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+
+  .sr-only {
+    display: none;
+  }
+</style>
+
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+</script>
