@@ -1,20 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-
-const catalog = [
-  {
-    artist: "3 Doors Down",
-    song: "Kryptonite",
-  },
-  {
-    artist: "Ben E. King",
-    song: "Stand by Me",
-  },
-  {
-    artist: "Blink 182",
-    song: "All The Small Things",
-  },
-];
 ---
 
 <Layout title="Song List | Living Type">
@@ -22,21 +7,15 @@ const catalog = [
     <h2>Song List</h2>
   </div>
   <div class="content">
-    {
-      catalog.map((item) => (
-        <div>
-          {item.artist} - {item.song}
-        </div>
-      ))
-    }
+    <div>3 Doors Down - Kryptonite</div>
+    <div>Birds of Tokyo - Wayside</div>
+    <div>Blink 182 - All The Small Things</div>
     <div>Blink 182 - Dammit</div>
     <div>Blink 182 - What's My Age Again</div>
-    <div>Birds of Tokyo - Wayside</div>
     <div>British India - I Can Make You Love Me</div>
     <div>Bowling for Soup - Baby One More Time</div>
-    <div>The Cranberries - Zombie</div>
+    <div>Counting Crows - Mr Jones</div>
     <div>Crowded House - Don't Dream It's Over</div>
-    <div>Dolly Parton - Jolene</div>
     <div>Eagle Eye Cherry - Save Tonight</div>
     <div>Ed Sheeran - Castle on the Hill</div>
     <div>Everclear - Santa Monica</div>
@@ -47,6 +26,7 @@ const catalog = [
     <div>Goo Goo Dolls - Iris</div>
     <div>Goo Goo Dolls - Slide</div>
     <div>Green Day - Boulevard of Broken Dreams</div>
+    <div>Green Day - Holiday</div>
     <div>Green Day - When I Come Around</div>
     <div>Gretta Van Fleet - Highway Tune</div>
     <div>Grinspoon - No Reason</div>
@@ -57,24 +37,26 @@ const catalog = [
     <div>Incubus - Drive</div>
     <div>INXS - Never Tear Us Apart</div>
     <div>Jet - Are You Gonna Be My Girl</div>
-    <div>Kings Of Leon - Molly's Chambers</div>
     <div>Led Zeppelin - Whole Lotta Love</div>
+    <div>Lenny Kravitz - Fly Away</div>
     <div>Lifehouse - Hanging by a Moment</div>
     <div>Live - Dolphins Cry</div>
-    <div>Living Type - Free</div>
-    <div>Living Type - Taper</div>
     <div>Living Type - Ain't No Way</div>
-    <div>Living Type - Long Way Round</div>
-    <div>Living Type - Hold Tight</div>
-    <div>Living Type - Patches</div>
     <div>Living Type - Eternity</div>
+    <div>Living Type - Free</div>
+    <div>Living Type - Hold Tight</div>
+    <div>Living Type - Long Way Round</div>
     <div>Living Type - Not I</div>
+    <div>Living Type - Patches</div>
+    <div>Living Type - Taper</div>
+    <div>Matchbox 20 - 3AM</div>
     <div>Mignight Oil - King of the Mountain</div>
     <div>Nickelback - How You Remind Me</div>
     <div>Nirvana - About A Girl</div>
     <div>Nirvana - Lithium</div>
     <div>Nirvana - Smells Like Teen Spirit</div>
     <div>Noiseworks - Touch</div>
+    <div>Paul Kelly - Dumb Things</div>
     <div>Pearl Jam - Better Man</div>
     <div>Powderfinger - Love Your Way</div>
     <div>Red Hot Chili Peppers - Otherside</div>
@@ -82,6 +64,7 @@ const catalog = [
     <div>Split Enz - I Got You</div>
     <div>Staind - It's Been Awhile</div>
     <div>Tenacious D - Tribute</div>
+    <div>The Cranberries - Zombie</div>
     <div>Tonic - If You Could Only See</div>
     <div>Wheatus - Teenage Dirtbag</div>
     <div>Zac Brown Band - Chicken Fried</div>
