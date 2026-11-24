@@ -183,6 +183,7 @@ const nextShow = shows.length > 0 ? shows[0] : null;
 
     submitButton.disabled = true;
     status.textContent = "Sending your message…";
+    status.dataset.state = "sending";
 
     try {
       const { error } = await actions.contact(new FormData(form));
@@ -190,16 +191,19 @@ const nextShow = shows.length > 0 ? shows[0] : null;
         status.textContent = isInputError(error)
           ? "Please check the form and try again."
           : error.message;
+        status.dataset.state = "error";
         status.setAttribute("role", "alert");
         return;
       }
 
       form.reset();
       status.textContent = "Thanks for getting in touch. Your message has been sent.";
+      status.dataset.state = "success";
       status.setAttribute("role", "status");
     } catch (error) {
       console.error("Contact form submission failed:", error);
       status.textContent = "Unable to send your message right now. Please try again later.";
+      status.dataset.state = "error";
       status.setAttribute("role", "alert");
     } finally {
       submitButton.disabled = false;

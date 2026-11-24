@@ -246,6 +246,20 @@ const year = d.getFullYear();
     cursor: pointer;
   }
 
+  #contact-status {
+    clear: both;
+    margin: 0.75rem 0 0;
+    color: #1f1f1f;
+  }
+
+  #contact-status[data-state="success"] {
+    color: #166534;
+  }
+
+  #contact-status[data-state="error"] {
+    color: #991b1b;
+  }
+
   .sr-only {
     display: none;
   }
