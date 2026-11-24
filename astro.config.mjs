@@ -1,6 +1,9 @@
 import { defineConfig } from 'astro/config';
+import cloudflare from '@astrojs/cloudflare';
 
 // https://astro.build/config
 export default defineConfig({
-    trailingSlash: 'ignore'
+    adapter: cloudflare({ imageService: 'passthrough' }),
+    session: false,
+    trailingSlash: 'ignore',
 });

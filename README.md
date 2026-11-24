@@ -1,5 +1,13 @@
 # Astro Starter Kit: Basics
 
+## Contact form email
+
+The homepage remains prerendered as a static page. A small client-side script
+submits the contact form to an Astro Action running on the Cloudflare Worker.
+The action sends email through Cloudflare Email Sending. The recipient is
+configured as `info@livingtype.band`, which is also the sender address. Its
+domain must be onboarded for Email Sending and use Cloudflare DNS.
+
 ```
 npm create astro@latest -- --template basics
 ```
